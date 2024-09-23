@@ -2,4 +2,5 @@
 
 Welcome to the Metaverse
 
-[![hello](images/class_pic.jpg)]
+[![YouTube](images/class_pic.jpg)](images/class_pic.jpg)
+
