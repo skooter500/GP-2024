@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtdb2cik7v4uo"]
+
+[ext_resource type="Texture2D" uid="uid://ckmaspa7xadub" path="res://assets/PNG/Sprites/Missiles/spaceMissiles_001.png" id="1_ag8hw"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_ag8hw")
