@@ -39,7 +39,7 @@ func _physics_process(delta):
 	can_move = true
 	if can_move:
 		var r = get_viewport_rect()	
-		var f = Input.get_axis("left", "right")
+		var f = Input.get_axis("turn_left", "turn_right")
 		velocity.x = f * speed
 		move_and_slide()
 
@@ -50,9 +50,9 @@ func _physics_process(delta):
 
 func _on_area_2d_area_entered(area):
 	print(area)
-	#var explosion = explosion_scene.instantiate()
-	#explosion.global_position = global_position
-	#explosion.emitting = true
-	#get_tree().root.add_child(explosion)
-	#queue_free()	
-	#pass # Replace with function body.
+	var explosion = explosion_scene.instantiate()
+	explosion.global_position = global_position
+	explosion.emitting = true
+	get_tree().root.add_child(explosion)
+	queue_free()	
+	pass # Replace with function body.
