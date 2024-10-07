@@ -1,6 +1,6 @@
 extends Node2D
 
-var bug_scene:PackedScene
+var bug_scene: PackedScene
 
 func _ready():
 	bug_scene = load("res://bug.tscn")

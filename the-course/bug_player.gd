@@ -39,7 +39,7 @@ func _physics_process(delta):
 	can_move = true
 	if can_move:
 		var r = get_viewport_rect()	
-		var f = Input.get_axis("left", "right")
+		var f = Input.get_axis("ui_left", "ui_right")
 		velocity.x = f * speed
 		move_and_slide()
 

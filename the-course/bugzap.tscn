@@ -18,9 +18,10 @@ size = Vector2(16, 623)
 
 [node name="bugzap" type="Node2D"]
 script = ExtResource("1_s2q5l")
+bug = ExtResource("4_k6dp0")
 
 [node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(464, 730)
+position = Vector2(464, 629)
 script = ExtResource("1_vqb0a")
 explosion_scene = ExtResource("2_rwge8")
 
@@ -39,14 +40,14 @@ polygon = PackedVector2Array(-25, -10, -5, -10, -5, -39, 5, -39, 5, -10, 25, -10
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/Area2D"]
 polygon = PackedVector2Array(-28, 10, -29, -12, -9, -16, -9, -43, 13, -43, 11, -16, 33, -14, 31, 14)
 
-[node name="laser" type="Line2D" parent="player"]
+[node name="laser" type="Line2D" parent="player" groups=["laser"]]
 position = Vector2(0, -50)
 points = PackedVector2Array(0, 0, 0, 0)
 width = 5.0
 
-[node name="laser" type="Area2D" parent="player/laser"]
+[node name="laser" type="Area2D" parent="player/laser" groups=["laser"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player/laser/laser"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/laser/laser" groups=["laser"]]
 position = Vector2(2, -311)
 shape = SubResource("RectangleShape2D_7kvm8")
 
@@ -69,7 +70,12 @@ text = "LIVES: 3
 "
 
 [node name="bug_spawner" type="Node2D" parent="."]
-visible = false
+position = Vector2(48, 54)
 script = ExtResource("9_oaua2")
 
+[node name="bug_spawner_timer" type="Timer" parent="bug_spawner"]
+wait_time = 5.0
+autostart = true
+
 [connection signal="area_entered" from="player/Area2D" to="player" method="_on_area_2d_area_entered"]
+[connection signal="timeout" from="bug_spawner/bug_spawner_timer" to="." method="_on_bug_spawner_timer_timeout"]

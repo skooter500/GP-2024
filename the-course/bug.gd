@@ -1,14 +1,19 @@
 extends Area2D
+class_name Enemy
 
 @export var bomb_spawn:Node2D
 @export var bomb_scene:PackedScene
 @export var explosion_scene:PackedScene
+@onready var bug = $"."
+
+var enemy_health = 10
 
 var target_pos:Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if enemy_health == 0:
+		queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,4 +54,7 @@ func _on_area_entered(area):
 		explosion.emitting = true
 		get_tree().root.add_child(explosion)
 		# self.queue_free()		
+		enemy_health -+ 10
+		if enemy_health == 0:
+			bug.queue_free()
 pass
