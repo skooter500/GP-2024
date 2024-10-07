@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://4guc3kuplmqn"]
+
+[ext_resource type="Texture2D" uid="uid://xod1vbt2tfih" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_018.png" id="1_i56rt"]
+[ext_resource type="AudioStream" uid="uid://76wsnaovdmfp" path="res://sounds/Laser_Shoot41.wav" id="1_yysf2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" type="RigidBody2D" parent="."]
+position = Vector2(72, 120)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="player"]
+stream = ExtResource("1_yysf2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
+polygon = PackedVector2Array(2, -11, -1, -20, -11, -20, -15, -16, -21, -12, -25, -1, -21, 12, -15, 16, -15, 16, -12, 21, 2, 21, 11, 16, 25, 15, 25, 5, 7, 5, 6, -4, 4, -7)
+
+[node name="Sprite2D" type="Sprite2D" parent="player/CollisionPolygon2D"]
+texture = ExtResource("1_i56rt")
+
+[node name="Gun" type="Node2D" parent="player/CollisionPolygon2D"]
+position = Vector2(27, 10)
