@@ -26,9 +26,9 @@ Thursday:
 - 13:00-14:00 - Time for lunch and engagement with campus activities
 - 14:00-17:00 - Studio Classroom
 
-*Studio Classroom* Means we work together in a lab class on various topics and projects, building competency through experience, in various areas of software and games development. We will take plenty of breaks for students to get up and walk around in the afternoon.
+*Studio Classroom* means: we work together in a lab class on various topics and projects, building competency through experience, in various areas of software and games development. We will take plenty of breaks to get up and walk around.
 
-At the end of the module, each student will have the ability to develop a complete digital game from scratch themselves and manage their work on a github repository.
+At the end of the module, each student will have the ability to develop a complete digital game from scratch incorporating logic, movement and gameplay and manage their work on github.
 
 # Assessment
 
