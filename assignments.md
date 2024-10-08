@@ -28,4 +28,4 @@ Your project should demonstrate:
 
 This is a playlist of last years assignments for inspiration:
 
-- [![YouTube](http://img.youtube.com/vi/xF7VrXZqLko/0.jpg)](https://www.youtube.com/watch?v=xF7VrXZqLko)
+- https://www.youtube.com/watch?v=xnbHNQOCXSU&list=PL1n0B6z4e_E7PV9bmzFDRow2Qoe1MOqvo
