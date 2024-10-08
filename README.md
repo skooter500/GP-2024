@@ -48,6 +48,7 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 - [Game dev news chanell](https://www.youtube.com/@gamefromscratch)
 - [Class discord. Important to check this regularly as I share a lot of useful information here](https://discord.gg/3SwfCsH9)
 - [Godot discord](https://discord.com/invite/godotengine)
+- [Submit your fork of the git repo](https://forms.office.com/Pages/ResponsePage.aspx?id=yxdjdkjpX06M7Nq8ji_V2ou3qmFXqEdGlmiD1Myl3gNUQTMyV1NKWFVUWUwxQjZTS05SRTE1TEUxQi4u)
 
 # Content
 
