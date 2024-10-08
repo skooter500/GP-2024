@@ -6,7 +6,7 @@ Welcome to the Metaverse
 
 # Introduction
 
-The aim of this course is to develop core technical skills in coding, digital literacy computational thinking, use of git and other tools, that are used in software development and in the games industry. The course uses Godot Game Engine and github, however I will also show examples using Unity, Python and other relevant tehcnologies. Over the course of the module, students will build a portfolio of work on their github repositories and will have the opportunity to do projects in many creative areas such as art, music and of course games development. Skills acquired on the module are transferrable to other engines and technologies and provide solid foundation for a future career in game development.
+The aim of this course is to develop core technical skills in coding, digital literacy,  computational thinking, and use of git and other tools, that are used in software development and in the games industry. The course uses Godot Game Engine and github, however I will also show examples using Unity, Python and other relevant tehcnologies. Over the course of the module, students will build a portfolio of work on their github repositories and will have the opportunity to do projects in many creative areas such as art, music and of course games development. Skills acquired on the module are transferrable to other engines and technologies and provide solid foundation for a future career in game development.
 
 # Structure
 
