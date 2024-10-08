@@ -12,21 +12,27 @@ The aim of this course is to develop core technical skills in coding, digital li
 
 Semester 1
 
-Monday's
+Monday:
+
 12:00-13:00 - Studio Classroom
+
 13:00-14:00 - Time for lunch and engagement with campus activities
+
 14:00-17:00 - Studio Classroom
 
 Semester 2
 
-Thursday's
+Thursday:
+
 12:00-13:00 - Studio Classroom
+
 13:00-14:00 - Time for lunch and engagement with campus activities
+
 14:00-17:00 - Studio Classroom
 
-*Studio Classroom* Means we work together in a lab class on various topics and projects, building competency through experience, in various areas of software and games development.
+*Studio Classroom* Means we work together in a lab class on various topics and projects, building competency through experience, in various areas of software and games development. We will take plenty of breaks for students to get up and walk around in the afternoon.
 
-At the end of the module, each student will have the ability to develop a digital game from scratch themselves and manage their work on a github repository.
+At the end of the module, each student will have the ability to develop a complete digital game from scratch themselves and manage their work on a github repository.
 
 # Assessment
 
@@ -36,14 +42,17 @@ At the end of the module, each student will have the ability to develop a digita
 - [Assignment 1 25% - Due 9/12/2024](assignments.md)
 - Assignment 2 25%
 
-Weekly engagement mark is assessessed automatically by evaluating the number of git commits made each week. 1 commit means 1 mark. 2 commits 2 marks, 3 commits or more full marks
+Weekly engagement mark is assessessed automatically by evaluating the number of git commits made each week. 1 commit means 1 mark. 2 commits 2 marks, 3 commits or more full marks each week.
 
 # Resources
 - [CSResources git repo](https://github.com/skooter500/csresources/blob/main/git_ref.pdf). Here you will find links to the previous courses and all my quick references
 - [Git for poets](https://www.youtube.com/watch?v=BCQHnlnPusY)
-- [https://www.youtube.com/watch?v=LOhfqjmasi0](Godot for beginners)
-- [https://www.youtube.com/watch?v=e1zJS31tr88](GDScript Tutorial)
-- [https://discord.gg/3SwfCsH9](Class discord). Important to check this regularly as I share a lot of useful information here.
+- [Godot for beginners](https://www.youtube.com/watch?v=LOhfqjmasi0)
+- [GDScript Tutorial](https://www.youtube.com/watch?v=e1zJS31tr88)
+- [Games Made in Godot to inspire you](https://www.youtube.com/@stayathomedev) 
+- [Game dev news chanell](https://www.youtube.com/@gamefromscratch)
+- [Class discord. Important to check this regularly as I share a lot of useful information here](https://discord.gg/3SwfCsH9)
+- [Godot discord](https://discord.com/invite/godotengine)
 
 # Content
 
