@@ -14,21 +14,17 @@ Semester 1
 
 Monday:
 
-12:00-13:00 - Studio Classroom
-
-13:00-14:00 - Time for lunch and engagement with campus activities
-
-14:00-17:00 - Studio Classroom
+- 12:00-13:00 - Studio Classroom
+- 13:00-14:00 - Time for lunch and engagement with campus activities
+- 14:00-17:00 - Studio Classroom
 
 Semester 2
 
 Thursday:
 
-12:00-13:00 - Studio Classroom
-
-13:00-14:00 - Time for lunch and engagement with campus activities
-
-14:00-17:00 - Studio Classroom
+- 12:00-13:00 - Studio Classroom
+- 13:00-14:00 - Time for lunch and engagement with campus activities
+- 14:00-17:00 - Studio Classroom
 
 *Studio Classroom* Means we work together in a lab class on various topics and projects, building competency through experience, in various areas of software and games development. We will take plenty of breaks for students to get up and walk around in the afternoon.
 
@@ -36,7 +32,6 @@ At the end of the module, each student will have the ability to develop a comple
 
 # Assessment
 
-# Grading
 - End of year programming test 30%
 - Weekly engagement mark 20%
 - [Assignment 1 25% - Due 9/12/2024](assignments.md)
@@ -75,6 +70,3 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 ## Week 1
 - Yoga
 - Introductions
-
-
-
