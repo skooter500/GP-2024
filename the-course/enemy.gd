@@ -1,9 +1,12 @@
 extends CharacterBody2D
 var speed = 50
-@export var target_pos: Vector2
+@onready var Spaceman = target_pos
+var target_pos: Vector2
 var start_pos:Vector2
+@export var explosion:PackedScene
 
 func _ready() -> void:
+	target_pos = Spaceman
 	target_pos = global_position
 	start_pos = global_position
 
@@ -22,14 +25,31 @@ func move_right():
 #var choose = [move_down(),move_up(), move_right(), move_left()]
 
 func _physics_process(delta):
-	if target_pos.y < start_pos.y:
-		velocity.y = 50
-	if target_pos.y > start_pos.y:
-		velocity.y = -50
-	if target_pos.x < start_pos.x:
-		velocity.x = -50
-	if target_pos.x > start_pos.x:
-		velocity.x = 50
+	
+	var d:Vector2 = $"../Spaceman".global_position - global_position
+	d = d.normalized()
+	velocity = d * speed
+	
+	
+	var c =  move_and_collide(velocity * delta)
+	if c:
+		if c.get_collider().name.contains("Spaceman"):
+			c.get_collider().queue_free()
+			speed = 0
+			#var e = explosion.instantiate()
+			#get_tree().get_root().add_child(e)
+			#e.global_position = self.global_position
+			#e.emitting = true
+			#self.queue_free()
+	
+	#if target_pos.y < start_pos.y:
+		#velocity.y = 50
+	#if target_pos.y > start_pos.y:
+		#velocity.y = -50
+	#if target_pos.x < start_pos.x:
+		#velocity.x = -50
+	#if target_pos.x > start_pos.x:
+		#velocity.x = 50
 	move_and_slide()
 
 """

@@ -29,5 +29,9 @@ func _physics_process(delta: float) -> void:
 		var b = bullet_scene.instantiate()
 		b.global_position = bullet_spawn_point.global_position
 		get_parent().add_child(b)
+	 
+	if $Enemy5.global_position == global_position:
+		velocity/2
+		
 	
 	move_and_slide()
