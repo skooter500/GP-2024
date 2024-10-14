@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cx6qdq0c477ye"]
+[gd_scene load_steps=7 format=3 uid="uid://cx6qdq0c477ye"]
 
 [ext_resource type="Script" path="res://Spaceman.gd" id="1_ohbyb"]
 [ext_resource type="Texture2D" uid="uid://dfqem0ebv08jw" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_001.png" id="2_ugyg5"]
+[ext_resource type="Script" path="res://bullet_scene.gd" id="3_8socv"]
 [ext_resource type="Texture2D" uid="uid://c844yfbd26ea8" path="res://sprites/bug.png" id="3_glu3y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a56th"]
@@ -25,6 +26,7 @@ texture = ExtResource("2_ugyg5")
 [node name="spawn_point" type="Node2D" parent="Spaceman"]
 position = Vector2(32, -1)
 rotation = 1.5708
+script = ExtResource("3_8socv")
 
 [node name="Timer" type="Timer" parent="Spaceman"]
 wait_time = 0.2
