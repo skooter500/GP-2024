@@ -9,7 +9,7 @@ func _process(delta):
 	velocity = -transform.y * speed
 	var c =  move_and_collide(velocity * delta)
 	if c:
-		if c.get_collider().name.contains("block"):
+		if c.get_collider().name.contains("block") or c.get_collider().name.contains("Enemy"):
 			c.get_collider().queue_free()
 			var e = explosion.instantiate()
 			get_tree().get_root().add_child(e)

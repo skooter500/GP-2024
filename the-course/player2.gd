@@ -1,6 +1,6 @@
-extends RigidBody2D
+extends CharacterBody2D
 
-@export var power:float = 0
+@export var power:float = -100
 @export var rot_power:float = 360
 
 @export var bullet_scene:PackedScene
@@ -23,7 +23,7 @@ func _physics_process(delta):
 	var r = Input.get_axis("left", "right")
 	apply_torque(rot_power * r)
 	
-	f = Input.get_axis("back", "forward")
+	f = Input.get_axis("move_backwards", "move_forwards")
 	
 	var force = power * -transform.y * f
 	# DebugDraw2D.set_text("Force", force)
