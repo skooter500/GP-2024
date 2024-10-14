@@ -12,12 +12,17 @@ config_version=5
 
 <<<<<<< HEAD
 config/name="The Course 2024"
+<<<<<<< HEAD
 run/main_scene="res://bugzap.tscn"
 =======
 config/name="The Course"
 run/main_scene="res://start scene.tscn"
 >>>>>>> 331c2a68323446ff3b35f6ad4ba1d81999a36a06
 config/features=PackedStringArray("4.2", "Forward Plus")
+=======
+run/main_scene="res://tank_game1.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+>>>>>>> b9917c07b8d958647b24aff370de487b8c539336
 config/icon="res://icon.svg"
 
 [input]
