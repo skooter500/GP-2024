@@ -5,8 +5,6 @@ extends Sprite2D
 func _ready():
 	pass # Replace with function body.
 
-
-
 var speed:float = 500
 var rot_speed:float = 200
 
@@ -19,14 +17,22 @@ func _process(delta: float) -> void:
 	#global_translate(Vector2(10, speed * delta))
 	var s = speed
 	var rs = rot_speed
-
+	if (Input.is_key_pressed(KEY_SHIFT)):
+		s = s * 5 
+		rs = rs * 2
 	if Input.is_key_pressed(KEY_UP):
-		position -= transform.y * speed * delta
-
+		translate(Vector2(0,- speed * delta)) 
+		rotate(deg_to_rad(rot_speed * delta))
+	if Input.is_key_pressed(KEY_DOWN):
+		translate(Vector2(0, speed * delta)) 
+		rotate(deg_to_rad(-rot_speed * delta))
+	
 	if Input.is_key_pressed(KEY_LEFT):
+		translate(Vector2(-10, delta)) 
 		rotate(deg_to_rad(-rot_speed * delta))
 		
 	if Input.is_key_pressed(KEY_RIGHT):
+		translate(Vector2(10, delta)) 
 		rotate(deg_to_rad(rot_speed * delta))
 	
 	pass

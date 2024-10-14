@@ -1,4 +1,4 @@
-extends Sprite2D
+extends RigidBody2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -7,8 +7,8 @@ func _ready():
 
 
 
-var speed:float = 500
-var rot_speed:float = 200
+var speed:float = 250
+var rot_speed:float = 100
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 	var rs = rot_speed
 
 	if Input.is_key_pressed(KEY_UP):
-		position -= transform.y * speed * delta
+		position -= linear_velocity * speed * delta
 
 	if Input.is_key_pressed(KEY_LEFT):
 		rotate(deg_to_rad(-rot_speed * delta))
