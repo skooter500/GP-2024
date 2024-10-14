@@ -1,6 +1,6 @@
 extends CharacterBody2D
 var speed = 50
-var target_pos: Vector2
+@export var target_pos: Vector2
 var start_pos:Vector2
 
 func _ready() -> void:
@@ -22,20 +22,15 @@ func move_right():
 #var choose = [move_down(),move_up(), move_right(), move_left()]
 
 func _physics_process(delta):
-	velocity = Vector2.ZERO
-	if target_pos:
-		velocity = position.direction_to(target_pos) * speed
-	move_and_slide()
-	"""
-	if target_pos.y > start_pos.y:
-		move_down()
 	if target_pos.y < start_pos.y:
-		position.y = -50
-	if target_pos.x > start_pos.x:
-		move_left()
+		velocity.y = 50
+	if target_pos.y > start_pos.y:
+		velocity.y = -50
 	if target_pos.x < start_pos.x:
-		move_right()
-	"""
+		velocity.x = -50
+	if target_pos.x > start_pos.x:
+		velocity.x = 50
+	move_and_slide()
 
 """
 func on_timer_timeout():

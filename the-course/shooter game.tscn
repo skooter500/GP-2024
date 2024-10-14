@@ -18,7 +18,7 @@ size = Vector2(33, 32)
 [node name="Node2D" type="Node2D"]
 
 [node name="Spaceman" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn_point")]
-position = Vector2(77, 75)
+position = Vector2(88, 67)
 script = ExtResource("1_ohbyb")
 bullet_scene = ExtResource("2_y2mg7")
 bullet_spawn_point = NodePath("spawn_point")
@@ -51,6 +51,7 @@ texture = ExtResource("3_glu3y")
 [node name="Timer" type="Timer" parent="Enemy"]
 
 [node name="Enemy2" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(363, 380)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
@@ -60,6 +61,7 @@ shape = SubResource("RectangleShape2D_4rqb6")
 texture = ExtResource("3_glu3y")
 
 [node name="Enemy3" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(597, 368)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3"]
@@ -69,6 +71,7 @@ shape = SubResource("RectangleShape2D_4rqb6")
 texture = ExtResource("3_glu3y")
 
 [node name="Enemy4" type="StaticBody2D" parent="."]
+visible = false
 position = Vector2(299, 192)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4"]

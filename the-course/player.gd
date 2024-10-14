@@ -8,6 +8,9 @@ const JUMP_VELOCITY = -400.0
 
 const TURN_RATE = 180
 
+func _ready():
+	global_position
+
 func _physics_process(delta: float) -> void:
 	
 	var r = Input.get_axis("turn_left", "turn_right")
