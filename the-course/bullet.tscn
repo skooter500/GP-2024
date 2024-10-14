@@ -31,6 +31,7 @@ one_shot = true
 autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 1)
 stream = ExtResource("3_ba8d6")
 autoplay = true
 
