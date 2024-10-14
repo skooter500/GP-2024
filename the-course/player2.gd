@@ -23,9 +23,7 @@ func _physics_process(delta):
 	var r = Input.get_axis("turn_left", "turn_right")
 	apply_torque(rot_power * r)
 	
-=======
 	f = Input.get_axis("move_backwards", "move_forward")
->>>>>>> 64b46a1c2b9629824eaa4bb5262cc5296245cf3f
 	
 	var force = power * -transform.y * f
 	# DebugDraw2D.set_text("Force", force)
