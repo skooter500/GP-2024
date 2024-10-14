@@ -20,7 +20,7 @@ func _ready():
 	
 func _physics_process(delta):
 	
-	var r = Input.get_axis("left", "right")
+	var r = Input.get_axis("turn_left", "turn_right")
 	apply_torque(rot_power * r)
 	
 	f = Input.get_axis("move_backwards", "move_forwards")
