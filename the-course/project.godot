@@ -10,8 +10,13 @@ config_version=5
 
 [application]
 
+<<<<<<< HEAD
 config/name="The Course 2024"
 run/main_scene="res://bugzap.tscn"
+=======
+config/name="The Course"
+run/main_scene="res://start scene.tscn"
+>>>>>>> 331c2a68323446ff3b35f6ad4ba1d81999a36a06
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 

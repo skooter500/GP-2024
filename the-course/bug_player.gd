@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 @export var explosion_scene:PackedScene
 
-@onready var laser:Node2D=$laser
+@onready var laser:Node2D=$laser_line
 
 @onready var bug = $"../bug"
 
@@ -25,9 +25,11 @@ func _process(delta):
 		var result = space_state.intersect_ray(query)
 		var to_bug	
 		if bug && position.x > bug.position.x - h and position.x < bug.position.x + h:
-			to_bug = laser.global_position.y - bug.global_position.y			
+			to_bug = laser.global_position.y - bug.global_position.y
+			
 		else:
 			to_bug = laser.global_position.y
+			pass
 		p.y = - to_bug			
 		laser.set_point_position(1, p)
 		laser.visible = true						
