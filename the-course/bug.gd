@@ -5,7 +5,7 @@ extends Area2D
 @export var explosion_scene:PackedScene
 
 var target_pos:Vector2
-
+var health_fart:Vector2
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,8 +15,7 @@ func _ready():
 func _process(delta):
 	global_position = lerp(global_position, target_pos, delta)
 	pass
-
-
+	
 func _on_timer_timeout():
 	var offset = randf_range(-100, 100)
 	target_pos = position
@@ -48,5 +47,5 @@ func _on_area_entered(area):
 		explosion.global_position = global_position
 		explosion.emitting = true
 		get_tree().root.add_child(explosion)
-		# self.queue_free()		
+		queue_free()	
 pass
