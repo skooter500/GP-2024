@@ -38,13 +38,15 @@ func _physics_process(delta: float) -> void:
 	var rot = deg_to_rad(ROT_SPEED * turn * delta)
 	rotate(rot)
 	
-	if Input.is_action_pressed("fire") and can_fire:
+	if Input.is_action_just_pressed("fire") and can_fire:
 		var b = bullet_scene.instantiate()
 		b.global_position = bullet_spawn_point.global_position
 		b.global_rotation = bullet_spawn_point.global_rotation
 		get_tree().get_root().add_child(b) 
 		can_fire = false
 		$Timer.start()
+		
+	
 		
 	
 	
