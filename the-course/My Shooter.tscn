@@ -11,3 +11,6 @@ texture = ExtResource("1_kyvdw")
 script = ExtResource("1_xfway")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
+
+[node name="Marker2D" type="Marker2D" parent="Sprite2D"]
+position = Vector2(-3, -97)
