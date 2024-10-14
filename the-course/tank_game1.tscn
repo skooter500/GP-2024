@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dum0vq7fy15st"]
+[gd_scene load_steps=12 format=3 uid="uid://dum0vq7fy15st"]
 
 [ext_resource type="Script" path="res://root1.gd" id="1_027t5"]
 [ext_resource type="FontFile" uid="uid://0jk2p2kfmllu" path="res://fonts/Hyperspace Bold.otf" id="2_601f3"]
@@ -7,7 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://bq4kjn4r61ps2" path="res://sounds/jet.wav" id="5_ee1yw"]
 [ext_resource type="Script" path="res://jet_sound.gd" id="6_6rfpp"]
 [ext_resource type="Script" path="res://spawner.gd" id="7_jndn7"]
-[ext_resource type="Texture2D" uid="uid://2v8yl7j6etc2" path="res://assets/PNG/Sprites/Rockets/spaceRockets_002.png" id="7_t6sba"]
 [ext_resource type="PackedScene" uid="uid://bwi6lmhwtpkeh" path="res://block.tscn" id="8_jabo1"]
 [ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="9_uakw0"]
 
@@ -40,7 +39,6 @@ modulate = Color(0.623529, 0.52549, 0.27451, 1)
 material = SubResource("CanvasItemMaterial_m7bvt")
 position = Vector2(-108, 3107)
 scale = Vector2(10.6497, 11.0583)
-texture = ExtResource("7_t6sba")
 
 [node name="Sprite2D2" type="Sprite2D" parent="player/Sprite2D"]
 modulate = Color(0.588235, 0.537255, 0.309804, 1)
@@ -66,16 +64,18 @@ thing = ExtResource("8_jabo1")
 [node name="ui" type="Node" parent="."]
 
 [node name="Panel" type="Panel" parent="ui"]
-offset_left = 141.0
-offset_top = 468.0
-offset_right = 1141.0
-offset_bottom = 518.0
+offset_left = 155.0
+offset_top = 512.0
+offset_right = 1155.0
+offset_bottom = 562.0
 theme = ExtResource("9_uakw0")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ui/Panel"]
 layout_mode = 0
-offset_right = 1000.0
-offset_bottom = 50.0
+offset_left = 16.0
+offset_top = 5.0
+offset_right = 1016.0
+offset_bottom = 55.0
 text = "Click the screen to create things to shoot"
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
