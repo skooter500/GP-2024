@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2ywc8wsl1ikj"]
+
+[ext_resource type="Texture2D" uid="uid://b70diaad65ppu" path="res://bow.jpg" id="1_kyvdw"]
+[ext_resource type="Script" path="res://movement.gd" id="1_xfway"]
+
+[node name="root" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(395, 203)
+texture = ExtResource("1_kyvdw")
+script = ExtResource("1_xfway")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D"]
