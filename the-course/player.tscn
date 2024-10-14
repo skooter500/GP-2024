@@ -21,7 +21,15 @@ texture = ExtResource("2_m46rs")
 shape = SubResource("CircleShape2D_5gtcp")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+rotation = 1.56596
 texture = ExtResource("3_jwfmr")
 
 [node name="bullet_spawn_point" type="Marker2D" parent="."]
-position = Vector2(2, 170)
+position = Vector2(-1, 73)
+rotation = 1.5708
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://652vkknks7jc"]
+[gd_scene load_steps=4 format=3 uid="uid://652vkknks7jc"]
 
 [ext_resource type="PackedScene" uid="uid://cacpd8qvulvcp" path="res://player.tscn" id="1_unoke"]
+[ext_resource type="PackedScene" uid="uid://k6isvcf6k1l" path="res://enemy.tscn" id="2_2ji0c"]
+[ext_resource type="Texture2D" uid="uid://c8suijkma2w3w" path="res://assets/PNG/Sprites/Station/spaceStation_020.png" id="2_cggoe"]
 
 [node name="root" type="Node2D"]
 
@@ -9,4 +11,14 @@ position = Vector2(230, 161)
 bullet_spawn_point = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="player"]
-position = Vector2(-1, 155)
+position = Vector2(-1, 61)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+
+[node name="SpaceStation020" type="Sprite2D" parent="."]
+position = Vector2(928, 332)
+rotation = 0.402343
+texture = ExtResource("2_cggoe")
+
+[node name="Sprite" parent="." instance=ExtResource("2_2ji0c")]
+position = Vector2(433, 271)

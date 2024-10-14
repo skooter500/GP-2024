@@ -11,7 +11,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mn0g"]
 size = Vector2(10, 10)
 
-[node name="bullet" type="CharacterBody2D"]
+[node name="bullet" type="CharacterBody2D" groups=["Bullet"]]
 script = ExtResource("1_csdhu")
 speed = 500
 explosion = ExtResource("2_hvpqa")
@@ -22,9 +22,6 @@ material = SubResource("CanvasItemMaterial_ouehp")
 scale = Vector2(10, 10)
 texture = SubResource("CanvasTexture_mkyav")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_5mn0g")
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
@@ -34,4 +31,10 @@ autostart = true
 stream = ExtResource("3_ba8d6")
 autoplay = true
 
+[node name="Area2D" type="Area2D" parent="." groups=["Bullet"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Bullet"]]
+shape = SubResource("RectangleShape2D_5mn0g")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b26mblvmunn4a"]
 
 [ext_resource type="Script" path="res://bug.gd" id="1_nnkhd"]
-[ext_resource type="PackedScene" path="res://bomb.tscn" id="2_s2pxd"]
+[ext_resource type="PackedScene" uid="uid://wk5jgsobmh3w" path="res://bomb.tscn" id="2_s2pxd"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="3_cqlux"]
 [ext_resource type="Texture2D" uid="uid://c844yfbd26ea8" path="res://sprites/bug.png" id="3_ferv2"]
 [ext_resource type="AudioStream" uid="uid://dr7urkmsac1h7" path="res://sounds/Laser_Shoot42.wav" id="4_j6f0n"]
