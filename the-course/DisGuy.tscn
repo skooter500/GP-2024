@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://vym2k1xbug7c"]
+
+[ext_resource type="Script" path="res://MainGuy.gd" id="1_7yqtn"]
+[ext_resource type="Texture2D" uid="uid://cyb1li5opi7vq" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_012.png" id="2_4sf86"]
+[ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="2_ydch5"]
+[ext_resource type="PackedScene" uid="uid://dmnjcei6dc26l" path="res://shoot_point.tscn" id="3_7toga"]
+[ext_resource type="Texture2D" uid="uid://b2magku6a233n" path="res://assets/PNG/Sprites/Building/spaceBuilding_001.png" id="3_yd0ka"]
+
+[node name="Base" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn")]
+position = Vector2(525, 264)
+script = ExtResource("1_7yqtn")
+bullet_scene = ExtResource("2_ydch5")
+bullet_spawn = NodePath("CollisionPolygon2D/Sprite2D/shoot_point")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+rotation = 3.14159
+polygon = PackedVector2Array(-22, -13, -17, -16, -13, -22, -2, -25, 12, -23, 16, -17, 21, -13, 21, 0, 16, 2, 8, 3, 1, 7, -8, 3, -8, 6, -5, 8, -5, 24, -13, 24, -14, 12, -19, 8, -19, 5, -21, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionPolygon2D"]
+rotation = 1.5708
+texture = ExtResource("2_4sf86")
+
+[node name="shoot_point" parent="CharacterBody2D/CollisionPolygon2D/Sprite2D" instance=ExtResource("3_7toga")]
+position = Vector2(28, 10)
+rotation = 1.5708
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 0.4
+one_shot = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(514, 372)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-22, -17, -17, -22, 16, -22, 21, -17, 21, 16, 16, 20, -16, 19, -21, 14)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionPolygon2D"]
+position = Vector2(0, -1)
+texture = ExtResource("3_yd0ka")
+
+[connection signal="timeout" from="CharacterBody2D/Timer" to="CharacterBody2D" method="_on_timer_timeout"]

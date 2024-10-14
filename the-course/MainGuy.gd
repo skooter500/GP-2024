@@ -1,37 +1,37 @@
-extends RigidBody2D
+extends CharacterBody2D
 
-@export var power:float = 0
-@export var rot_power:float = 360
+
 
 @export var bullet_scene:PackedScene
 @export var bullet_spawn:Node2D
 
 
 
-var f
+
+
+const SPEED = 300.0
+const TURN_RATE = 180.0
 
 var can_fire = true;
 
 func _ready():
 	# bullet = load("res://bullet.tscn")
 	# bullet_spawn = get_node("shoot_point")
-	
 	pass
 	
+
+
+
+
 func _physics_process(delta):
 	
-	var r = Input.get_axis("turn_left", "turn_right")
-	apply_torque(rot_power * r)
+	var t := Input.get_axis("turn_left", "turn_right")
+	var turn = deg_to_rad(t * TURN_RATE * delta)
+	rotate(turn)
 	
-	f = Input.get_axis("move_backwards", "move_forwards")
-	
-	var force = power * -transform.y * f
-	# DebugDraw2D.set_text("Force", force)
-	if (force.length() > 0):
-		apply_central_force(force)
-		pass
-	# print("right: " + str(transform.x))
-	# print("up:" + str(transform.y))
+	var w = Input.get_axis("move_forwards","move_backwards")
+	var fow = transform.y * w * SPEED
+	velocity = fow
 	
 	if Input.is_action_pressed("fire") and can_fire:
 		var b = bullet_scene.instantiate()
@@ -40,11 +40,12 @@ func _physics_process(delta):
 		get_tree().get_root().add_child(b) 
 		can_fire = false
 		$Timer.start()
-		
-	
+	move_and_slide()
 	pass
-	
 
 func _on_timer_timeout():
-	can_fire = true
-	pass # Replace with function body.
+	can_fire = true 
+	
+	pass # Replace with function body
+
+	
