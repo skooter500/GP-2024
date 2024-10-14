@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://2p1mfd6adrte"]
+
+[ext_resource type="Texture2D" uid="uid://dr38bbt88q06l" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_009.png" id="1_4jvex"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6legn"]
+radius = 23.0
+height = 46.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(96, 122)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-2, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_4jvex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_6legn")
