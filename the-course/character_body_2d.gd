@@ -6,17 +6,18 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -300.0
 
-const TURN_RATE = 300
+const TURN_RATE = 100
 
 func _physics_process(delta: float) -> void:
 	var r = Input.get_axis("turn_left", "turn_right")
 	var rot = deg_to_rad(r * TURN_RATE * delta)
-	var f = Input.get_axis("move_backwards", "move_forwards")
+	rotate(rot)
+	var f = Input.get_axis("move_forwards", "move_backwards")
 	var vel = transform.y * f * SPEED
 	velocity = vel 
 
 	if Input.is_action_pressed("fire"):
-		var b = bullet_scene.instantiated()
+		var b = bullet_scene.instantiate()
 		b.global_position = bullet_spawn_point.global_position
 		get_parent().add_child(b)
 				
