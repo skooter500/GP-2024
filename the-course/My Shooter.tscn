@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2ywc8wsl1ikj"]
+[gd_scene load_steps=5 format=3 uid="uid://d2ywc8wsl1ikj"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_ft5pe"]
 [ext_resource type="Texture2D" uid="uid://b70diaad65ppu" path="res://bow.jpg" id="1_kyvdw"]
 [ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="2_on6tv"]
+[ext_resource type="Script" path="res://enemy.gd" id="4_ga7hp"]
 
 [node name="root" type="Node2D"]
 
@@ -17,3 +18,6 @@ texture = ExtResource("1_kyvdw")
 
 [node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
 position = Vector2(-6, -103)
+
+[node name="enemy" type="Sprite2D" parent="."]
+script = ExtResource("4_ga7hp")
