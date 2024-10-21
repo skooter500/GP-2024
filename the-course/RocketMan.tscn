@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgbawlrbcnb5r"]
+[gd_scene load_steps=6 format=3 uid="uid://bqvm1txmqy61t"]
 
 [ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_5g45x"]
-[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://191312.png" id="1_ebb3t"]
+[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://191312.png" id="2_24nbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1737f"]
 size = Vector2(75, 87)
@@ -21,11 +21,11 @@ angular_damp = 2.0
 script = ExtResource("1_5g45x")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(2, 2)
-texture = ExtResource("1_ebb3t")
+position = Vector2(-3, -6)
+texture = ExtResource("2_24nbb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(1, 1)
+position = Vector2(-1, -5)
 shape = SubResource("RectangleShape2D_1737f")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
