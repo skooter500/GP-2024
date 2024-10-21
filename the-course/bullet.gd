@@ -12,4 +12,9 @@ func _on_Bullet_body_entered(body):
 		body.queue_free()
 	queue_free()
 	if Input.is_action_just_pressed("shoot"):
-		shoot() 
+		shoot():
+		func shoot():
+	var b = Bullet.instance()
+	add_child(b)
+	b.transform = $Muzzle.transform
+	
