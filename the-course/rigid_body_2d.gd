@@ -9,7 +9,7 @@ var rotation_dir = 0
 func get_input():
 	thrust = Vector2.ZERO
 	if Input.is_action_pressed("thrust"):
-		thrust = transform.x * engine_power
+		thrust -= transform.y * engine_power
 	rotation_dir = Input.get_axis("rotate_left", "rotate_right")
 	
 func _physics_process(_delta):
