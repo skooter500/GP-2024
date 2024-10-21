@@ -54,6 +54,7 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 
 ## Week 5
 - GodotCon Update - [Check out my pictures](https://photos.app.goo.gl/iUpijUxEwGwgDWnu6)
+- Shooter Game
 - Check out [GDQuest for amazing free tutorials](https://www.gdquest.com/)!
 - Editing Godot projects on Quest 3
 - Music stuff
