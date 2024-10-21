@@ -23,17 +23,7 @@ texture = ExtResource("2_pcmpa")
 [node name="Sprite" parent="." instance=ExtResource("3_36rll")]
 position = Vector2(433, 271)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
+[node name="Label" type="Label" parent="."]
 offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Container" type="Container" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="Control/Container"]
-layout_mode = 2
-text = "1"
+offset_bottom = 23.0
+text = "123"
