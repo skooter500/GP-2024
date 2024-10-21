@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -400.0
 
 const TURN_RATE = 180
 
+<<<<<<< HEAD
 func print_stuff():
 <<<<<<< HEAD
 	DebugDraw2D.set_text("pos", position)
@@ -31,6 +32,8 @@ func print_stuff():
 	DebugDraw2D.set_text("transform.y",transform.y)
 	DebugDraw2D.set_text("pos",postion)
 
+=======
+>>>>>>> 492b090 (Commit 2)
 func _physics_process(delta: float) -> void:
 >>>>>>> bde809b (Commit 1)
 	
