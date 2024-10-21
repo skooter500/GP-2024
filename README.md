@@ -6,7 +6,7 @@ Welcome to the Metaverse
 
 # Introduction
 
-The aim of this course is to develop core technical skills in coding, digital literacy,  computational thinking, and use of git and other tools, that are used in software development and in the games industry. The course uses Godot Game Engine and github, however I will also show examples using Unity, Python and other relevant tehcnologies. Over the course of the module, students will build a portfolio of work on their github repositories and will have the opportunity to do projects in many creative areas such as art, music and of course games development. Skills acquired on the module are transferrable to other engines and technologies and provide solid foundation for a future career in game development.
+The aim of this course is to develop core technical skills in coding, digital literacy,  computational thinking, and use of git and other tools, that are used in software development and in the games industry. The course uses Godot Game Engine and github, however I will also show examples using Unity, Python and other relevant tehcnologies. Over the course of the module, students will build a portfolio of work on their github repositories and will have the opportunity to do projects in many creative areas such as art, music and games development. Skills acquired on the module are transferrable to other engines and technologies and provide solid foundation for a future career in game development.
 
 # Structure
 
@@ -44,13 +44,20 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 - [Git for poets](https://www.youtube.com/watch?v=BCQHnlnPusY)
 - [Godot for beginners](https://www.youtube.com/watch?v=LOhfqjmasi0)
 - [GDScript Tutorial](https://www.youtube.com/watch?v=e1zJS31tr88)
-- [Games Made in Godot to inspire you](https://www.youtube.com/@stayathomedev) 
+- [5 Games Made in Godot to inspire you each week](https://www.youtube.com/@stayathomedev) 
 - [Game dev news channel](https://www.youtube.com/@gamefromscratch)
 - [Class discord. Important to check this regularly as I share a lot of useful information here](https://discord.gg/3SwfCsH9)
 - [Godot discord](https://discord.com/invite/godotengine)
 - [Submit your fork of the git repo](https://forms.office.com/Pages/ResponsePage.aspx?id=yxdjdkjpX06M7Nq8ji_V2ou3qmFXqEdGlmiD1Myl3gNUQTMyV1NKWFVUWUwxQjZTS05SRTE1TEUxQi4u)
 
 # Content
+
+## Week 5
+- GodotCon Update - [Check out my pictures](https://photos.app.goo.gl/iUpijUxEwGwgDWnu6)
+- Shooter Game
+- Check out [GDQuest for amazing free tutorials](https://www.gdquest.com/)!
+- Editing Godot projects on Quest 3
+- Music stuff
 
 ## Week 4
 - Yoga

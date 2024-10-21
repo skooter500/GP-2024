@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://652vkknks7jc"]
+[gd_scene load_steps=3 format=3 uid="uid://652vkknks7jc"]
 
 [ext_resource type="PackedScene" uid="uid://cacpd8qvulvcp" path="res://player.tscn" id="1_unoke"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d0y8p"]
+
 [node name="root" type="Node2D"]
 
-[node name="player" parent="." node_paths=PackedStringArray("bullet_spawn_point") instance=ExtResource("1_unoke")]
-position = Vector2(230, 161)
-bullet_spawn_point = NodePath("Marker2D")
+[node name="player" parent="." instance=ExtResource("1_unoke")]
 
-[node name="Marker2D" type="Marker2D" parent="player"]
-position = Vector2(-1, 155)
+[node name="bullet_spawn_point" parent="player" index="3"]
+position = Vector2(0, -60)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(518, 523)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_d0y8p")
+
+[editable path="player"]
