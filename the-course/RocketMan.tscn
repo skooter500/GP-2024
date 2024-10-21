@@ -10,13 +10,13 @@ size = Vector2(75, 87)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(38, 44)
-mass = 5.0
-linear_damp = 2.0
+linear_damp = 1.0
 angular_damp = 2.0
 script = ExtResource("1_5g45x")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(-3, -3)
+rotation = 1.5708
 texture = ExtResource("1_ebb3t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]

@@ -1,32 +1,20 @@
 extends RigidBody2D
 
+@export var engine_power = 800
+@export var spin_power = 10000
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var thrust = Vector2.ZERO
+var rotation_dir = 0
 
-
-
-var speed:float = 250
-var rot_speed:float = 100
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func get_input():
+	thrust = Vector2.ZERO
+	if Input.is_action_pressed("thrust"):
+		thrust = transform.x * engine_power
+	rotation_dir = Input.get_axis("rotate_left", "rotate_right")
 	
-	#rotate(deg_to_rad(rot_speed * delta))
-	#translate(Vector2(10, speed * delta)) 
+func _physics_process(_delta):
+	get_input()
+	constant_force = thrust
+	constant_torque = rotation_dir * spin_power
 	
-	#global_translate(Vector2(10, speed * delta))
-	var s = speed
-	var rs = rot_speed
-
-	if Input.is_key_pressed(KEY_UP):
-		position -= linear_velocity * speed * delta
-
-	if Input.is_key_pressed(KEY_LEFT):
-		rotate(deg_to_rad(-rot_speed * delta))
-		
-	if Input.is_key_pressed(KEY_RIGHT):
-		rotate(deg_to_rad(rot_speed * delta))
-	
-	pass
+pass
