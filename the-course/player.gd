@@ -8,6 +8,9 @@ const JUMP_VELOCITY = -400.0
 
 const TURN_RATE = 180
 
+func _ready():
+	global_position
+
 func _physics_process(delta: float) -> void:
 	
 	var r = Input.get_axis("turn_left", "turn_right")
@@ -26,5 +29,9 @@ func _physics_process(delta: float) -> void:
 		var b = bullet_scene.instantiate()
 		b.global_position = bullet_spawn_point.global_position
 		get_parent().add_child(b)
+	 
+	if $Enemy5.global_position == global_position:
+		velocity/2
+		
 	
 	move_and_slide()
