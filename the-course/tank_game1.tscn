@@ -34,22 +34,36 @@ bullet_spawn = NodePath("shoot_point")
 stream = ExtResource("5_ee1yw")
 script = ExtResource("6_6rfpp")
 
+<<<<<<< HEAD
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
 polygon = PackedVector2Array(-24, -25, -5, -25, -5, -79, 4, -79, 4, -24, 24, -24, 24, 2.17238, 24, 24, -26, 25)
 
 [node name="Sprite2D" type="Sprite2D" parent="player/CollisionPolygon2D"]
+=======
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 modulate = Color(0.623529, 0.52549, 0.27451, 1)
 material = SubResource("CanvasItemMaterial_m7bvt")
 scale = Vector2(50, 50)
 texture = SubResource("CanvasTexture_7xkkn")
 
+<<<<<<< HEAD
 [node name="Sprite2D2" type="Sprite2D" parent="player/CollisionPolygon2D/Sprite2D"]
+=======
+[node name="Sprite2D2" type="Sprite2D" parent="player/Sprite2D"]
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 modulate = Color(0.588235, 0.537255, 0.309804, 1)
 material = SubResource("CanvasItemMaterial_m7bvt")
 position = Vector2(0, -0.565)
 scale = Vector2(0.2, 2)
 texture = SubResource("CanvasTexture_7xkkn")
 
+<<<<<<< HEAD
+=======
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
+polygon = PackedVector2Array(-24, -25, -5, -25, -5, -79, 4, -79, 4, -24, 24, -24, 24, 24, -26, 25)
+
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 [node name="shoot_point" type="Node2D" parent="player"]
 position = Vector2(0, -87)
 
@@ -77,6 +91,9 @@ offset_bottom = 50.0
 text = "Click the screen to create things to shoot"
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(1, 1)
+=======
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 
 [connection signal="timeout" from="player/Timer" to="player" method="_on_timer_timeout"]

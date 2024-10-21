@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 {
     "godotTools.editorPath.godot4": "c:\\Godot_v4.3-stable_win64.exe\\Godot_v4.3-stable_win64.exe"
+=======
+{
+    "godotTools.editorPath.godot4": "c:\\Godot_v4.3-stable_win64.exe\\Godot_v4.3-stable_win64.exe"
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 }

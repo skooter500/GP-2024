@@ -22,9 +22,17 @@ func _physics_process(delta: float) -> void:
 	print(transform.y)
 	velocity = vel
 	
+<<<<<<< HEAD
 	if Input.is_action_pressed("fire"):
 		var b = bullet_scene.instantiate()
 		b.global_position = bullet_spawn_point.global_position
+=======
+	
+	if Input.is_action_pressed("fire"):
+		var b = bullet_scene.instantiate()
+		b.global_position = bullet_spawn_point.global_position
+		b.global_rotation = bullet_spawn_point.global_rotation
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 		get_parent().add_child(b)
 	
 	move_and_slide()
