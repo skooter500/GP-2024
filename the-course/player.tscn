@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cacpd8qvulvcp"]
+[gd_scene load_steps=4 format=3 uid="uid://cacpd8qvulvcp"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_jcss3"]
 [ext_resource type="Texture2D" uid="uid://04l6fjuge313" path="res://assets/PNG/Sprites/Ships/spaceShips_001.png" id="2_m46rs"]
@@ -18,11 +18,4 @@ bullet_spawn_point = NodePath("bullet_spawn_point")
 rotation = 3.14159
 texture = ExtResource("2_m46rs")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_5gtcp")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-texture = ExtResource("3_jwfmr")
-
 [node name="bullet_spawn_point" type="Marker2D" parent="."]
-position = Vector2(0, -50)

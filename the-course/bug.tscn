@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b26mblvmunn4a"]
 
 [ext_resource type="Script" path="res://bug.gd" id="1_nnkhd"]
-[ext_resource type="PackedScene" path="res://bomb.tscn" id="2_s2pxd"]
+[ext_resource type="PackedScene" uid="uid://wk5jgsobmh3w" path="res://bomb.tscn" id="2_s2pxd"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="3_cqlux"]
 [ext_resource type="Texture2D" uid="uid://c844yfbd26ea8" path="res://sprites/bug.png" id="3_ferv2"]
 [ext_resource type="AudioStream" uid="uid://dr7urkmsac1h7" path="res://sounds/Laser_Shoot42.wav" id="4_j6f0n"]
@@ -21,7 +21,7 @@ autostart = true
 texture = ExtResource("3_ferv2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-16, 15, -11, 1, -16, 2, -17, -2, -1, -19, 19, 1, 9, 1, 9, 6, 16, 12, 15, 18, 8, 17, 2, 10, 3, 5, -3, 1, -8, 17)
+polygon = PackedVector2Array(-11, 14, -7, 5, -10, 5, -13, 4, -16, 2, -16, -1, -14.9844, -2.01563, -13, -2, -10, -6, -9.98438, -7.01563, -2, -15, -2, -16, 2, -16, 2, -15, 10.1406, -6.85938, 10, -5, 13, -2, 15, -2, 16, -1, 15.9974, 2.50131, 13, 4, 10, 5, 7, 5, 11, 14, 12, 16, 10, 16, 5, 5, 2, 5, 2, 4, -2, 4, -2.08725, 5, -5, 5, -9, 16, -11.6325, 16.0919)
 
 [node name="bomb_spawn" type="Marker2D" parent="."]
 position = Vector2(0, 45)

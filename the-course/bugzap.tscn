@@ -20,7 +20,7 @@ size = Vector2(16, 623)
 script = ExtResource("1_s2q5l")
 
 [node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(464, 730)
+position = Vector2(462, 632)
 script = ExtResource("1_vqb0a")
 explosion_scene = ExtResource("2_rwge8")
 
@@ -54,7 +54,8 @@ shape = SubResource("RectangleShape2D_7kvm8")
 position = Vector2(100, 100)
 
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
-offset_right = 295.0
+offset_left = 3.0
+offset_right = 298.0
 offset_bottom = 72.0
 theme = ExtResource("8_12hsc")
 
@@ -69,6 +70,10 @@ text = "LIVES: 3
 "
 
 [node name="bug_spawner" type="Node2D" parent="."]
+visible = false
+script = ExtResource("9_oaua2")
+
+[node name="bug_spawner2" type="Node2D" parent="."]
 visible = false
 script = ExtResource("9_oaua2")
 
