@@ -6,8 +6,13 @@
 
 [node name="player" parent="." instance=ExtResource("1_unoke")]
 
+[node name="bullet_spawn_point" parent="player" index="3"]
+position = Vector2(0, -60)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(518, 523)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-317, -292, -305, -337, -304, -339, -288, -343, -288, -346, -271, -346, -271, -340, -258, -340, -258, -346, -242, -346, -242, -343, -224, -339, -223, -337, -211, -293, -211, -290, -233, -267, -237, -268, -242, -272, -238, -278, -242, -278, -245, -286, -245, -291, -243, -293, -243, -296, -248, -302, -255, -282, -273, -282, -279, -303, -284, -299, -285, -293, -283, -290, -286, -279, -291, -278, -286, -272, -290, -268, -296, -268, -317, -290)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_d0y8p")
+
+[editable path="player"]
