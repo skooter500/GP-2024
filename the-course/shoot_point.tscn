@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dmnjcei6dc26l"]
+
+[node name="shoot_point" type="Node2D"]
+position = Vector2(0, -87)

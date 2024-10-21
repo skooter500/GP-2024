@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dum0vq7fy15st"]
+[gd_scene load_steps=13 format=3 uid="uid://dum0vq7fy15st"]
 
 [ext_resource type="Script" path="res://root1.gd" id="1_027t5"]
 [ext_resource type="FontFile" uid="uid://0jk2p2kfmllu" path="res://fonts/Hyperspace Bold.otf" id="2_601f3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="4_w5fy6"]
 [ext_resource type="AudioStream" uid="uid://bq4kjn4r61ps2" path="res://sounds/jet.wav" id="5_ee1yw"]
 [ext_resource type="Script" path="res://jet_sound.gd" id="6_6rfpp"]
+[ext_resource type="PackedScene" uid="uid://dmnjcei6dc26l" path="res://shoot_point.tscn" id="7_bvrg8"]
 [ext_resource type="Script" path="res://spawner.gd" id="7_jndn7"]
 [ext_resource type="PackedScene" uid="uid://bwi6lmhwtpkeh" path="res://block.tscn" id="8_jabo1"]
 [ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="9_uakw0"]
@@ -28,7 +29,7 @@ script = ExtResource("3_hurv8")
 power = 10000.0
 rot_power = 10000.0
 bullet_scene = ExtResource("4_w5fy6")
-bullet_spawn = NodePath("shoot_point")
+bullet_spawn = NodePath("")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="player"]
 stream = ExtResource("5_ee1yw")
@@ -47,11 +48,12 @@ position = Vector2(0, -0.565)
 scale = Vector2(0.2, 2)
 texture = SubResource("CanvasTexture_7xkkn")
 
+[node name="Camera2D" type="Camera2D" parent="player/Sprite2D"]
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
 polygon = PackedVector2Array(-24, -25, -5, -25, -5, -79, 4, -79, 4, -24, 24, -24, 24, 24, -26, 25)
 
-[node name="shoot_point" type="Node2D" parent="player"]
-position = Vector2(0, -87)
+[node name="shoot_point" parent="player" instance=ExtResource("7_bvrg8")]
 
 [node name="Timer" type="Timer" parent="player"]
 wait_time = 0.2
