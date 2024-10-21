@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2ywc8wsl1ikj"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_ft5pe"]
+[ext_resource type="Texture2D" uid="uid://b70diaad65ppu" path="res://bow.jpg" id="1_kyvdw"]
+[ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="2_on6tv"]
+
+[node name="root" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn_point")]
+position = Vector2(178, 153)
+script = ExtResource("1_ft5pe")
+bullet_scene = ExtResource("2_on6tv")
+bullet_spawn_point = NodePath("Marker2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_kyvdw")
+
+[node name="Marker2D" type="Marker2D" parent="CharacterBody2D"]
+position = Vector2(-6, -103)
