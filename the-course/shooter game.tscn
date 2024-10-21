@@ -18,7 +18,7 @@ size = Vector2(31.5, 35)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eqfl4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3d4rm"]
-radius = 76.0349
+radius = 47.0724
 
 [node name="Node2D" type="Node2D"]
 
@@ -119,6 +119,8 @@ position = Vector2(-0.75, 1.5)
 shape = SubResource("CircleShape2D_3d4rm")
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy5"]
+position = Vector2(0.999989, -1)
+scale = Vector2(0.494186, 0.480132)
 texture = ExtResource("8_d52hu")
 
 [connection signal="timeout" from="Spaceman/Timer" to="Spaceman" method="_on_timer_timeout"]
