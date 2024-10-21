@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cfa8ngqfetkl" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_011.png" id="3_jwfmr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gtcp"]
-radius = 50.0
+radius = 40.0
 
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("bullet_spawn_point")]
 position = Vector2(254, 215)
@@ -15,6 +15,7 @@ bullet_scene = ExtResource("2_tps20")
 bullet_spawn_point = NodePath("bullet_spawn_point")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
 texture = ExtResource("2_m46rs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -24,4 +25,4 @@ shape = SubResource("CircleShape2D_5gtcp")
 texture = ExtResource("3_jwfmr")
 
 [node name="bullet_spawn_point" type="Marker2D" parent="."]
-position = Vector2(2, 170)
+position = Vector2(0, -50)

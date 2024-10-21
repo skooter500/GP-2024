@@ -8,8 +8,13 @@
 
 [node name="player" parent="." instance=ExtResource("1_unoke")]
 
+[node name="bullet_spawn_point" parent="player" index="3"]
+position = Vector2(0, -60)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(518, 523)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_d0y8p")
+
+[editable path="player"]
