@@ -3,10 +3,11 @@
 [ext_resource type="Script" path="res://bugzap.gd" id="1_s2q5l"]
 [ext_resource type="Script" path="res://bug_player.gd" id="1_vqb0a"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="2_rwge8"]
-[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://191312.png" id="4_e2he0"]
+[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="4_e2he0"]
 [ext_resource type="PackedScene" uid="uid://b26mblvmunn4a" path="res://bug.tscn" id="4_k6dp0"]
 [ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="8_12hsc"]
 [ext_resource type="Script" path="res://bug_spawner.gd" id="9_oaua2"]
+
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2f7eg"]
 size = Vector2(10, 30)

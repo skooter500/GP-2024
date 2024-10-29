@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i8pp0u427i1v"
-path="res://.godot/imported/191312.png-4bb533e7f69bbd98578c2585d92efc86.ctex"
+path="res://.godot/imported/191312.png-92e9702f835fc9b35ec5d71c729c0709.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://191312.png"
-dest_files=["res://.godot/imported/191312.png-4bb533e7f69bbd98578c2585d92efc86.ctex"]
+source_file="res://Bomber Man/191312.png"
+dest_files=["res://.godot/imported/191312.png-92e9702f835fc9b35ec5d71c729c0709.ctex"]
 
 [params]
 

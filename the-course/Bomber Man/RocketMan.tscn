@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqvm1txmqy61t"]
 
 [ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_5g45x"]
-[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://191312.png" id="2_24nbb"]
+[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="2_24nbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1737f"]
 size = Vector2(75, 87)
