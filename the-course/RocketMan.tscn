@@ -34,20 +34,20 @@ shape = SubResource("RectangleShape2D_1737f")
 position = Vector2(-8.375, 621.125)
 shape = SubResource("RectangleShape2D_vboc1")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(1880, 603)
-shape = SubResource("RectangleShape2D_vboc1")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2"]
 position = Vector2(1062.25, -9)
 shape = SubResource("RectangleShape2D_4qiui")
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+[node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D/StaticBody2D2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3"]
+position = Vector2(1880, 603)
+shape = SubResource("RectangleShape2D_vboc1")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4"]
 position = Vector2(1069, 935)
 shape = SubResource("RectangleShape2D_4qiui")

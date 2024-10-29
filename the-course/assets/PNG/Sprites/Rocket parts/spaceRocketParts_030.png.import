@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0qau82jufwj0"
-path="res://.godot/imported/spaceRocketParts_030.png-0fed3d8cc2f0034e7e2d858723ee6756.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://assets/PNG/Sprites/Rocket parts/spaceRocketParts_030.png"
-dest_files=["res://.godot/imported/spaceRocketParts_030.png-0fed3d8cc2f0034e7e2d858723ee6756.ctex"]
 
 [params]
 
