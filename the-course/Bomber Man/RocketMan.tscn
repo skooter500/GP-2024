@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqvm1txmqy61t"]
 
-[ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_5g45x"]
-[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="2_24nbb"]
+[ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_dg82q"]
+[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="2_03q06"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1737f"]
 size = Vector2(75, 87)
@@ -18,11 +18,11 @@ size = Vector2(2183.5, 40)
 position = Vector2(540, 295)
 linear_damp = 1.0
 angular_damp = 2.0
-script = ExtResource("1_5g45x")
+script = ExtResource("1_dg82q")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(-3, -6)
-texture = ExtResource("2_24nbb")
+texture = ExtResource("2_03q06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(-1, -5)
@@ -31,23 +31,23 @@ shape = SubResource("RectangleShape2D_1737f")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-8.375, 621.125)
+position = Vector2(-29, 608)
 shape = SubResource("RectangleShape2D_vboc1")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2"]
-position = Vector2(1062.25, -9)
+position = Vector2(723, -18)
 shape = SubResource("RectangleShape2D_4qiui")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D/StaticBody2D2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3"]
-position = Vector2(1880, 603)
+position = Vector2(1182, 544)
 shape = SubResource("RectangleShape2D_vboc1")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4"]
-position = Vector2(1069, 935)
+position = Vector2(871, 667)
 shape = SubResource("RectangleShape2D_4qiui")
