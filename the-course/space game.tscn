@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://652vkknks7jc"]
+[gd_scene load_steps=6 format=3 uid="uid://652vkknks7jc"]
 
 [ext_resource type="PackedScene" uid="uid://cacpd8qvulvcp" path="res://player.tscn" id="1_unoke"]
+[ext_resource type="Texture2D" uid="uid://c8suijkma2w3w" path="res://assets/PNG/Sprites/Station/spaceStation_020.png" id="2_3jvc7"]
+[ext_resource type="PackedScene" uid="uid://p0jgv26ofn3x" path="res://satellite.tscn" id="3_tg57x"]
+[ext_resource type="PackedScene" uid="uid://b26mblvmunn4a" path="res://bug.tscn" id="4_4dvca"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d0y8p"]
 
@@ -8,13 +11,27 @@
 
 [node name="player" parent="." instance=ExtResource("1_unoke")]
 
-[node name="bullet_spawn_point" parent="player" index="3"]
+[node name="bullet_spawn_point" parent="player" index="2"]
 position = Vector2(0, -60)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(518, 523)
+[node name="border1" type="StaticBody2D" parent="."]
+position = Vector2(518, 1828)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border1"]
 shape = SubResource("WorldBoundaryShape2D_d0y8p")
 
+[node name="SpaceStation020" type="Sprite2D" parent="."]
+position = Vector2(913, 256)
+rotation = 0.556657
+texture = ExtResource("2_3jvc7")
+
+[node name="satellite" parent="." groups=["block"] instance=ExtResource("3_tg57x")]
+scale = Vector2(0.560703, 0.703692)
+
+[node name="bug" parent="." instance=ExtResource("4_4dvca")]
+position = Vector2(651, 444)
+rotation = 0.376962
+scale = Vector2(0.560703, 0.703692)
+
 [editable path="player"]
+[editable path="satellite"]

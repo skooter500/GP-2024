@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://p0jgv26ofn3x"]
+
+[ext_resource type="Texture2D" uid="uid://locu6hlgvtw5" path="res://assets/PNG/Sprites/Station/spaceStation_019.png" id="1_cwiph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6tgn"]
+size = Vector2(86.9441, 30.9174)
+
+[sub_resource type="Animation" id="Animation_3llbu"]
+resource_name = "spin"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.376962, -2.77454]
+}
+
+[sub_resource type="Animation" id="Animation_nwms3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.376962]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cq0mh"]
+_data = {
+"RESET": SubResource("Animation_nwms3"),
+"spin": SubResource("Animation_3llbu")
+}
+
+[node name="SpaceStation019" type="Sprite2D"]
+position = Vector2(693, 238)
+rotation = 0.376962
+texture = ExtResource("1_cwiph")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+rotation = -0.795559
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.197922, -0.395386)
+rotation = -2.3533
+scale = Vector2(1.97599, -1.66185)
+shape = SubResource("RectangleShape2D_m6tgn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cq0mh")
+}
