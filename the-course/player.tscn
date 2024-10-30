@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cacpd8qvulvcp"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_jcss3"]
-[ext_resource type="Texture2D" uid="uid://04l6fjuge313" path="res://assets/PNG/Sprites/Ships/spaceShips_001.png" id="2_m46rs"]
+[ext_resource type="Texture2D" path="res://assets/PNG/Sprites/Ships/spaceShips_001.png" id="2_m46rs"]
 [ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="2_tps20"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gtcp"]
@@ -32,5 +32,6 @@ wait_time = 0.2
 position = Vector2(0, 46)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
 
 [connection signal="timeout" from="shoot_timer" to="." method="_on_timer_timeout"]
