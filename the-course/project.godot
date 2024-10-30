@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="The Course 2024"
+<<<<<<< HEAD
 run/main_scene="res://scifi spaceship game supreme.tscn"
+=======
+run/main_scene="res://space game.tscn"
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 

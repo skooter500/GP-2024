@@ -25,12 +25,18 @@ func _physics_process(delta: float) -> void:
 	print(transform.y)
 	velocity = vel
 	
+<<<<<<< HEAD
 	if Input.is_action_pressed("fire") and can_shoot:
+=======
+	
+	if Input.is_action_pressed("fire"):
+>>>>>>> bb5f40e80b73069e85d7ffc68436e713392cb601
 		var b = bullet_scene.instantiate()
 		
 		can_shoot = false
 		b.global_rotation = bullet_spawn_point.global_rotation
 		b.global_position = bullet_spawn_point.global_position
+		b.global_rotation = bullet_spawn_point.global_rotation
 		get_parent().add_child(b)
 		$Timer.start()
 	
