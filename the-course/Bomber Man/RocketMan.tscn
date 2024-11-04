@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqvm1txmqy61t"]
+[gd_scene load_steps=9 format=3 uid="uid://bqvm1txmqy61t"]
 
 [ext_resource type="Script" path="res://Bomber Man/rocket_man.gd" id="1_bs004"]
 [ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_dg82q"]
 [ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="2_03q06"]
 [ext_resource type="Texture2D" uid="uid://c67qrds413ar4" path="res://Bomber Man/il_1080xN.5941421093_t2y6.jpg" id="3_5ubvf"]
+[ext_resource type="Texture2D" uid="uid://crbchji1blac0" path="res://Bomber Man/pngtree-pixel-art-rocket-png-image_13061388.png" id="5_tfero"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1737f"]
 size = Vector2(77.5, 88.5)
@@ -59,3 +60,8 @@ shape = SubResource("RectangleShape2D_vboc1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4"]
 position = Vector2(871, 667)
 shape = SubResource("RectangleShape2D_4qiui")
+
+[node name="Pngtree-pixel-art-rocket-png-image13061388" type="Sprite2D" parent="."]
+position = Vector2(252.75, 251.25)
+scale = Vector2(0.167083, 0.139583)
+texture = ExtResource("5_tfero")
