@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bqvm1txmqy61t"]
+[gd_scene load_steps=12 format=3 uid="uid://bqvm1txmqy61t"]
 
 [ext_resource type="Script" path="res://Bomber Man/rocket_man.gd" id="1_bs004"]
 [ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_dg82q"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c67qrds413ar4" path="res://Bomber Man/il_1080xN.5941421093_t2y6.jpg" id="3_5ubvf"]
 [ext_resource type="Texture2D" uid="uid://4qhlohohle31" path="res://Bomber Man/360x360.jpg" id="5_5lxxe"]
 [ext_resource type="Script" path="res://Bomber Man/pngtree_pixel_art_rocket_png_image_13061388.gd" id="6_x4fuc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exyn6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1737f"]
 size = Vector2(77.5, 88.5)
@@ -15,6 +17,9 @@ size = Vector2(55.25, 1228.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qiui"]
 size = Vector2(2183.5, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1un47"]
+size = Vector2(361.311, 362.252)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_bs004")
@@ -33,6 +38,12 @@ script = ExtResource("1_dg82q")
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(1, 0)
 texture = ExtResource("2_03q06")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D/Sprite2D"]
+position = Vector2(-541, -295)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Sprite2D/Area2D"]
+shape = SubResource("RectangleShape2D_exyn6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 position = Vector2(1.25, -0.25)
@@ -62,8 +73,15 @@ shape = SubResource("RectangleShape2D_vboc1")
 position = Vector2(871, 667)
 shape = SubResource("RectangleShape2D_4qiui")
 
-[node name="Pngtree-pixel-art-rocket-png-image13061388" type="Sprite2D" parent="."]
+[node name="shidstain" type="Sprite2D" parent="."]
 position = Vector2(283, 268)
 scale = Vector2(0.514792, 0.499653)
 texture = ExtResource("5_5lxxe")
 script = ExtResource("6_x4fuc")
+
+[node name="Area2D" type="Area2D" parent="shidstain"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shidstain/Area2D"]
+position = Vector2(-6.10352e-05, 1.00085)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1un47")
