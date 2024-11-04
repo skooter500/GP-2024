@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqvm1txmqy61t"]
+[gd_scene load_steps=8 format=3 uid="uid://bqvm1txmqy61t"]
 
+[ext_resource type="Script" path="res://Bomber Man/rocket_man.gd" id="1_bs004"]
 [ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_dg82q"]
 [ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="2_03q06"]
+[ext_resource type="Texture2D" uid="uid://c67qrds413ar4" path="res://Bomber Man/il_1080xN.5941421093_t2y6.jpg" id="3_5ubvf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1737f"]
-size = Vector2(75, 87)
+size = Vector2(77.5, 88.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vboc1"]
 size = Vector2(55.25, 1228.25)
@@ -13,6 +15,12 @@ size = Vector2(55.25, 1228.25)
 size = Vector2(2183.5, 40)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_bs004")
+
+[node name="Il1080xN_5941421093T2y6" type="Sprite2D" parent="."]
+position = Vector2(588, 326)
+scale = Vector2(1.30556, 0.803704)
+texture = ExtResource("3_5ubvf")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(540, 295)
@@ -21,11 +29,11 @@ angular_damp = 2.0
 script = ExtResource("1_dg82q")
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(-3, -6)
+position = Vector2(1, 0)
 texture = ExtResource("2_03q06")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(-1, -5)
+position = Vector2(1.25, -0.25)
 shape = SubResource("RectangleShape2D_1737f")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

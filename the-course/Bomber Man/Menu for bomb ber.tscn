@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cleyudmu0av3k"]
+[gd_scene load_steps=3 format=3 uid="uid://cleyudmu0av3k"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_2mxjt"]
+[ext_resource type="Texture2D" uid="uid://d0wptppajim7a" path="res://Bomber Man/1000_F_572788249_Lpiz0SMKEh1XU4y3Lj7NXjZW89yXw4ZC.jpg" id="2_13ew1"]
 
 [node name="MENU" type="Control"]
 layout_mode = 3
@@ -14,6 +15,11 @@ offset_bottom = -398.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2mxjt")
+
+[node name="1000F572788249Lpiz0smkEh1xu4y3Lj7nXjZw89yXw4zc" type="Sprite2D" parent="."]
+position = Vector2(340, 218.25)
+scale = Vector2(1.15, 1.04273)
+texture = ExtResource("2_13ew1")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0

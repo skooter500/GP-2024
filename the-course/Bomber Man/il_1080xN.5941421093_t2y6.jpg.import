@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0qau82jufwj0"
-path="res://.godot/imported/spaceRocketParts_030.png-0fed3d8cc2f0034e7e2d858723ee6756.ctex"
+uid="uid://c67qrds413ar4"
+path="res://.godot/imported/il_1080xN.5941421093_t2y6.jpg-e7364918251307556a57882a3e38d425.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/PNG/Sprites/Rocket parts/spaceRocketParts_030.png"
-dest_files=["res://.godot/imported/spaceRocketParts_030.png-0fed3d8cc2f0034e7e2d858723ee6756.ctex"]
+source_file="res://Bomber Man/il_1080xN.5941421093_t2y6.jpg"
+dest_files=["res://.godot/imported/il_1080xN.5941421093_t2y6.jpg-e7364918251307556a57882a3e38d425.ctex"]
 
 [params]
 
