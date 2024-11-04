@@ -7,14 +7,18 @@ var thrust = Vector2.ZERO
 var rotation_dir = 0
 var esc = KEY_ESCAPE
 
-func _on_CollisionShape2D_area_entered(area):
+func _on_RigidBody2D_area_entered(area):
 	if area.get_parent().name.begins_with("shidstain"):
 		get_tree().quit()
 	pass
 
-func _on_CollisionShape2D_body_entered(body):
+func _on_RigidBody2D_body_entered(body):
 	if body.name.begins_with("shidstain"):
 		print("collided with", body.get_parent().get_name())
+		get_tree().quit()
+	pass
+func _input_event(viewport, event, shape_idx):
+	if $"../shidstain":
 		get_tree().quit()
 	pass
 	
