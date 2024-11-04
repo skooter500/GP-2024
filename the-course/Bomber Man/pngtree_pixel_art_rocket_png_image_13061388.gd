@@ -1,6 +1,6 @@
 extends Sprite2D
 @export var time = 5
-@export var speed = 10
+@export var speed = 50
 @onready var player = $"../RigidBody2D/Sprite2D"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,7 +8,7 @@ func _ready() -> void:
 	var b:float = 0
 	
 	for i in range(17):
-	b = a * 17.0
+		b = a * 17.0
 	print(b)
 	pass
 	var tot_time:float = 0
@@ -16,13 +16,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	var to_player:Vector2 = player.global_position - global_position
-	
-	if to_player.lenght() > 0.5:
-	
-	to_player = to_player.normalized()
-	
-	global_position = global_position + to_player * speed * delta
-	
-	tot_time += delta 
-		
-	pass
+	if to_player.length() > 0.5:
+		to_player = to_player.normalized()
+		global_position = global_position + to_player * speed * delta
+		pass
