@@ -1,15 +1,16 @@
 extends CharacterBody2D
 
+
 @export var bullet_scene:PackedScene
 @export var bullet_spawn_point:Node2D
+@onready var shoot_timer: Timer = $shoot_timer
 
-var can_shoot = true
-
-const SPEED = 250.0
-const shoot_speed = 5
+const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
 
 const TURN_RATE = 180
+
+var shooting = false
 
 func _physics_process(delta: float) -> void:
 	
@@ -25,17 +26,18 @@ func _physics_process(delta: float) -> void:
 	print(transform.y)
 	velocity = vel
 	
-	if Input.is_action_pressed("fire") and can_shoot:
+
+	
+	if Input.is_action_pressed("fire") and shooting == false:
+		shooting = true
 		var b = bullet_scene.instantiate()
-		
-		can_shoot = false
-		b.global_rotation = bullet_spawn_point.global_rotation
 		b.global_position = bullet_spawn_point.global_position
+		b.global_rotation = bullet_spawn_point.global_rotation
 		get_parent().add_child(b)
-		$Timer.start()
+		shoot_timer.start()
 	
 	move_and_slide()
 
-func _on_timer_timeout():
-	can_shoot = true
-	pass # Replace with function body.
+
+func _on_timer_timeout() -> void:
+	shooting = false

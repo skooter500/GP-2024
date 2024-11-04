@@ -1,0 +1,8 @@
+res://space game.tscn
+res://player.gd
+res://player.tscn
+res://bullet.tscn
+res://satellite.tscn
+res://bug.tscn
+res://bullet.gd
+res://bug.gd

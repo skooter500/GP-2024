@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
-@export var speed = 20
+@export var speed:float
+
 
 @export var explosion:PackedScene
 
 	
 func _process(delta):
-	velocity = transform.y * speed
+	velocity = -transform.y * speed
 	var c =  move_and_collide(velocity * delta)
 	if c:
 		if c.get_collider().name.contains("block"):
@@ -20,8 +21,4 @@ func _process(delta):
 
 func _on_timer_timeout():
 	self.queue_free()
-	pass # Replace with function body.
-
-
-func _on_area_2d_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.
