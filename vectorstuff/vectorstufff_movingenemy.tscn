@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b551x5vuroplh"]
+
+[ext_resource type="Texture2D" uid="uid://r573hqd7f0qi" path="res://icon.svg" id="1_p811b"]
+[ext_resource type="Texture2D" uid="uid://dgp1c1vydjn20" path="res://bow.jpg" id="2_py55v"]
+[ext_resource type="Script" path="res://bug.gd" id="3_a3v5q"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" type="Sprite2D" parent="."]
+texture = ExtResource("1_p811b")
+
+[node name="bug" type="Sprite2D" parent="."]
+position = Vector2(318, 132)
+texture = ExtResource("2_py55v")
+script = ExtResource("3_a3v5q")
