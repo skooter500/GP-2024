@@ -1,7 +1,7 @@
 extends Sprite2D
 @export var time = 5
 @export var speed = 50
-@onready var player = $"../RigidBody2D/body"
+@onready var player = $"../Player"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var a:float = 10 / 17.0

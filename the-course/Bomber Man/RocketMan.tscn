@@ -29,23 +29,23 @@ position = Vector2(588, 326)
 scale = Vector2(1.30556, 0.803704)
 texture = ExtResource("3_5ubvf")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="Player" type="RigidBody2D" parent="."]
 position = Vector2(540, 295)
 linear_damp = 1.0
 angular_damp = 2.0
 script = ExtResource("1_dg82q")
 
-[node name="body" type="Sprite2D" parent="RigidBody2D"]
+[node name="body" type="Sprite2D" parent="Player"]
 position = Vector2(1, 0)
 texture = ExtResource("2_03q06")
 
-[node name="Area2D" type="Area2D" parent="RigidBody2D/body"]
+[node name="Area2D" type="Area2D" parent="Player/body"]
 position = Vector2(-541, -295)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/body/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/body/Area2D"]
 shape = SubResource("RectangleShape2D_exyn6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(1.25, -0.25)
 shape = SubResource("RectangleShape2D_1737f")
 
@@ -80,14 +80,6 @@ texture = ExtResource("5_5lxxe")
 script = ExtResource("6_x4fuc")
 
 [node name="Area2D" type="Area2D" parent="shidstain"]
-
-[node name="evil" type="RigidBody2D" parent="shidstain/Area2D"]
-scale = Vector2(1, 1)
-
-[node name="shidstain" type="CollisionShape2D" parent="shidstain/Area2D/evil"]
-position = Vector2(-6.10352e-05, 1.00085)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_1un47")
 
 [node name="shidstain2" type="CollisionShape2D" parent="shidstain/Area2D"]
 position = Vector2(-6.10352e-05, 1.00085)

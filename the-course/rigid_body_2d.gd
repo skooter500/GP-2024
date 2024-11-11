@@ -11,9 +11,9 @@ func _on_RigidBody2D_area_entered(area):
 	if area.get_parent().name.begins_with("shidstain"):
 		get_tree().quit()
 	pass
-	
-func _on_Sprite2D_body_entered(body):
-	if Sprite2D.name.begins_with("shidstain"):
+
+func _on_RigidBody2D_body_entered(body):
+	if RigidBody2D.name.begins_with("evil"):
 		print("collided with", body.get_parent().get_name())
 		get_tree().quit()
 	pass
@@ -32,6 +32,4 @@ func _physics_process(_delta):
 	constant_force = thrust
 	constant_torque = rotation_dir * spin_power
 	
-
-
 pass
