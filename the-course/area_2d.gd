@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var explosion_scene:PackedScene
+
 func _ready() -> void:
 	
 	var f:float
@@ -36,12 +38,22 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	DebugDraw2D.set_text("pos", position)
+	DebugDraw2D.set_text("gp", global_position)
+	DebugDraw2D.set_text("rot", rotation)
+	DebugDraw2D.set_text("gr", global_rotation)
+
+	rotation -= 0.1
 	
+	position.x += 1
 
 func _on_area_entered(area: Area2D) -> void:
 	print("Collieded!")
 	print(area)
 	area.queue_free()
+	
+	var explosion:Node2D = explosion_scene.instantiate()
+	explosion.global_position = area.global_position
+	get_parent().add_child(explosion)
 	pass
 	
 	
