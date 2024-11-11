@@ -4,6 +4,5 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4dm8i")
-speed = null
 
 [node name="Player" type="Sprite2D" parent="."]
