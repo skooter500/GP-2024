@@ -18,8 +18,8 @@ func _on_RigidBody2D_body_entered(body):
 		get_tree().quit()
 	pass
 func _input_event(viewport, event, shape_idx):
-	if $"../shidstain":
-		get_tree().quit()
+	if CollisionShape2D.shape.begins_with("shidstain"):
+		get_tree().change_scene_to_file("res://Bomber Man/Menu for bomb ber.tscn")
 	pass
 	
 func get_input():
