@@ -6,6 +6,8 @@ extends Area2D
 
 var target_pos:Vector2
 
+signal bug_hit
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -43,10 +45,13 @@ func drop_bomb():
 
 
 func _on_area_entered(area):
-	if area.name == "laser":
+	print(area)
+	if area.name == "laser_area":
 		var explosion = explosion_scene.instantiate()
 		explosion.global_position = global_position
 		explosion.emitting = true
 		get_tree().root.add_child(explosion)
-		# self.queue_free()		
+		# delete me		
+		self.queue_free()		
+		emit_signal("bug_hit")
 pass

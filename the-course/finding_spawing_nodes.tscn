@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://dth1ll88fyqb7"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_auafa"]
+[ext_resource type="PackedScene" uid="uid://b26mblvmunn4a" path="res://bug.tscn" id="2_weddt"]
+[ext_resource type="Texture2D" uid="uid://dnku55dcgmtb2" path="res://icon.svg" id="3_4soax"]
+[ext_resource type="Script" path="res://godot_syntax.gd" id="4_7meu2"]
+[ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="5_pldsn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uphih"]
+size = Vector2(124, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukdl2"]
+size = Vector2(131, 129)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_auafa")
+bug_scene = ExtResource("2_weddt")
+
+[node name="wall2" type="Area2D" parent="."]
+position = Vector2(720, 112)
+
+[node name="Sprite2D" type="Sprite2D" parent="wall2"]
+texture = ExtResource("3_4soax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_uphih")
+
+[node name="wall" type="Area2D" parent="."]
+position = Vector2(527, 123)
+
+[node name="Sprite2D" type="Sprite2D" parent="wall"]
+texture = ExtResource("3_4soax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_uphih")
+
+[node name="moving_thing" type="Area2D" parent="."]
+position = Vector2(191, 105)
+script = ExtResource("4_7meu2")
+explosion_scene = ExtResource("5_pldsn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="moving_thing"]
+texture = ExtResource("3_4soax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_thing"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_ukdl2")
+
+[connection signal="area_entered" from="moving_thing" to="moving_thing" method="_on_area_entered"]

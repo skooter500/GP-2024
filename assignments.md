@@ -25,11 +25,11 @@ For this individual assignment, you will create an interactive musical experienc
 ## Technical Requirements
 Your project must include:
 - At least one scene with a clear user interface
-- Multiple interactive elements (buttons, sliders, or clickable areas)
+- Multiple interactive elements (sprites, animations, buttons, sliders, or clickable areas)
 - Sound playback or generation
 - Visual feedback when sounds play
-- At least one loop (for example, repeating sounds or animations)
-- At least one if statement (for example, checking if a button is pressed)
+- At least one loop (for example creating elements in a loop)
+- At least one if statement (for example, checking if elements overlap)
 - Regular commits to git showing your progress
 
 ## Learning Outcomes
@@ -54,7 +54,7 @@ Simple examples you could build on:
 
 | Category | Weighting | 1 | 2.1 | 2.2 | Pass | Fail |
 |----------|-----------|--------|----|----|----|----|
-| Technical Implementation (40%) | Multiple different interactions (clicks, drags, holds). Uses loops effectively. At least one array. Multiple scenes. Timers for timing events. Good signal connections. Clean, commented code. Multiple scripts. Excellent error handling. Regular, meaningful git commits throughout development | Basic interaction with multiple controls. Simple loops. Single scene with good organization. Basic signal usage. Code works reliably. Some comments. Regular git commits | Simple button interactions. Basic sound playback. Working signals. Code needs some cleanup. Basic git usage | Minimal working code. Few interactions. Sparse git commits | Non-functional code. No version control |
+| Technical Implementation (40%) | Multiple different interactions (clicks, drags, holds). Uses loops effectively. Used subscenes. At least one array. Multiple scenes. Timers for timing events. Good signal connections. Multiple scripts. Regular, meaningful git commits throughout development | Basic interaction with multiple controls. Simple loop implementation. Single scene with good organization. Basic signal usage. Code works reliably. Some comments. Regular git commits | Simple button interactions. Basic sound playback. Working signals. Code needs some cleanup. Basic git usage | Minimal working code. Few interactions. Sparse git commits | Non-functional code. No version control |
 | Creativity & Design (40%) | Original concept with engaging interaction. Professional-looking interface. Clear visual feedback. Multiple sound varieties. Coherent visual style. Original assets or well-integrated free assets. Smooth animations or transitions. Project feels polished and complete | Good original concept. Clear interface. Good visual feedback. Multiple sounds. Consistent style. Mix of original and free assets | Basic but complete concept. Simple interface. Basic feedback. Limited sound variety | Minimal design effort. Basic interface. Few sounds | Incomplete or non-functional |
 | Documentation (20%) | Clear readme file explaining the project. Video demonstration showing all features. Screenshots in documentation. Setup instructions. Regular, well-spaced git commits | Good readme with main features documented. Video showing core features. Regular git commits | Basic readme. Simple video or screenshots. Some git commits | Minimal documentation. Few commits | No documentation or version control |
 
