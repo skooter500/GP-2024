@@ -11,15 +11,11 @@ func _on_RigidBody2D_area_entered(area):
 	if area.get_parent().name.begins_with("shidstain"):
 		get_tree().quit()
 	pass
-
-func _on_RigidBody2D_body_entered(body):
-	if body.name.begins_with("shidstain"):
+	
+func _on_Sprite2D_body_entered(body):
+	if Sprite2D.name.begins_with("shidstain"):
 		print("collided with", body.get_parent().get_name())
 		get_tree().quit()
-	pass
-func _input_event(viewport, event, shape_idx):
-	if CollisionShape2D.shape.begins_with("shidstain"):
-		get_tree().change_scene_to_file("res://Bomber Man/Menu for bomb ber.tscn")
 	pass
 	
 func get_input():

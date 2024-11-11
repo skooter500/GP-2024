@@ -35,14 +35,14 @@ linear_damp = 1.0
 angular_damp = 2.0
 script = ExtResource("1_dg82q")
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+[node name="body" type="Sprite2D" parent="RigidBody2D"]
 position = Vector2(1, 0)
 texture = ExtResource("2_03q06")
 
-[node name="Area2D" type="Area2D" parent="RigidBody2D/Sprite2D"]
+[node name="Area2D" type="Area2D" parent="RigidBody2D/body"]
 position = Vector2(-541, -295)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Sprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/body/Area2D"]
 shape = SubResource("RectangleShape2D_exyn6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
@@ -81,6 +81,15 @@ script = ExtResource("6_x4fuc")
 
 [node name="Area2D" type="Area2D" parent="shidstain"]
 
-[node name="shidstain" type="CollisionShape2D" parent="shidstain/Area2D"]
+[node name="evil" type="RigidBody2D" parent="shidstain/Area2D"]
+scale = Vector2(1, 1)
+
+[node name="shidstain" type="CollisionShape2D" parent="shidstain/Area2D/evil"]
 position = Vector2(-6.10352e-05, 1.00085)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1un47")
+
+[node name="shidstain2" type="CollisionShape2D" parent="shidstain/Area2D"]
+position = Vector2(-6.10352e-05, 1.00085)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1un47")

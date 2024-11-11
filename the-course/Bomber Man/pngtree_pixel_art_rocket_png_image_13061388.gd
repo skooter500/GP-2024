@@ -1,7 +1,7 @@
 extends Sprite2D
 @export var time = 5
 @export var speed = 50
-@onready var player = $"../RigidBody2D/Sprite2D"
+@onready var player = $"../RigidBody2D/body"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var a:float = 10 / 17.0
@@ -20,3 +20,9 @@ func _process(delta: float) -> void:
 		to_player = to_player.normalized()
 		global_position = global_position + to_player * speed * delta
 		pass
+
+func _on_Sprite2D_body_entered(body):
+	if Sprite2D.name.begins_with("shidstain"):
+		print("collided with", body.get_parent().get_name())
+		get_tree().quit()
+	pass
