@@ -32,4 +32,16 @@ func _ready() -> void:
 	print(g)
 	print(h)
 	
+	pass
+	
+func _process(delta: float) -> void:
+	DebugDraw2D.set_text("pos", position)
+	
+
+func _on_area_entered(area: Area2D) -> void:
+	print("Collieded!")
+	print(area)
+	area.queue_free()
+	pass
+	
 	
