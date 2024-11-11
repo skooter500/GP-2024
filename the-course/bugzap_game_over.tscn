@@ -43,3 +43,4 @@ text = "QUIT
 "
 
 [connection signal="button_down" from="Control/restart" to="." method="_on_restart_button_down"]
+[connection signal="button_down" from="Control/quit" to="." method="_on_quit_button_down"]

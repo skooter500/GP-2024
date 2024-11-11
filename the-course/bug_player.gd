@@ -49,6 +49,6 @@ func _on_area_2d_area_entered(area):
 	var explosion = explosion_scene.instantiate()
 	explosion.global_position = global_position
 	explosion.emitting = true
-	get_tree().root.add_child(explosion)
+	get_parent().add_child(explosion)
 	emit_signal("hit")
 	pass # Replace with function body.

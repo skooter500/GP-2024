@@ -10,5 +10,7 @@ func _on_timer_timeout():
 	var bug = bug_scene.instantiate()
 	bug.position.x = randf_range(20, s.x - 20)
 	bug.position.y = 50
-	get_tree().root.add_child(bug)
+	var bugzap = $".."
+	bug.bug_hit.connect(bugzap._on_bug_bug_hit)
+	add_child(bug)
 	pass # Replace with function body.
