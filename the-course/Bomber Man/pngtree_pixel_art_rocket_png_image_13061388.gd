@@ -11,7 +11,6 @@ func _ready() -> void:
 		b = a * 17.0
 	print(b)
 	pass
-	var tot_time:float = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
@@ -19,10 +18,9 @@ func _process(delta: float) -> void:
 	if to_player.length() > 0.5:
 		to_player = to_player.normalized()
 		global_position = global_position + to_player * speed * delta
-		pass
-
-func _on_Sprite2D_body_entered(body):
-	if Sprite2D.name.begins_with("shidstain"):
-		print("collided with", body.get_parent().get_name())
-		get_tree().quit()
 	pass
+func _on_area_entered(area:Area2D) -> void:
+	print ("collided")
+	print(area)
+	area.queue_free()
+pass

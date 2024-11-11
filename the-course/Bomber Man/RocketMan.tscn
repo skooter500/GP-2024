@@ -39,10 +39,10 @@ script = ExtResource("1_dg82q")
 position = Vector2(1, 0)
 texture = ExtResource("2_03q06")
 
-[node name="Area2D" type="Area2D" parent="Player/body"]
+[node name="Player Collider" type="Area2D" parent="Player/body"]
 position = Vector2(-541, -295)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/body/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/body/Player Collider"]
 shape = SubResource("RectangleShape2D_exyn6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

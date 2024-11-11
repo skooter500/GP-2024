@@ -12,11 +12,11 @@ func _on_RigidBody2D_area_entered(area):
 		get_tree().quit()
 	pass
 
-func _on_RigidBody2D_body_entered(body):
-	if RigidBody2D.name.begins_with("evil"):
-		print("collided with", body.get_parent().get_name())
-		get_tree().quit()
-	pass
+func _on_area_entered(area: Area2D) -> void:
+	print ("collided")
+	print(area)
+	area.queue_free()
+pass
 	
 func get_input():
 	thrust = Vector2.ZERO
