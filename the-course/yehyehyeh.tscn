@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://dnku55dcgmtb2" path="res://icon.svg" id="2_qmuvq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxwsu"]
-size = Vector2(122, 127)
+size = Vector2(134, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4v8ee"]
-size = Vector2(120, 125)
+size = Vector2(132, 131)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(452, 234)
@@ -18,7 +18,7 @@ position = Vector2(452, 234)
 texture = ExtResource("2_qmuvq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, 1)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_fxwsu")
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -30,5 +30,5 @@ position = Vector2(-3, 0)
 texture = ExtResource("2_qmuvq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(0, 2)
+position = Vector2(-4, -2.5)
 shape = SubResource("RectangleShape2D_4v8ee")

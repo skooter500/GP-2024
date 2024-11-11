@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://b21d2701sm5wn"]
+
+[ext_resource type="Script" path="res://coob.gd" id="1_hafpb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1e1sr"]
+
+[sub_resource type="Environment" id="Environment_i6bbw"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_5ig1e"]
+
+[sub_resource type="Compositor" id="Compositor_7hupk"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.620164, 0)
+mesh = SubResource("BoxMesh_1e1sr")
+script = ExtResource("1_hafpb")
+
+[node name="Camera3D" type="Camera3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 0.95337, 0.301804, 0, -0.301804, 0.95337, 0, 0.91438, 1.6716)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.95337, 0.301804, 0, -0.301804, 0.95337, 0, 1.53454, 1.6716)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_i6bbw")
+camera_attributes = SubResource("CameraAttributesPractical_5ig1e")
+compositor = SubResource("Compositor_7hupk")
