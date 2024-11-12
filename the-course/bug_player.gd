@@ -63,4 +63,12 @@ func _on_laser_area_area_entered(area: Area2D) -> void:
 		get_tree().root.add_child(explosion)
 		area.queue_free()		
 		emit_signal("bug_hit")
+		
+	if area.get_groups()[0] == "bomb":
+		var explosion = explosion_scene.instantiate()
+		explosion.global_position = area.global_position
+		explosion.emitting = true
+		get_tree().root.add_child(explosion)
+		area.queue_free()		
+		# emit_signal("bug_hit")
 	pass # Replace with function body.

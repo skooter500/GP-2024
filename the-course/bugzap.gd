@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	$VSplitContainer/lives.text = "LIVES: " + str(lives)
 	
 func game_over():
-		get_tree().change_scene_to_file("res://bugzap_game_over.tscn")
+		get_tree().change_scene_to_file("res://bugzap_start.tscn")
 
 		pass
 	

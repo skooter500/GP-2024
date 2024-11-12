@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://2mcgbjpyoe2x"]
+[gd_scene load_steps=5 format=3 uid="uid://2mcgbjpyoe2x"]
 
 [ext_resource type="Texture2D" uid="uid://dnku55dcgmtb2" path="res://icon.svg" id="1_oev32"]
 [ext_resource type="Texture2D" uid="uid://c844yfbd26ea8" path="res://sprites/bug.png" id="2_8pm2h"]
-[ext_resource type="Script" path="res://trump.gd" id="3_ekugb"]
 [ext_resource type="Script" path="res://spiral.gd" id="4_y6gwc"]
 [ext_resource type="PackedScene" uid="uid://dsoph4ss2clnq" path="res://spiral_arm.tscn" id="5_ulvfa"]
 
@@ -15,7 +14,6 @@ texture = ExtResource("1_oev32")
 [node name="bug" type="Sprite2D" parent="."]
 position = Vector2(239, 186)
 texture = ExtResource("2_8pm2h")
-script = ExtResource("3_ekugb")
 
 [node name="spiral" type="Node2D" parent="."]
 position = Vector2(516, 486)

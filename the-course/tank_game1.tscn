@@ -19,13 +19,12 @@ script = ExtResource("1_027t5")
 custom_font = ExtResource("2_601f3")
 
 [node name="player" type="RigidBody2D" parent="." node_paths=PackedStringArray("bullet_spawn")]
-position = Vector2(441, 640)
-mass = 5.0
+position = Vector2(506, 531)
 linear_damp_mode = 1
 linear_damp = 2.0
 angular_damp = 2.0
 script = ExtResource("3_hurv8")
-power = 10000.0
+power = 1000.0
 rot_power = 10000.0
 bullet_scene = ExtResource("4_w5fy6")
 bullet_spawn = NodePath("shoot_point")
@@ -64,10 +63,10 @@ thing = ExtResource("8_jabo1")
 [node name="ui" type="Node" parent="."]
 
 [node name="Panel" type="Panel" parent="ui"]
-offset_left = 141.0
-offset_top = 468.0
-offset_right = 1141.0
-offset_bottom = 518.0
+offset_left = 46.0
+offset_top = 223.0
+offset_right = 1046.0
+offset_bottom = 273.0
 theme = ExtResource("9_uakw0")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ui/Panel"]
