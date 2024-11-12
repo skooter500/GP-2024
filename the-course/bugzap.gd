@@ -23,13 +23,13 @@ func _input(event):
 			get_tree().quit()
 
 func _on_player_hit() -> void:
-	if lives > 0:
-		lives -= 1
-		var p = $player.global_position
-		var v:Rect2 = get_viewport_rect()
-		p.x = v.get_center().x
-	else:
-		game_over()
+	#if lives > 0:
+		#lives -= 1
+		#var p = $player.global_position
+		#var v:Rect2 = get_viewport_rect()
+		#p.x = v.get_center().x
+	#else:
+		#game_over()
 	pass # Replace with function body.
 	
 func _on_bug_bug_hit() -> void:

@@ -21,7 +21,7 @@ var speed = 50
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	global_position = global_position.move_toward(target_pos, delta * speed)
+	# global_position = global_position.move_toward(target_pos, delta * speed)
 	pass
 
 func _on_timer_timeout():

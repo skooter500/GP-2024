@@ -24,11 +24,10 @@ func _process(delta):
 
 		var p1 = Vector2.UP * 500
 		laser.set_point_position(1, p1)
-		# Make the laser visible to the bug
-		$laser/laser_area.monitorable = true
+		$laser/laser_area.monitoring = true
 		laser.visible = true						
 	else:
-		$laser/laser_area.monitorable = false
+		$laser/laser_area.monitoring = false
 		laser.visible = false
 		can_move = true
 		
@@ -51,4 +50,16 @@ func _on_area_2d_area_entered(area):
 	explosion.emitting = true
 	get_parent().add_child(explosion)
 	emit_signal("hit")
+	pass # Replace with function body.
+
+
+func _on_laser_area_area_entered(area: Area2D) -> void:
+	print(area)
+	if area.name == "bug":
+		var explosion = explosion_scene.instantiate()
+		explosion.global_position = area.global_position
+		explosion.emitting = true
+		get_tree().root.add_child(explosion)
+		area.queue_free()		
+		emit_signal("bug_hit")
 	pass # Replace with function body.
