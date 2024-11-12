@@ -77,6 +77,7 @@ script = ExtResource("9_oaua2")
 [node name="Timer" type="Timer" parent="bug_spawner"]
 autostart = true
 
+[connection signal="bug_hit" from="player" to="." method="_on_player_bug_hit"]
 [connection signal="hit" from="player" to="." method="_on_player_hit"]
 [connection signal="area_entered" from="player/player" to="player" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="player/laser/laser_area" to="player" method="_on_laser_area_area_entered"]

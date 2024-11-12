@@ -12,6 +12,8 @@ var can_move = true
 
 signal hit
 
+signal bug_hit
+
 func _ready():
 	laser.visible = false
 
@@ -54,8 +56,7 @@ func _on_area_2d_area_entered(area):
 
 
 func _on_laser_area_area_entered(area: Area2D) -> void:
-	print(area)
-	if area.name == "bug":
+	if area.get_groups()[0] == "bug":
 		var explosion = explosion_scene.instantiate()
 		explosion.global_position = area.global_position
 		explosion.emitting = true

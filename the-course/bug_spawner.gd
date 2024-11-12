@@ -11,6 +11,5 @@ func _on_timer_timeout():
 	bug.position.x = randf_range(20, s.x - 20)
 	bug.position.y = 50
 	var bugzap = $".."
-	bug.bug_hit.connect(bugzap._on_bug_bug_hit)
 	add_child(bug)
 	pass # Replace with function body.

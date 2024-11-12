@@ -47,15 +47,3 @@ func drop_bomb():
 	bomb.global_position = bomb_spawn.global_position 
 	get_parent().add_child(bomb)
 	pass # Replace with function body.
-
-func _on_area_entered(area):
-	print(area)
-	if area.name == "laser_area":
-		var explosion = explosion_scene.instantiate()
-		explosion.global_position = global_position
-		explosion.emitting = true
-		get_tree().root.add_child(explosion)
-		# delete me		
-		self.queue_free()		
-		emit_signal("bug_hit")
-pass

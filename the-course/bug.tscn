@@ -11,14 +11,14 @@ size = Vector2(50, 50)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxifh"]
 size = Vector2(52, 51)
 
-[node name="bug" type="Area2D" node_paths=PackedStringArray("bomb_spawn")]
+[node name="bug" type="Area2D" node_paths=PackedStringArray("bomb_spawn") groups=["bug"]]
 position = Vector2(278, 100)
 script = ExtResource("1_nnkhd")
 bomb_spawn = NodePath("bomb_spawn")
 bomb_scene = ExtResource("2_s2pxd")
 explosion_scene = ExtResource("3_cqlux")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." groups=["bug"]]
 wait_time = 0.5
 autostart = true
 
