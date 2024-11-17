@@ -6,15 +6,6 @@
 
 [node name="root" type="Node2D"]
 
-[node name="player" parent="." node_paths=PackedStringArray("bullet_spawn_point") instance=ExtResource("1_4qlsp")]
-position = Vector2(230, 161)
-bullet_spawn_point = NodePath("Marker2D")
-
-[node name="Marker2D" type="Marker2D" parent="player"]
-position = Vector2(-1, 61)
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-
 [node name="SpaceStation020" type="Sprite2D" parent="."]
 position = Vector2(928, 332)
 rotation = 0.402343
@@ -37,3 +28,6 @@ offset_bottom = 40.0
 [node name="Label" type="Label" parent="Control/Container"]
 layout_mode = 2
 text = "1"
+
+[node name="player" parent="." instance=ExtResource("1_4qlsp")]
+position = Vector2(81, 158)

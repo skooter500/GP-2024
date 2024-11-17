@@ -9,27 +9,33 @@
 radius = 50.0
 
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("bullet_spawn_point")]
-position = Vector2(254, 215)
 script = ExtResource("1_jcss3")
 bullet_scene = ExtResource("2_tps20")
 bullet_spawn_point = NodePath("bullet_spawn_point")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+scale = Vector2(0.959258, 0.957767)
 texture = ExtResource("2_m46rs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(1.07816, 0.958159)
 shape = SubResource("CircleShape2D_5gtcp")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-4.19095e-09, -19)
 rotation = 1.56596
+scale = Vector2(0.614686, 0.496248)
 texture = ExtResource("3_jwfmr")
 
 [node name="bullet_spawn_point" type="Marker2D" parent="."]
-position = Vector2(-1, 73)
-rotation = 1.5708
+position = Vector2(0, 57)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
