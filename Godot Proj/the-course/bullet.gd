@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 20
+@export var speed : float
 
 @export var explosion:PackedScene
 

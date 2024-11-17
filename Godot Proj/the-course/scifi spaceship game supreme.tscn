@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cacpd8qvulvcp" path="res://player.tscn" id="1_4qlsp"]
 [ext_resource type="Texture2D" uid="uid://c8suijkma2w3w" path="res://assets/PNG/Sprites/Station/spaceStation_020.png" id="2_pcmpa"]
-[ext_resource type="PackedScene" uid="uid://k6isvcf6k1l" path="res://enemy.tscn" id="3_36rll"]
+[ext_resource type="PackedScene" uid="uid://k6isvcf6k1l" path="res://enemyTestScene.tscn" id="3_36rll"]
 
 [node name="root" type="Node2D"]
 
@@ -20,7 +20,7 @@ position = Vector2(928, 332)
 rotation = 0.402343
 texture = ExtResource("2_pcmpa")
 
-[node name="Sprite" parent="." instance=ExtResource("3_36rll")]
+[node name="enemyT" parent="." instance=ExtResource("3_36rll")]
 position = Vector2(433, 271)
 
 [node name="Control" type="Control" parent="."]
