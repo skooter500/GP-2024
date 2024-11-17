@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://652vkknks7jc"]
+
+[ext_resource type="PackedScene" uid="uid://cacpd8qvulvcp" path="res://player.tscn" id="1_4qlsp"]
+[ext_resource type="Texture2D" uid="uid://c8suijkma2w3w" path="res://assets/PNG/Sprites/Station/spaceStation_020.png" id="2_pcmpa"]
+[ext_resource type="PackedScene" uid="uid://k6isvcf6k1l" path="res://enemyTestScene.tscn" id="3_36rll"]
+
+[node name="root" type="Node2D"]
+
+[node name="player" parent="." node_paths=PackedStringArray("bullet_spawn_point") instance=ExtResource("1_4qlsp")]
+position = Vector2(230, 161)
+bullet_spawn_point = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="player"]
+position = Vector2(-1, 61)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+
+[node name="SpaceStation020" type="Sprite2D" parent="."]
+position = Vector2(928, 332)
+rotation = 0.402343
+texture = ExtResource("2_pcmpa")
+
+[node name="enemyT" parent="." instance=ExtResource("3_36rll")]
+position = Vector2(433, 271)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Container" type="Container" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/Container"]
+layout_mode = 2
+text = "1"
