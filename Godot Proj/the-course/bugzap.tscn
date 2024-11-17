@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://betoa56tlk8tg"]
+
+[ext_resource type="Script" path="res://bugzap.gd" id="1_s2q5l"]
+[ext_resource type="Script" path="res://bug_player.gd" id="1_vqb0a"]
+[ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="2_rwge8"]
+[ext_resource type="PackedScene" uid="uid://b26mblvmunn4a" path="res://bug.tscn" id="4_k6dp0"]
+[ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="8_12hsc"]
+[ext_resource type="Script" path="res://bug_spawner.gd" id="9_oaua2"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rvup1"]
+size = Vector2(50, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2f7eg"]
+size = Vector2(10, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kvm8"]
+size = Vector2(16, 623)
+
+[node name="bugzap" type="Node2D"]
+script = ExtResource("1_s2q5l")
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(464, 730)
+script = ExtResource("1_vqb0a")
+explosion_scene = ExtResource("2_rwge8")
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+texture = SubResource("PlaceholderTexture2D_rvup1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="player"]
+position = Vector2(0, -24)
+texture = SubResource("PlaceholderTexture2D_2f7eg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
+polygon = PackedVector2Array(-25, -10, -5, -10, -5, -39, 5, -39, 5, -10, 25, -10, 25, 10, -25, 10)
+
+[node name="Area2D" type="Area2D" parent="player"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/Area2D"]
+polygon = PackedVector2Array(-28, 10, -29, -12, -9, -16, -9, -43, 13, -43, 11, -16, 33, -14, 31, 14)
+
+[node name="laser" type="Line2D" parent="player"]
+position = Vector2(0, -50)
+points = PackedVector2Array(0, 0, 0, 0)
+width = 5.0
+
+[node name="laser" type="Area2D" parent="player/laser"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/laser/laser"]
+position = Vector2(2, -311)
+shape = SubResource("RectangleShape2D_7kvm8")
+
+[node name="bug" parent="." instance=ExtResource("4_k6dp0")]
+position = Vector2(100, 100)
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+offset_right = 295.0
+offset_bottom = 72.0
+theme = ExtResource("8_12hsc")
+
+[node name="Label" type="Label" parent="VSplitContainer"]
+layout_mode = 2
+text = "SCORE: 0
+"
+
+[node name="Label2" type="Label" parent="VSplitContainer"]
+layout_mode = 2
+text = "LIVES: 3
+"
+
+[node name="bug_spawner" type="Node2D" parent="."]
+visible = false
+script = ExtResource("9_oaua2")
+
+[connection signal="area_entered" from="player/Area2D" to="player" method="_on_area_2d_area_entered"]
