@@ -13,7 +13,7 @@ func create_note(me):
 	note.pitch = me.pitch
 	var rect:Rect2 = get_viewport_rect()
 	var size:Vector2 = rect.size
-	var y = remap(me.pitch, 30, 60,0, rect.size.y)
+	var y = remap(me.pitch, 0, 128,0, rect.size.y)
 	print(note.pitch)
 	print(y)
 	note.global_position.x = rect.size.x - (note.size.x / 2)

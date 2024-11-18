@@ -5,7 +5,7 @@
 [node name="note" type="ColorRect"]
 offset_left = 139.0
 offset_top = 80.0
-offset_right = 179.0
-offset_bottom = 120.0
+offset_right = 159.0
+offset_bottom = 90.0
 script = ExtResource("1_f6fa7")
 speed = 200
