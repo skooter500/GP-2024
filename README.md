@@ -52,6 +52,14 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 
 # Content
 
+## Week 8 - Trigonometry
+- [Trigonometry Problem Set](https://1.cdn.edl.io/IDqRlI8C9dRkoqehbbdHBrcGT6m87gkCQuMKTkp0U7JvHvuG.pdf)
+
+## Week 7 - Review Week
+
+## Week 6
+- Introduction to Vectors
+
 ## Week 5
 - GodotCon Update - [Check out my pictures](https://photos.app.goo.gl/iUpijUxEwGwgDWnu6)
 - Shooter Game

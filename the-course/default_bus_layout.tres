@@ -7,7 +7,8 @@ resource_name = "Reverb"
 resource_name = "PitchShift"
 
 [resource]
+bus/0/volume_db = -80.0
 bus/0/effect/0/effect = SubResource("AudioEffectReverb_jagyb")
-bus/0/effect/0/enabled = true
+bus/0/effect/0/enabled = false
 bus/0/effect/1/effect = SubResource("AudioEffectPitchShift_7bspv")
-bus/0/effect/1/enabled = true
+bus/0/effect/1/enabled = false
