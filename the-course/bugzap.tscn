@@ -20,7 +20,7 @@ size = Vector2(16, 623)
 script = ExtResource("1_s2q5l")
 
 [node name="player" type="CharacterBody2D" parent="."]
-position = Vector2(464, 730)
+position = Vector2(464, 590)
 script = ExtResource("1_vqb0a")
 explosion_scene = ExtResource("2_rwge8")
 
@@ -34,9 +34,11 @@ texture = SubResource("PlaceholderTexture2D_2f7eg")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
 polygon = PackedVector2Array(-25, -10, -5, -10, -5, -39, 5, -39, 5, -10, 25, -10, 25, 10, -25, 10)
 
-[node name="Area2D" type="Area2D" parent="player"]
+[node name="player" type="Area2D" parent="player"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/player"]
+position = Vector2(-0.767742, -1.38388)
+scale = Vector2(0.983871, 0.976974)
 polygon = PackedVector2Array(-28, 10, -29, -12, -9, -16, -9, -43, 13, -43, 11, -16, 33, -14, 31, 14)
 
 [node name="laser" type="Line2D" parent="player"]
@@ -44,9 +46,10 @@ position = Vector2(0, -50)
 points = PackedVector2Array(0, 0, 0, 0)
 width = 5.0
 
-[node name="laser" type="Area2D" parent="player/laser"]
+[node name="laser_area" type="Area2D" parent="player/laser"]
+monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player/laser/laser"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/laser/laser_area"]
 position = Vector2(2, -311)
 shape = SubResource("RectangleShape2D_7kvm8")
 
@@ -58,18 +61,24 @@ offset_right = 295.0
 offset_bottom = 72.0
 theme = ExtResource("8_12hsc")
 
-[node name="Label" type="Label" parent="VSplitContainer"]
+[node name="score" type="Label" parent="VSplitContainer"]
 layout_mode = 2
 text = "SCORE: 0
 "
 
-[node name="Label2" type="Label" parent="VSplitContainer"]
+[node name="lives" type="Label" parent="VSplitContainer"]
 layout_mode = 2
 text = "LIVES: 3
 "
 
 [node name="bug_spawner" type="Node2D" parent="."]
-visible = false
 script = ExtResource("9_oaua2")
 
-[connection signal="area_entered" from="player/Area2D" to="player" method="_on_area_2d_area_entered"]
+[node name="Timer" type="Timer" parent="bug_spawner"]
+autostart = true
+
+[connection signal="bug_hit" from="player" to="." method="_on_player_bug_hit"]
+[connection signal="hit" from="player" to="." method="_on_player_hit"]
+[connection signal="area_entered" from="player/player" to="player" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="player/laser/laser_area" to="player" method="_on_laser_area_area_entered"]
+[connection signal="timeout" from="bug_spawner/Timer" to="bug_spawner" method="_on_timer_timeout"]
