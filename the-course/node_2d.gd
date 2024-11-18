@@ -1,26 +1,5 @@
 extends Node2D
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-@export var bug_scene:PackedScene
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-
-	var count = 10
-	
-	for i in range(count):
-		var w = bug_scene.instantiate()
-		var p = Vector2(i * 50, 0)
-		w.position = p
-		add_child(w)
-
-=======
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
->>>>>>> e25075f (Commit1)
-=======
 @export var speed = 10
 @export var player = $Player
 # Called when the node enters the scene tree for the first time.
@@ -32,7 +11,6 @@ func _ready() -> void:
 	b = a * 17.0
 	print(b)
 	
->>>>>>> a9b956d (Commit2)
 	pass # Replace with function body.
 
 
