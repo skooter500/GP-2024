@@ -4,7 +4,7 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_04on2"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_eic81"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_nho7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5iuy"]
 size = Vector2(48, 50)
@@ -16,7 +16,7 @@ script = ExtResource("1_4urbb")
 modulate = Color(0.592157, 0.337255, 0.784314, 1)
 material = SubResource("CanvasItemMaterial_04on2")
 scale = Vector2(50, 50)
-texture = SubResource("CanvasTexture_eic81")
+texture = SubResource("CanvasTexture_nho7q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)
