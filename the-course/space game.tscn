@@ -9,6 +9,12 @@
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(531, 122)
 
+<<<<<<< HEAD
+[node name="Sprite2D2" parent="player" index="2"]
+position = Vector2(166, -62)
+
+[node name="bullet_spawn_point" parent="player" index="3"]
+=======
 [node name="player" parent="Marker2D" instance=ExtResource("1_unoke")]
 position = Vector2(200, 200)
 
@@ -16,6 +22,7 @@ position = Vector2(200, 200)
 position = Vector2(132, -32)
 
 [node name="bullet_spawn_point" parent="Marker2D/player" index="3"]
+>>>>>>> 344b3500755176c7aaf1b180a630655787f55e8f
 position = Vector2(0, -60)
 
 [node name="enemy" type="Sprite2D" parent="." node_paths=PackedStringArray("player")]

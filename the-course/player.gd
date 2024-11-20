@@ -8,6 +8,15 @@ const JUMP_VELOCITY = -400.0
 
 const TURN_RATE = 180
 
+<<<<<<< HEAD
+func _print_stuff():
+	DebugDraw2D.set_text("pos", position)
+	DebugDraw2D.set_text("rotation", rotation)
+
+
+
+func _physics_process(delta: float) -> void:
+=======
 func print_stuff():
 	DebugDraw2D.set_text("pos", position)
 	DebugDraw2D.set_text("global position", global_position)
@@ -20,6 +29,7 @@ func print_stuff():
 	DebugDraw2D.set_text("global_transform.x", global_transform.x)
 	DebugDraw2D.set_text("global_transform.y", global_transform.y)
 	DebugDraw2D.set_text("vel", velocity)
+>>>>>>> 344b3500755176c7aaf1b180a630655787f55e8f
 	
 func _process(delta: float) -> void:
 	print_stuff()
