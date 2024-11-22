@@ -11,15 +11,15 @@ func _draw() -> void:
 	
 	#sets base colours 
 	draw_rect(Rect2(0, 0, h, l), Color.PINK, true)
-	draw_rect(Rect2(h, 0, h, l), Color.LIGHT_BLUE, true)
-	draw_rect(Rect2(h, l, h, l), Color.BLUE, true)
+	draw_rect(Rect2(h, 0, h, l), Color.DEEP_PINK, true)
+	draw_rect(Rect2(h, l, h, l), Color.MEDIUM_PURPLE, true)
 	draw_rect(Rect2(0, l, h, l), Color.REBECCA_PURPLE, true)
 	
 	if p.x < h and p.y < l:
 		draw_rect(Rect2(h, 0, h, l), Color.HOT_PINK, true)
 		
 	elif p.x > h and p.y < l:
-		draw_rect(Rect2(0, 0, h, l), Color.YELLOW, true)
+		draw_rect(Rect2(0, 0, h, l), Color.PEACH_PUFF, true)
 		
 	
 	elif p.x < h and p.y > l:
@@ -27,7 +27,7 @@ func _draw() -> void:
 		
 		
 	elif p.x > h and p.y > l:
-		draw_rect(Rect2(h, l, h, l), Color.RED, true)
+		draw_rect(Rect2(h, l, h, l), Color.PALE_TURQUOISE, true)
 		
 	
 	
