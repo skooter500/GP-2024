@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://wk5jgsobmh3w" path="res://bomb.tscn" id="2_s2pxd"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="3_cqlux"]
 [ext_resource type="AudioStream" uid="uid://dr7urkmsac1h7" path="res://sounds/Laser_Shoot42.wav" id="4_j6f0n"]
+[ext_resource type="Texture2D" uid="uid://do47y6j8rii7q" path="res://R.png" id="4_raa4y"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ovx4e"]
 size = Vector2(50, 50)
@@ -23,7 +24,16 @@ wait_time = 0.5
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+<<<<<<< HEAD
 texture = SubResource("PlaceholderTexture2D_ovx4e")
+=======
+position = Vector2(-1.14441e-05, 2)
+scale = Vector2(0.307922, 0.277438)
+texture = ExtResource("4_raa4y")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-16, 15, -11, 1, -16, 2, -17, -2, -1, -19, 19, 1, 9, 1, 9, 6, 16, 12, 15, 18, 8, 17, 2, 10, 3, 5, -3, 1, -8, 17)
+>>>>>>> main
 
 [node name="bomb_spawn" type="Marker2D" parent="."]
 position = Vector2(0, 45)

@@ -5,9 +5,13 @@ extends Area2D
 @export var explosion_scene:PackedScene
 
 var target_pos:Vector2
+<<<<<<< HEAD
 
 signal bug_hit
 
+=======
+var health_fart:Vector2
+>>>>>>> main
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -23,7 +27,11 @@ var speed = 50
 func _process(delta):
 	global_position = global_position.move_toward(target_pos, delta * speed)
 	pass
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> main
 func _on_timer_timeout():
 	var offset = randf_range(-100, 100)
 	target_pos = global_position
@@ -47,3 +55,16 @@ func drop_bomb():
 	bomb.global_position = bomb_spawn.global_position 
 	get_parent().add_child(bomb)
 	pass # Replace with function body.
+<<<<<<< HEAD
+=======
+
+
+func _on_area_entered(area):
+	if area.name == "laser":
+		var explosion = explosion_scene.instantiate()
+		explosion.global_position = global_position
+		explosion.emitting = true
+		get_tree().root.add_child(explosion)
+		queue_free()	
+pass
+>>>>>>> main

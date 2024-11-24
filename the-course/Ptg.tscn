@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpg7eigmu5ocx"]
+
+[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="1_cs52b"]
+[ext_resource type="Script" path="res://sprite_2d.gd" id="2_0e88k"]
+
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(475, 316)
+texture = ExtResource("1_cs52b")
+script = ExtResource("2_0e88k")
