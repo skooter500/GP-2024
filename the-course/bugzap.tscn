@@ -3,12 +3,11 @@
 [ext_resource type="Script" path="res://bugzap.gd" id="1_s2q5l"]
 [ext_resource type="Script" path="res://bug_player.gd" id="1_vqb0a"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="2_rwge8"]
+[ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="4_e2he0"]
 [ext_resource type="PackedScene" uid="uid://b26mblvmunn4a" path="res://bug.tscn" id="4_k6dp0"]
 [ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="8_12hsc"]
 [ext_resource type="Script" path="res://bug_spawner.gd" id="9_oaua2"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rvup1"]
-size = Vector2(50, 20)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2f7eg"]
 size = Vector2(10, 30)
@@ -25,16 +24,24 @@ script = ExtResource("1_vqb0a")
 explosion_scene = ExtResource("2_rwge8")
 
 [node name="Sprite2D" type="Sprite2D" parent="player"]
-texture = SubResource("PlaceholderTexture2D_rvup1")
+position = Vector2(34, -152.5)
+texture = ExtResource("4_e2he0")
 
 [node name="Sprite2D2" type="Sprite2D" parent="player"]
-position = Vector2(0, -24)
+visible = false
+position = Vector2(34, -176.5)
 texture = SubResource("PlaceholderTexture2D_2f7eg")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player"]
+position = Vector2(34, -152.5)
 polygon = PackedVector2Array(-25, -10, -5, -10, -5, -39, 5, -39, 5, -10, 25, -10, 25, 10, -25, 10)
 
+<<<<<<< HEAD
 [node name="player" type="Area2D" parent="player"]
+=======
+[node name="Area2D" type="Area2D" parent="player"]
+position = Vector2(34, -152.5)
+>>>>>>> main
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="player/player"]
 position = Vector2(-0.767742, -1.38388)
@@ -42,7 +49,7 @@ scale = Vector2(0.983871, 0.976974)
 polygon = PackedVector2Array(-28, 10, -29, -12, -9, -16, -9, -43, 13, -43, 11, -16, 33, -14, 31, 14)
 
 [node name="laser" type="Line2D" parent="player"]
-position = Vector2(0, -50)
+position = Vector2(34, -202.5)
 points = PackedVector2Array(0, 0, 0, 0)
 width = 5.0
 

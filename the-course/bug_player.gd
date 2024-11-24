@@ -37,7 +37,7 @@ func _physics_process(delta):
 	can_move = true
 	if can_move:
 		var r = get_viewport_rect()	
-		var f = Input.get_axis("left", "right")
+		var f = Input.get_axis("turn_left", "turn_right")
 		velocity.x = f * speed
 		move_and_slide()
 
@@ -46,6 +46,7 @@ func _physics_process(delta):
 		if global_position.x < 25:
 			global_position.x = 25
 
+<<<<<<< HEAD
 func _on_area_2d_area_entered(area):	
 	var explosion = explosion_scene.instantiate()
 	explosion.global_position = global_position
@@ -71,4 +72,13 @@ func _on_laser_area_area_entered(area: Area2D) -> void:
 		get_tree().root.add_child(explosion)
 		area.queue_free()		
 		# emit_signal("bug_hit")
+=======
+func _on_area_2d_area_entered(area):
+	print(area)
+	var explosion = explosion_scene.instantiate()
+	explosion.global_position = global_position
+	explosion.emitting = true
+	get_tree().root.add_child(explosion)
+	queue_free()	
+>>>>>>> main
 	pass # Replace with function body.

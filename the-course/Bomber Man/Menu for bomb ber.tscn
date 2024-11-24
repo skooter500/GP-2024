@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cleyudmu0av3k"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_2mxjt"]
+[ext_resource type="Texture2D" uid="uid://d0wptppajim7a" path="res://Bomber Man/1000_F_572788249_Lpiz0SMKEh1XU4y3Lj7NXjZW89yXw4ZC.jpg" id="2_13ew1"]
+
+[node name="MENU" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 240.0
+offset_top = 106.0
+offset_right = -275.0
+offset_bottom = -398.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2mxjt")
+
+[node name="1000F572788249Lpiz0smkEh1xu4y3Lj7nXjZw89yXw4zc" type="Sprite2D" parent="."]
+position = Vector2(340, 218.25)
+scale = Vector2(1.15, 1.04273)
+texture = ExtResource("2_13ew1")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 635.0
+offset_bottom = 401.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
