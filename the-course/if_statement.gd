@@ -1,5 +1,6 @@
 extends Node2D
 
+<<<<<<< HEAD
 var i = 1
 
 func _draw() -> void:
