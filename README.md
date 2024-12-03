@@ -52,6 +52,16 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 
 # Content
 
+## Week 11
+- More music Examples
+- Demonstration of the shruiti box
+
+## Week 10
+- Music examples
+
+## Week 9
+- [Movement & collisions]
+
 ## Week 8 - Trigonometry
 - [Trigonometry Problem Set](https://1.cdn.edl.io/IDqRlI8C9dRkoqehbbdHBrcGT6m87gkCQuMKTkp0U7JvHvuG.pdf)
 
