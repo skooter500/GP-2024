@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://df7y0n0k1q73g"]
+
+[node name="Guitar" type="Node2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 516.0
+offset_bottom = 525.0
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Button_LowE" type="Button" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+text = "Low E"
