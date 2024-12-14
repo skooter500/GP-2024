@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://762b7tscrufx"]
+
+[ext_resource type="Script" path="res://root1.gd" id="1_6hsnh"]
+
+[sub_resource type="FontFile" id="FontFile_nxe5d"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(123, 523)
+script = ExtResource("1_6hsnh")
+custom_font = SubResource("FontFile_nxe5d")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
