@@ -4,6 +4,7 @@ func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
+	queue_redraw()
 	pass
 	
 func _draw() -> void:
@@ -37,10 +38,30 @@ func _draw() -> void:
 	for i in range(num_lines):
 		draw_line(Vector2(i * w, 0), Vector2(i * w, s.x), Color.AQUAMARINE)
 		
-	var num_h_lines = 4
+	var num_h_lines = 10
 	var gap = 50
-	var border = 100
+	var border = 120
+	for i in range(num_h_lines):
+		draw_line(Vector2(border, border + gap * i),
+		Vector2(v.size.x - border, border + gap * i), Color.GREEN_YELLOW)
 	
-	for i in range(4):
-		draw_line(Vector2(border, border + gap * i), Vector2(v.size.x - border, border + gap * i), Color.CHARTREUSE)
+	for i in range(200):
+		draw_line(Vector2(0, gap * i), Vector2(v.size.x, v.size.y - i * gap), Color.PALE_VIOLET_RED)
+		
+	for i in range(200):
+		draw_line(Vector2(v.size.x, gap * i), Vector2(0, v.size.y - i * gap), Color.PALE_VIOLET_RED)
+	
+	var m = get_global_mouse_position()
+	print(m)
+	
+	var num_c_lines = m.x / 2
+	
+	gap = v.size.y / num_c_lines
+	
+	for i in range(num_c_lines):
+		draw_line(Vector2(0, i * gap), Vector2(v.size.x, v.size.y - ( i * gap)), Color.FIREBRICK)
+		
+	
+	gap = v.size
+	
 	pass
