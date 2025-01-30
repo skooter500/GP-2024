@@ -3,12 +3,14 @@ extends CharacterBody2D
 @export var bullet_scene:PackedScene
 @export var bullet_spawn_point:Node2D
 
-const SPEED = 500.0
+const SPEED = -500.0
 const JUMP_VELOCITY = -400.0
 
 const TURN_RATE = 180
 
+<<<<<<< HEAD
 func print_stuff():
+<<<<<<< HEAD
 	DebugDraw2D.set_text("pos", position)
 	DebugDraw2D.set_text("global position", global_position)
 	DebugDraw2D.set_text("rotation", rotation)
@@ -20,6 +22,20 @@ func print_stuff():
 	DebugDraw2D.set_text("global_transform.x", global_transform.x)
 	DebugDraw2D.set_text("global_transform.y", global_transform.y)
 	DebugDraw2D.set_text("vel", velocity)
+=======
+	DebugDraw2D.set_text("global_transform.x",global_transform.x)
+	DebugDraw2D.set_text("global_transform.y",global_transform.y)
+	DebugDraw2D.set_text("pos",position)
+	DebugDraw2D.set_text("Rotation",Rotation)
+	DebugDraw2D.set_text("pos",postion)
+	DebugDraw2D.set_text("transform.x",transform.x)
+	DebugDraw2D.set_text("transform.y",transform.y)
+	DebugDraw2D.set_text("pos",postion)
+
+=======
+>>>>>>> 492b090 (Commit 2)
+func _physics_process(delta: float) -> void:
+>>>>>>> bde809b (Commit 1)
 	
 func _process(delta: float) -> void:
 	print_stuff()

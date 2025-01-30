@@ -20,13 +20,13 @@ func _ready():
 	
 func _physics_process(delta):
 	
-	var r = Input.get_axis("left", "right")
+	var r = Input.get_axis("turn_left", "turn_left")
 	apply_torque(rot_power * r)
 	
-	f = Input.get_axis("back", "forward")
+	f = Input.get_axis("move_backwards", "move_forwards")
 	
 	var force = power * -transform.y * f
-	DebugDraw2D.set_text("Force", force)
+	# DebugDraw2D.set_text("Force", force)
 	if (force.length() > 0):
 		apply_central_force(force)
 		pass
