@@ -12,10 +12,17 @@ config_version=5
 
 config/name="The Course 2024"
 <<<<<<< HEAD
+<<<<<<< HEAD
 run/main_scene="res://if_statement.tscn"
 =======
 run/main_scene="uid://c3ckbgrf6rwu7"
 >>>>>>> 376a74e (Work done in class)
+=======
+run/main_scene="uid://c3ckbgrf6rwu7"
+=======
+run/main_scene="res://if_statement.tscn"
+>>>>>>> 5593244 (bla)
+>>>>>>> bbd3d13 (bla)
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
