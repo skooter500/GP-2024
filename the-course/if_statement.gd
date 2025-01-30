@@ -30,20 +30,21 @@ func _draw() -> void:
 		draw_rect(Rect2(h, 0, h, r.size.y), Color.YELLOW, true, 10, true)
 		draw_rect(Rect2(h, w, h, r.size.y), Color.GREEN, true, 10, true)
 		draw_rect(Rect2(0, w, h, r.size.y), Color.RED, true, 10, true)
-	## ==p
-	## <
-	## >
-	## <=
-	## >=
-	## && and
-	## || or
-	## not
+	# ==p
+	# <
+	# >
+	# <=
+	# >=
+	# && and
+	# || or
+	# not
 
+	
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	queue_redraw()
