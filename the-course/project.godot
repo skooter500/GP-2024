@@ -21,9 +21,15 @@ run/main_scene="uid://c3ckbgrf6rwu7"
 run/main_scene="uid://c3ckbgrf6rwu7"
 =======
 run/main_scene="res://if_statement.tscn"
+<<<<<<< HEAD
 >>>>>>> 5593244 (bla)
->>>>>>> bbd3d13 (bla)
+=======
+<<<<<<< HEAD
+>>>>>>> a1fb8e7 (jfbvlie)
 config/features=PackedStringArray("4.4", "Forward Plus")
+=======
+config/features=PackedStringArray("4.3", "Forward Plus")
+>>>>>>> 90dbf76 (Commit)
 config/icon="res://icon.svg"
 
 [input]
