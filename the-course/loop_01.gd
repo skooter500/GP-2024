@@ -35,7 +35,6 @@ func draw_grid() -> void:
 			tile.texture = preload("res://sprites/troll.png")
 			tile.position = Vector2(x * 64, y * 64)
 			add_child(tile)
-			
 
 #Draw function
 func _draw() -> void:
@@ -72,3 +71,35 @@ func _draw() -> void:
 		draw_line(Vector2(i * w, i * l), Vector2(i * w, s.y), Color.RED)
 		# Horizontal
 		draw_line(Vector2(0, i * l), Vector2(s.x, i * l), Color.HOT_PINK)
+	
+	var num_circles = 5
+	var circle_radius = 50
+	var colors = [Color.GOLD, Color.GREEN, Color.BLUE, Color.RED, Color.PINK]
+	for i in range(num_circles):
+		var radius = circle_radius * (1 - float(i) / num_circles)
+		draw_circle(Vector2(500, 500), radius, colors[i])
+	
+	var num_dots = 500
+	var dot_radius = 50
+	for i in range(num_dots):
+		var radius = dot_radius * (1 / num_dots)
+
+
+# Totally custom spiral code // use for future reference in projects
+	var center = Vector2(500, 500)  # Center of the spiral
+	var angle = 0.0                 # Starting angle
+	var radius = 0.0                # Starting radius
+	var angle_step = 0.1            # Angle increment per step
+	var radius_step = 2.0           # Radius increment per step
+	var prev_point = center         # Previous point for line drawing
+	
+	for i in range(250):  # Number of points in the spiral
+		var x = center.x + radius * cos(angle)
+		var y = center.y + radius * sin(angle)
+		var current_point = Vector2(x, y)
+		
+		draw_line(prev_point, current_point, Color.WHITE, 1)  # Draw a line
+		prev_point = current_point  # Update the previous point
+		
+		angle += angle_step  # Increase the angle
+		radius += radius_step  # Increase the radius

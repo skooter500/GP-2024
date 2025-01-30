@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dprumlarg7pgr"]
+[gd_scene load_steps=2 format=3 uid="uid://dlp7j5fjup5hj"]
 
-[ext_resource type="Script" path="res://loop_02.gd" id="1_kg3xm"]
+[sub_resource type="GDScript" id="GDScript_lo0u4"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func _draw() -> void:
+"
 
 [node name="Loop 02" type="Node2D"]
-script = ExtResource("1_kg3xm")
+script = SubResource("GDScript_lo0u4")
