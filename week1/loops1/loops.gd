@@ -36,4 +36,11 @@ func _draw() -> void:
 		
 	for i in range(num_lines):
 		draw_line(Vector2(i * w, 0), Vector2(i * w, s.x), Color.AQUAMARINE)
+		
+	var num_h_lines = 4
+	var gap = 50
+	var border = 100
+	
+	for i in range(4):
+		draw_line(Vector2(border, border + gap * i), Vector2(v.size.x - border, border + gap * i), Color.CHARTREUSE)
 	pass
