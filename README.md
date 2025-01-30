@@ -35,7 +35,7 @@ At the end of the module, each student will have the ability to develop a comple
 - End of year programming test 30%
 - Weekly engagement mark 20%
 - [Assignment 1 25% - Due 9/12/2024](assignments.md)
-- Assignment 2 25%
+- [Assignment 2 25% - Due 10/4/2024](assignments.md)
 
 Weekly engagement mark is assessessed automatically by evaluating the number of git commits made each week. 1 commit means 1 mark. 2 commits 2 marks, 3 commits or more full marks each week.
 
@@ -50,7 +50,26 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 - [Godot discord](https://discord.com/invite/godotengine)
 - [Submit your fork of the git repo](https://forms.office.com/Pages/ResponsePage.aspx?id=yxdjdkjpX06M7Nq8ji_V2ou3qmFXqEdGlmiD1Myl3gNUQTMyV1NKWFVUWUwxQjZTS05SRTE1TEUxQi4u)
 
-# Content
+# Semester 2
+
+## Week 1 
+- [Loops](labs/loops.md)
+
+## Lab:
+- [Loops](labs/loops_lab.md)
+
+
+# Semester 1
+
+## Week 11
+- More music Examples
+- Demonstration of the shruiti box
+
+## Week 10
+- Music examples
+
+## Week 9
+- [Movement & collisions]
 
 ## Week 8 - Trigonometry
 - [Trigonometry Problem Set](https://1.cdn.edl.io/IDqRlI8C9dRkoqehbbdHBrcGT6m87gkCQuMKTkp0U7JvHvuG.pdf)
