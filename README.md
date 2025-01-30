@@ -35,7 +35,7 @@ At the end of the module, each student will have the ability to develop a comple
 - End of year programming test 30%
 - Weekly engagement mark 20%
 - [Assignment 1 25% - Due 9/12/2024](assignments.md)
-- [Assignment 2 25% - Due 10/4/2024] (assignments.md)
+- [Assignment 2 25% - Due 10/4/2024](assignments.md)
 
 Weekly engagement mark is assessessed automatically by evaluating the number of git commits made each week. 1 commit means 1 mark. 2 commits 2 marks, 3 commits or more full marks each week.
 
