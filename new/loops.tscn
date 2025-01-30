@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://tyvbnjbqox42"]
+
+[ext_resource type="Script" uid="uid://c2f7rjra0bf5i" path="res://loops1.gd" id="1_71k3l"]
+
+[node name="loops" type="Node2D"]
+position = Vector2(11, 23)
+script = ExtResource("1_71k3l")
