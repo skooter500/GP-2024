@@ -1,11 +1,11 @@
 # Loop-Worksheet 30/01/2025
-
 extends Node2D
 
 func _ready() -> void:
 	draw_grid()
 	enemy_respawn()
 	pass
+
 
 func _process(delta: float) -> void:
 	pass
@@ -18,6 +18,7 @@ func enemy_respawn() -> void:
 		respawn_time -= 1
 		await(get_tree().create_timer(1.0))
 	print("Enemy respawned!")
+
 
 func enemy_spawn() -> void:
 	var enemies_spawned = 0
@@ -36,7 +37,7 @@ func draw_grid() -> void:
 			tile.position = Vector2(x * 64, y * 64)
 			add_child(tile)
 
-#Draw function
+# Draw functions // Circles/Spiral
 func _draw() -> void:
 	var r = Rect2(10, 10, 100, 30)
 	draw_rect(r, Color.AQUA, false, 5)
