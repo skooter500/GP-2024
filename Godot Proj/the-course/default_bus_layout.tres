@@ -7,6 +7,10 @@ resource_name = "Reverb"
 resource_name = "PitchShift"
 
 [resource]
+<<<<<<< HEAD:Godot Proj/the-course/default_bus_layout.tres
+=======
+bus/0/volume_db = 6.02
+>>>>>>> 55932441a984cf73751705b877da75a315761fc6:the-course/default_bus_layout.tres
 bus/0/effect/0/effect = SubResource("AudioEffectReverb_jagyb")
 bus/0/effect/0/enabled = false
 bus/0/effect/1/effect = SubResource("AudioEffectPitchShift_7bspv")

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://rvjbc8pu44du"
-path="res://.godot/imported/Hyperspace.otf-43e3eb7bfa6a13ec5aeeb91ea6fe6cad.fontdata"
+uid="uid://erdgllynwqkw"
+path="res://.godot/imported/Roboto-Bold.ttf-3674de3d9ad3ee757cd4b4a89f1e126d.fontdata"
 
 [deps]
 
-source_file="res://fonts/Hyperspace.otf"
-dest_files=["res://.godot/imported/Hyperspace.otf-43e3eb7bfa6a13ec5aeeb91ea6fe6cad.fontdata"]
+source_file="res://examples_dd3d/Roboto-Bold.ttf"
+dest_files=["res://.godot/imported/Roboto-Bold.ttf-3674de3d9ad3ee757cd4b4a89f1e126d.fontdata"]
 
 [params]
 
@@ -29,7 +29,11 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration"
+}]
 language_support={}
 script_support={}
 opentype_features={}

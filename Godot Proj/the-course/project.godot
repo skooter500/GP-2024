@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="The Course 2024"
+<<<<<<< HEAD:Godot Proj/the-course/project.godot
 run/main_scene="res://scifi spaceship game supreme.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+=======
+run/main_scene="res://if_statement.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+>>>>>>> 55932441a984cf73751705b877da75a315761fc6:the-course/project.godot
 config/icon="res://icon.svg"
 
 [input]
