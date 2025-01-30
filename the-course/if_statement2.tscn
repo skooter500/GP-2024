@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bk004kqteeckr"]
 
-[ext_resource type="Script" path="res://if_statement2.gd" id="1_7pbnp"]
+[ext_resource type="Script" uid="uid://bf0u1vhyvolg0" path="res://if_statement2.gd" id="1_7pbnp"]
 [ext_resource type="Texture2D" uid="uid://dnku55dcgmtb2" path="res://icon.svg" id="2_655eo"]
 
 [node name="if_statement" type="Node2D"]
