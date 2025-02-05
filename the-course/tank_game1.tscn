@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://dum0vq7fy15st"]
 
-[ext_resource type="Script" path="res://root1.gd" id="1_027t5"]
+[ext_resource type="Script" uid="uid://2c4ruhqpdnx5" path="res://root1.gd" id="1_027t5"]
 [ext_resource type="FontFile" uid="uid://0jk2p2kfmllu" path="res://fonts/Hyperspace Bold.otf" id="2_601f3"]
-[ext_resource type="Script" path="res://player2.gd" id="3_hurv8"]
+[ext_resource type="Script" uid="uid://cwbrwgouo0kkq" path="res://player2.gd" id="3_hurv8"]
 [ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="4_w5fy6"]
 [ext_resource type="AudioStream" uid="uid://bq4kjn4r61ps2" path="res://sounds/jet.wav" id="5_ee1yw"]
-[ext_resource type="Script" path="res://jet_sound.gd" id="6_6rfpp"]
-[ext_resource type="Script" path="res://spawner.gd" id="7_jndn7"]
+[ext_resource type="Script" uid="uid://c5kt6yrp2pxxs" path="res://jet_sound.gd" id="6_6rfpp"]
+[ext_resource type="Script" uid="uid://d11q2l5gays6q" path="res://spawner.gd" id="7_jndn7"]
 [ext_resource type="PackedScene" uid="uid://bwi6lmhwtpkeh" path="res://block.tscn" id="8_jabo1"]
 [ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="9_uakw0"]
 
