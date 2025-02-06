@@ -2,34 +2,40 @@
 
 [ext_resource type="Script" uid="uid://bp4hy0qfyctpw" path="res://gen_art.gd" id="1_uhwsu"]
 
-[node name="gen_art" type="Node2D"]
+[node name="Node2D" type="Node2D"]
+
+[node name="gen_art" type="Node2D" parent="."]
+position = Vector2(508, 270)
 script = ExtResource("1_uhwsu")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 10.0
-offset_top = 1.0
-offset_right = 97.0
-offset_bottom = 24.0
+[node name="Label" type="Label" parent="gen_art"]
+offset_left = -495.0
+offset_top = -256.0
+offset_right = -408.0
+offset_bottom = -233.0
 text = "Num Lines:"
 
-[node name="num_slider" type="HSlider" parent="."]
-offset_left = 109.0
-offset_top = 4.0
-offset_right = 377.0
-offset_bottom = 20.0
+[node name="num_slider" type="HSlider" parent="gen_art"]
+offset_left = -396.0
+offset_top = -253.0
+offset_right = -128.0
+offset_bottom = -237.0
+max_value = 1000.0
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 10.0
-offset_top = 46.0
-offset_right = 67.0
-offset_bottom = 69.0
+[node name="Label2" type="Label" parent="gen_art"]
+offset_left = -495.0
+offset_top = -211.0
+offset_right = -438.0
+offset_bottom = -188.0
 text = "Radius:"
 
-[node name="rad_slider" type="HSlider" parent="."]
-offset_left = 79.0
-offset_top = 48.0
-offset_right = 367.0
-offset_bottom = 64.0
+[node name="rad_slider" type="HSlider" parent="gen_art"]
+offset_left = -426.0
+offset_top = -209.0
+offset_right = -138.0
+offset_bottom = -193.0
+max_value = 1.0
+step = 0.01
 
-[connection signal="value_changed" from="num_slider" to="." method="_on_num_slider_value_changed"]
-[connection signal="value_changed" from="rad_slider" to="." method="_on_rad_slider_value_changed"]
+[connection signal="value_changed" from="gen_art/num_slider" to="gen_art" method="_on_num_slider_value_changed"]
+[connection signal="value_changed" from="gen_art/rad_slider" to="gen_art" method="_on_rad_slider_value_changed"]
