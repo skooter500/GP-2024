@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1hhyf2tyalta"]
+
+[ext_resource type="Script" path="res://flower_1.gd" id="1_tu0ga"]
+
+[node name="really cool nice" type="Node2D"]
+position = Vector2(119, 116)
+script = ExtResource("1_tu0ga")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = -82.0
+offset_top = 203.0
+offset_right = 90.7
+offset_bottom = 219.0
+tooltip_text = "cool man"
+
+[node name="HSlider2" type="HSlider" parent="."]
+offset_left = -86.0
+offset_top = 249.0
+offset_right = 86.7
+offset_bottom = 265.0
+tooltip_text = "cool man"
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HSlider2" to="." method="_on_h_slider_2_value_changed"]
