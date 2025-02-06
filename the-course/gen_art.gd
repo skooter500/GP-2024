@@ -13,15 +13,18 @@ func _draw() -> void:
 	var px = 0
 	var py = 0
 	var r = 0
+	var a = 1
 	for i in range(s):
 		var theta= theta_inc * i
 		var x = sin(theta) * r
 		var y= cos(theta) * r
-		draw_line(Vector2(px,py), Vector2(x, y), Color.MEDIUM_PURPLE, 10)
+		var c:Color = Color.from_hsv(.5,1,1,a)
+		draw_line(Vector2(px,py), Vector2(x, y), c, 10)
 		#draw_circle(Vector2(x,y), 10, Color.HOT_PINK, false)
 		px = x
 		py = y
 		r = r + 10
+		a = a- 0.002
 		
 	pass
 	
