@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvh2h6i4sixrn"]
+
+[ext_resource type="Script" uid="uid://bp4hy0qfyctpw" path="res://gen_art.gd" id="1_uhwsu"]
+
+[node name="gen_art" type="Node2D"]
+script = ExtResource("1_uhwsu")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Num Lines:"
+
+[node name="num_slider" type="HSlider" parent="."]
+offset_left = 94.0
+offset_top = 5.0
+offset_right = 362.0
+offset_bottom = 21.0
