@@ -6,12 +6,30 @@
 script = ExtResource("1_uhwsu")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 10.0
+offset_top = 1.0
+offset_right = 97.0
+offset_bottom = 24.0
 text = "Num Lines:"
 
 [node name="num_slider" type="HSlider" parent="."]
-offset_left = 94.0
-offset_top = 5.0
-offset_right = 362.0
-offset_bottom = 21.0
+offset_left = 109.0
+offset_top = 4.0
+offset_right = 377.0
+offset_bottom = 20.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 46.0
+offset_right = 67.0
+offset_bottom = 69.0
+text = "Radius:"
+
+[node name="rad_slider" type="HSlider" parent="."]
+offset_left = 79.0
+offset_top = 48.0
+offset_right = 367.0
+offset_bottom = 64.0
+
+[connection signal="value_changed" from="num_slider" to="." method="_on_num_slider_value_changed"]
+[connection signal="value_changed" from="rad_slider" to="." method="_on_rad_slider_value_changed"]
