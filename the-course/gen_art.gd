@@ -9,7 +9,7 @@ func _draw() -> void:
 	#for i in range(s):
 		#draw_line(Vector2(i * 100, 0), Vector2(i * 100, 500), Color.DARK_BLUE, 10)
 	
-	var theta_inc= 1
+	var theta_inc= 8
 	var px = 0
 	var py = 0
 	var r = 0
@@ -24,7 +24,7 @@ func _draw() -> void:
 		px = x
 		py = y
 		r = r + 10
-		a = a- 0.002
+		a = a- 0.02
 		
 	pass
 	
