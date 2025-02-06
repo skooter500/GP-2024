@@ -1,15 +1,32 @@
 # Assignments
 
-# Assignment 2: Shooter Game
+# Assignment 2: Chromatic Artillery: A Shooter as Art
 
-For this individual assignment, you will be creating a 2D or 3D shooter game using Godot. The game can be top-down, side-scrolling, or any other perspective you choose. Your game should include at least one level, a start screen, player, scoring, and an enemy. Extra marks will be awarded for complexity, aesthetic quality, and documentation.
+For this individual assignment, you will subvert the traditional shooter game genre by creating an artistic 2D or 3D "spreading joy" game using Godot. Instead of shooting to destroy, your player character will spread positive elements like love, colors, music, or life throughout the game world. The game can be top-down, side-scrolling, or any other perspective you choose. Transform the typical "enemy" into beings that need happiness, color, or healing. Your game should include at least one level, a start screen, player character, scoring system based on positive actions, and interactive non-player characters.
+Project Requirements
+
+Create positive particle effects (hearts, flowers, colors, musical notes)
+Transform "hostile" environments into vibrant, living spaces
+Score points through acts of creation rather than destruction
+Use sound and music to enhance the peaceful atmosphere
+Design characters that evolve visually as they receive positive energy
+
+This reframing maintains all the technical learning objectives while promoting creative, non-violent gameplay. Students can explore themes like:
+
+Environmental restoration
+Spreading art through a gray world
+Converting sadness into joy
+Musical harmony bringing people together
+Growing gardens in unexpected places
+
+Would you like me to elaborate on any aspect of this reframing?
 
 ## Project Requirements
 
 Your project should demonstrate:
 
 - At least one scene with a well-designed user interface
-- Interactivity with player controls and enemy behavior
+- Interactivity with player controls and npc behavior
 - arrays, loops, and if statements
 - Implementation of scoring and level progression
 - Use of Godot systems (e.g., physics, animation, sound, particle systems)
