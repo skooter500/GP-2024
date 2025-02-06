@@ -5,16 +5,23 @@ var count:int
 
 func _draw() -> void:
 	var l= float(count)
-	for i in range (l):
-		draw_line(Vector2(i * 100, 0), Vector2(i * 100, 500), Color.DEEP_PINK, 10)
+	#for i in range (l):
+		#draw_line(Vector2(i * 100, 0), Vector2(i * 100, 500), Color.DEEP_PINK, 10)
 	
 	
-	var theta_inc = PI * 2.0 / l 
+	var theta_inc = 0.01
+	var px = 0 
+	var py = 0 
+	var r = 0
 	for i in range(l):
 		var theta = theta_inc * i 
-		var x = sin(theta) * radius
-		var y = cos(theta) * radius
-		draw_circle(Vector2(x, y), radius, Color.ORANGE, false)
+		var x = sin(theta) * r
+		var y = cos(theta) * r
+		draw_line(Vector2(px, py), Vector2(x, y), Color.ALICE_BLUE, 10)
+		draw_circle(Vector2(x, y), 10, Color.ORANGE, false)
+		px = x 
+		py = y
+		r = r + radius
 	
 	
 	

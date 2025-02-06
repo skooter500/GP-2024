@@ -20,6 +20,7 @@ offset_left = 97.0
 offset_top = 5.0
 offset_right = 295.0
 offset_bottom = 21.0
+max_value = 1000.0
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 4.0
@@ -33,6 +34,8 @@ offset_left = 96.0
 offset_top = 36.0
 offset_right = 294.0
 offset_bottom = 52.0
+max_value = 1.0
+step = 0.01
 
 [connection signal="value_changed" from="num_lines" to="gen_art" method="_on_num_lines_value_changed"]
 [connection signal="value_changed" from="radius" to="gen_art" method="_on_radius_value_changed"]
