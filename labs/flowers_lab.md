@@ -10,6 +10,7 @@ Adjustable parameters:
 - Petal size
 - Color of center
 - Color of petals
+- Color gradients
 - Etc Etc
 
 Bonus Ideas
