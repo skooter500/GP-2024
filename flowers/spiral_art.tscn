@@ -1,0 +1,92 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyri6p81qk2j1"]
+
+[ext_resource type="Script" uid="uid://8bk3uauung3q" path="res://spiral2.gd" id="1_1oiif"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tvboe"]
+font_size = 15
+font_color = Color(1, 0.568627, 1, 1)
+outline_color = Color(1, 0.141176, 1, 1)
+
+[node name="spiral_art" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -5.0
+offset_top = -3.0
+offset_right = 1161.0
+offset_bottom = 657.0
+color = Color(0.666667, 1, 0.619608, 1)
+
+[node name="spiral" type="Node2D" parent="."]
+position = Vector2(592, 325)
+script = ExtResource("1_1oiif")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 107.0
+offset_bottom = 231.0
+text = "r_inc:
+theta_inc:
+dir:
+iterations:
+hue begin:
+HUE_inc:
+ALPHA_INC:
+thickness:"
+label_settings = SubResource("LabelSettings_tvboe")
+
+[node name="r_inc" type="HSlider" parent="."]
+offset_left = 92.0
+offset_top = 12.0
+offset_right = 282.0
+offset_bottom = 28.0
+
+[node name="theta_inc" type="HSlider" parent="."]
+offset_left = 91.0
+offset_top = 39.0
+offset_right = 281.0
+offset_bottom = 55.0
+
+[node name="iterations" type="HSlider" parent="."]
+offset_left = 92.0
+offset_top = 88.0
+offset_right = 281.0
+offset_bottom = 104.0
+
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = 88.0
+offset_top = 60.0
+offset_right = 132.0
+offset_bottom = 84.0
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+offset_left = 98.0
+offset_top = 110.0
+offset_right = 145.0
+offset_bottom = 135.0
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 98.0
+offset_top = 137.0
+offset_right = 270.0
+offset_bottom = 153.0
+
+[node name="HSlider2" type="HSlider" parent="."]
+offset_left = 101.0
+offset_top = 161.0
+offset_right = 280.0
+offset_bottom = 177.0
+
+[node name="thickness" type="HSlider" parent="."]
+offset_left = 97.0
+offset_top = 190.0
+offset_right = 285.0
+offset_bottom = 206.0
+
+[connection signal="value_changed" from="r_inc" to="spiral" method="_on_r_inc_value_changed"]
+[connection signal="value_changed" from="theta_inc" to="spiral" method="_on_theta_inc_value_changed"]
+[connection signal="value_changed" from="iterations" to="spiral" method="_on_iterations_value_changed"]
+[connection signal="color_changed" from="ColorPickerButton" to="spiral" method="_on_color_picker_button_color_changed"]
+[connection signal="value_changed" from="HSlider" to="spiral" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HSlider2" to="spiral" method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="thickness" to="spiral" method="_on_thickness_value_changed"]
