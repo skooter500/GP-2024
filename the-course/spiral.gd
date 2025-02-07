@@ -37,8 +37,8 @@ func reset() -> void:
 	cx = 0
 	cy = 0	
 	r_inc = randf_range(min_radius_increment, max_radius_increment)
-	theta_inc = randf_range(min_theta_increment, max_theta_increment)
-	
+	target_theta_inc = randf_range(min_theta_increment, max_theta_increment)
+	 
 	dir = 1 if randi() % 2 == 0 else -1
 	color_hue_start = 0
 
