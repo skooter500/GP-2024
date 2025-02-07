@@ -14,34 +14,45 @@ var r_inc: float
 var theta_inc: float
 var dir: int
 var iterations = 100
-var color_hue_start
-var alpha_inc:float=0.0
+var color_hue_start 
+var alpha_inc:float=0.0 
 var hue_inc:float=0.0
-
+ 
 func _ready() -> void:
 	reset()
 	
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		r_inc = randf_range(0, 10)
-		theta_inc = randf_range(0, 6)
-	
-		color_hue_start = randf_range(0, 1) 
-		thickness = randf_range(1, 50)
-		hue_inc = randf_range(0, 1)
-		alpha_inc = randf_range(0, 1)
-
+	if event is InputEventAction && event.pressed && event.action == "reset_spiral" &&  not event.is_echo():
+		reset()
+ 
 func reset() -> void:
 	queue_redraw()
 	var viewport_size = get_viewport_rect().size
 	cx = 0
 	cy = 0	
-	r_inc = randf_range(min_radius_increment, max_radius_increment)
 	target_theta_inc = randf_range(min_theta_increment, max_theta_increment)
 	 
 	dir = 1 if randi() % 2 == 0 else -1
 	color_hue_start = 0
+	 
+	r_inc = randf_range(0, 10)
+	# theta_inc = randf_range(0, 6)
 
+	color_hue_start = randf_range(0, 1) 
+	iterations = randi_range(10, 500) 
+	thickness = randf_range(1, 50)
+	hue_inc = randf_range(0, 1)
+	alpha_inc = randf_range(0, 1)
+	
+	$"../r_inc".value = r_inc
+	$"../theta_inc".value = target_theta_inc
+	$"../iterations".value = iterations
+	var old_color = $"../ColorPickerButton".color
+	$"../ColorPickerButton".color = Color.from_hsv(color_hue_start, 1, 1, old_color.a)
+	$"../alpha".value = alpha_inc
+	$"../thickness".value = thickness
+	$"../hue".value = hue_inc
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_SPACE:

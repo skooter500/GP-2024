@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnlh5xpotna2y"]
+[gd_scene load_steps=3 format=3 uid="uid://bnlh5xpotna2y"]
 
 [ext_resource type="Script" uid="uid://du825yqfaxvax" path="res://spiral.gd" id="1_3lw7s"]
+[ext_resource type="Script" uid="uid://cgys4nkaf8jfp" path="res://spiral_center.gd" id="2_evqlj"]
 
 [node name="spiral_art" type="Node2D"]
 
@@ -65,7 +66,7 @@ offset_right = 274.0
 offset_bottom = 169.0
 color = Color(0, 0.666667, 1, 1)
 
-[node name="HSlider" type="HSlider" parent="."]
+[node name="hue" type="HSlider" parent="."]
 offset_left = 174.0
 offset_top = 174.0
 offset_right = 479.0
@@ -73,7 +74,7 @@ offset_bottom = 190.0
 max_value = 1.0
 step = 0.01
 
-[node name="HSlider2" type="HSlider" parent="."]
+[node name="alpha" type="HSlider" parent="."]
 offset_left = 185.0
 offset_top = 208.0
 offset_right = 487.0
@@ -87,10 +88,13 @@ offset_top = 241.0
 offset_right = 473.0
 offset_bottom = 257.0
 
+[node name="spiral_center2" type="Node2D" parent="."]
+script = ExtResource("2_evqlj")
+
 [connection signal="value_changed" from="r_inc" to="spiral" method="_on_r_inc_value_changed"]
 [connection signal="value_changed" from="theta_inc" to="spiral" method="_on_theta_inc_value_changed"]
 [connection signal="value_changed" from="iterations" to="spiral" method="_on_iterations_value_changed"]
 [connection signal="color_changed" from="ColorPickerButton" to="spiral" method="_on_color_picker_button_color_changed"]
-[connection signal="value_changed" from="HSlider" to="spiral" method="_on_h_slider_value_changed"]
-[connection signal="value_changed" from="HSlider2" to="spiral" method="_on_h_slider_2_value_changed"]
+[connection signal="value_changed" from="hue" to="spiral" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="alpha" to="spiral" method="_on_h_slider_2_value_changed"]
 [connection signal="value_changed" from="thickness" to="spiral" method="_on_thickness_value_changed"]
