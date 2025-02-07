@@ -7,8 +7,8 @@
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -46.0
 offset_top = -13.0
-offset_right = 1472.0
-offset_bottom = 759.0
+offset_right = 4762.0
+offset_bottom = 3132.0
 color = Color(0, 0, 0, 1)
 
 [node name="spiral" type="Node2D" parent="."]

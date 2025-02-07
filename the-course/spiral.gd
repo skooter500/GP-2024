@@ -20,6 +20,16 @@ var hue_inc:float=0.0
 
 func _ready() -> void:
 	reset()
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		r_inc = randf_range(0, 10)
+		theta_inc = randf_range(0, 6)
+	
+		color_hue_start = randf_range(0, 1) 
+		thickness = randf_range(1, 50)
+		hue_inc = randf_range(0, 1)
+		alpha_inc = randf_range(0, 1)
 
 func reset() -> void:
 	queue_redraw()
@@ -41,6 +51,8 @@ func _process(delta: float) -> void:
 	queue_redraw()    
 	rotation = lerp(rotation, Input.get_axis("forward", "back") * PI, 
 	delta)
+	
+	
 	# global_position.x += delta * 100
 	pass
 
@@ -58,8 +70,11 @@ func _draw() -> void:
 		var x = sin(theta) * r
 		var y = (cos(theta) * dir) * r
 		var c:Color = Color.from_hsv(color_hue, 1, 1, alpha)
-		draw_line(Vector2(px, py), Vector2(x, y), c , thickness)		
+		draw_line(Vector2(px, py), Vector2(x, y), c , thickness)	
+		var s = Vector2(1, 2)	
+		# draw_set_transform(Vector2.ZERO, 0, s)		
 		draw_circle(Vector2(px, py), 1, c, false, thickness)
+		# draw_set_transform(Vector2.ZERO, 0, Vector2.ONE)		
 		r += r_inc
 		theta += theta_inc
 		color_hue += hue_inc * 0.01
