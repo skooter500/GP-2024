@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://5xmg4kyjea30"]
+
+[ext_resource type="Script" uid="uid://d2cl3lf8mhede" path="res://dude.gd" id="1_opyg7"]
+
+[node name="shooter_game" type="Node2D"]
+
+[node name="dude" type="CharacterBody2D" parent="."]
+position = Vector2(189, 172)
+motion_mode = 1
+script = ExtResource("1_opyg7")
+size = 50
+line_size = 5
+color = Color(0, 1, 0.25, 0.45098)
+turn_left_input = "left"
+turn_right_input = "right"
+forward_input = "forward"
+back_input = "back"
+
+[node name="Marker2D" type="Marker2D" parent="dude"]
+position = Vector2(0, -38)
+
+[node name="Camera2D" type="Camera2D" parent="."]
