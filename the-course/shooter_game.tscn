@@ -1,11 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://5xmg4kyjea30"]
+[gd_scene load_steps=7 format=3 uid="uid://5xmg4kyjea30"]
 
+[ext_resource type="Script" uid="uid://byl3sew3vbcr5" path="res://shooter_game.gd" id="1_c5ar1"]
 [ext_resource type="Script" uid="uid://d2cl3lf8mhede" path="res://dude.gd" id="1_opyg7"]
+[ext_resource type="PackedScene" uid="uid://dl7bn3bgrqbcg" path="res://dude_bullet.tscn" id="2_mugk0"]
+[ext_resource type="PackedScene" uid="uid://7ffshnxf3qah" path="res://ufo.tscn" id="3_6xsbg"]
+[ext_resource type="Script" uid="uid://ck2i25kw3ks1m" path="res://ufo_spawner.gd" id="4_gm47b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gm47b"]
+size = Vector2(55, 53)
 
 [node name="shooter_game" type="Node2D"]
+script = ExtResource("1_c5ar1")
 
-[node name="dude" type="CharacterBody2D" parent="."]
-position = Vector2(189, 172)
+[node name="ufo3" parent="." instance=ExtResource("3_6xsbg")]
+position = Vector2(232, 59)
+
+[node name="Timer" parent="ufo3" index="1"]
+wait_time = 4.10649
+
+[node name="dude" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn")]
+collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_opyg7")
 size = 50
@@ -15,8 +29,60 @@ turn_left_input = "left"
 turn_right_input = "right"
 forward_input = "forward"
 back_input = "back"
+bullet_scene = ExtResource("2_mugk0")
+bullet_spawn = NodePath("Marker2D")
+lives = null
+ammo = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dude"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_gm47b")
 
 [node name="Marker2D" type="Marker2D" parent="dude"]
 position = Vector2(0, -38)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Timer" type="Timer" parent="dude"]
+wait_time = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="dude"]
+position = Vector2(-1, 0)
+position_smoothing_enabled = true
+
+[node name="ufo" parent="." instance=ExtResource("3_6xsbg")]
+position = Vector2(-346, 128)
+
+[node name="Timer" parent="ufo" index="1"]
+wait_time = 6.66072
+
+[node name="ufo2" parent="." instance=ExtResource("3_6xsbg")]
+position = Vector2(402, 68)
+
+[node name="Timer" parent="ufo2" index="1"]
+wait_time = 1.07011
+
+[node name="ufo_spawner" type="Marker2D" parent="."]
+script = ExtResource("4_gm47b")
+ufo_scene = ExtResource("3_6xsbg")
+radius = 300.0
+count = 10
+
+[node name="Timer" type="Timer" parent="ufo_spawner"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ufo_count" type="Label" parent="CanvasLayer"]
+offset_right = 134.0
+offset_bottom = 30.0
+text = "UFO_COUNT:"
+
+[node name="lives" type="Label" parent="CanvasLayer"]
+offset_top = 53.0
+offset_right = 132.0
+offset_bottom = 83.0
+text = "LIVES: 10"
+
+[connection signal="timeout" from="dude/Timer" to="dude" method="_on_timer_timeout"]
+
+[editable path="ufo3"]
+[editable path="ufo"]
+[editable path="ufo2"]

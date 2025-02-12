@@ -19,6 +19,9 @@ extends CharacterBody2D
 @export var bullet_scene:PackedScene
 @export var bullet_spawn:Node2D
 
+@export var lives:int = 100
+@export var ammo:int = 100
+
 var can_fire = true
 
 func _draw() -> void:
@@ -34,11 +37,15 @@ func _process(delta: float) -> void:
 	queue_redraw()
 	
 	if ! Engine.is_editor_hint():	
+		$"../CanvasLayer/lives".text = "LIVES: " + str(lives)
+		
 		if Input.is_action_pressed("fire") and can_fire:
 			var b = bullet_scene.instantiate()
 			b.global_position = bullet_spawn.global_position
 			b.global_rotation = bullet_spawn.global_rotation
 			get_tree().get_root().add_child(b) 
+			b.color = color
+			b.line_size = line_size
 			can_fire = false
 			$Timer.start()
 	pass
@@ -51,9 +58,20 @@ func _physics_process(delta: float) -> void:
 		var m = Input.get_axis(forward_input, back_input)
 		acceleration = transform.y * m * speed
 		velocity = velocity + acceleration * delta	
-		move_and_slide()
-		velocity = velocity * 0.99
+		var c = move_and_collide(velocity * delta)
+		if c and c.get_collider().is_in_group("ufo"):
+			print("I collided")
+			lives -= 1			
+			position = Vector2.ZERO
+			velocity = Vector2.ZERO
+		else:
+			velocity = velocity * 0.99
 		
 	
 func _ready() -> void:
 	pass
+
+
+func _on_timer_timeout() -> void:
+	can_fire = true
+	pass # Replace with function body.

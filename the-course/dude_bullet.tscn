@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl7bn3bgrqbcg"]
+
+[ext_resource type="Script" uid="uid://bbich0lxw8wn5" path="res://dude_bullet.gd" id="1_b6ii7"]
+[ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="2_u71cm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mugk0"]
+
+[node name="dude_bullet" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
+motion_mode = 1
+velocity = Vector2(0, -500)
+script = ExtResource("1_b6ii7")
+speed = 500
+explosion = ExtResource("2_u71cm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mugk0")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
