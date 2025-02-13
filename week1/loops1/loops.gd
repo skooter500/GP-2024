@@ -60,7 +60,7 @@ func _draw() -> void:
 	
 	for i in range(num_c_lines):
 		draw_line(Vector2(0, i * gap), Vector2(v.size.x, v.size.y - ( i * gap)), Color.FIREBRICK)
-		
+			
 	
 	gap = v.size
 	
