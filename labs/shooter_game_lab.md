@@ -15,6 +15,20 @@ Analyse the shooter_game scene carfully and write down your explanation of how t
 - What is the firing sequence of a ufo?
 - How do the UFO and the player appear. Can you improve this?
 
+## Create loot that drops when the player shoots a ufo
+- ammo. Create a design for an ammo drop. Make it rotate in a random direction and head towards the players position when it spawns 
+- lives. Same as above. Different color and shape. maybe a box with a cross in it
+- If a bullet from the player or the ufo's hits a loot drop, it explodes
+- Use the ufo_spawner to spawn spirals (the ones we made last week)
+- fire rate powerup
+- fire_power
+
+# Gameplay
+- add level progression so that the number of aliens increases as the levels increase
+- start at level 1 with 1 alien and increase the number of aliens that spawn
+- add camera zoom on a different input
+- add lives to the ufo so that some of them take more hits to kill
+
 ## Create the following enemy types with shapes of your own design:
 
 ## ufo_player_seeker
