@@ -3,7 +3,7 @@ extends Node2D
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("quit"):
 		get_tree().quit()
-	_draw()
+
 
 func _draw():
 # Flower 1
