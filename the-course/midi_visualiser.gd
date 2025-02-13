@@ -4,6 +4,10 @@ extends Node2D
 
 var notes:Dictionary
 
+func play_note(me):
+	$BlipSelect9.pitch_scale = remap(me.pitch, 0, 127, 0, 10)
+	$BlipSelect9.play()
+
 func note_disappear(note):
 	notes.erase(note.pitch)
 	remove_child(note)
@@ -23,7 +27,7 @@ func create_note(me):
 	note.color = Color.from_hsv(randf(), 1, 1)
 	add_child(note)
 	
-	
+		
 
 func _ready():
 	OS.open_midi_inputs()
@@ -34,6 +38,7 @@ func _input(input_event):
 		var me:InputEventMIDI = input_event
 		if me.message == 9:			
 			create_note(me)
+			play_note(me)
 			# _print_midi_info(me)
 		if me.message == 8:
 			if notes.has(me.pitch): 

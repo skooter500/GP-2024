@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dcn4soippejj5"]
 
-[ext_resource type="Script" path="res://bullet.gd" id="1_csdhu"]
+[ext_resource type="Script" uid="uid://up5xhrha1b72" path="res://bullet.gd" id="1_csdhu"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="2_hvpqa"]
 [ext_resource type="AudioStream" uid="uid://dxtc48o5qwpl8" path="res://sounds/Laser_Shoot38.wav" id="3_ba8d6"]
 
