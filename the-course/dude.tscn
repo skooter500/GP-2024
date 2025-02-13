@@ -8,6 +8,8 @@
 size = Vector2(55, 53)
 
 [node name="dude" type="CharacterBody2D" node_paths=PackedStringArray("bullet_spawn") groups=["dude"]]
+rotation = 2.54316
+scale = Vector2(1e-05, 1e-05)
 collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_prwsp")
@@ -31,13 +33,13 @@ position = Vector2(0, -38)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1, 0)
-position_smoothing_enabled = true
-
 [node name="Synth2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_62y41")
-pitch_scale = 1.83402
+pitch_scale = 1.05691
 autoplay = true
+stream_paused = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
