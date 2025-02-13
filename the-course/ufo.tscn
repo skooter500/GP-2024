@@ -25,7 +25,8 @@ position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_c0rv2")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 6.37324
+wait_time = 9.70477
+autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1, 40)

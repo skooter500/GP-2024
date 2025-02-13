@@ -6,7 +6,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mugk0"]
 
-[node name="dude_bullet2" type="CharacterBody2D"]
+[node name="dude_bullet3" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 5
 motion_mode = 1

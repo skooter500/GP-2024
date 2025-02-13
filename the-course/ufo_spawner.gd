@@ -16,10 +16,10 @@ func spawn():
 		var x = sin(theta) * radius
 		var y = - cos(theta) * radius
 		var ufo = ufo_scene.instantiate()
-		ufo.position = Vector2(x, y)		
-		add_child(ufo)
+		ufo.position = position + Vector2(x, y)		
+		get_parent().add_child(ufo)
 		
 		
 func _ready() -> void:
-	spawn()
+	# spawn()
 	pass 

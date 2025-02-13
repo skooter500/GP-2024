@@ -31,6 +31,7 @@ func respawn():
 	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(self, "scale", Vector2.ONE, 1)
 	position = Vector2.ZERO
+	get_node("Synth2").pitch_scale = randf_range(0.1, 2.2)
 	get_node("Synth2").play()
 
 func _draw() -> void:
@@ -74,8 +75,7 @@ func _physics_process(delta: float) -> void:
 		if c and c.get_collider().is_in_group("ufo"):
 			print("I collided")
 			lives -= 1			
-			position = Vector2.ZERO
-			velocity = Vector2.ZERO
+			respawn()
 		else:
 			velocity = velocity * 0.99
 		

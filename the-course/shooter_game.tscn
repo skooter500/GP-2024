@@ -9,12 +9,13 @@
 script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
+speed = 500.0
 ufo_count = 1
 
 [node name="ufo_spawner" type="Marker2D" parent="."]
 script = ExtResource("4_gm47b")
 ufo_scene = ExtResource("3_6xsbg")
-count = 10
+count = 5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -36,3 +37,17 @@ offset_top = 221.0
 offset_right = 338.0
 offset_bottom = 296.0
 text = "AMMO: 100"
+
+[node name="level" type="Label" parent="CanvasLayer"]
+offset_left = 8.0
+offset_top = 320.0
+offset_right = 338.0
+offset_bottom = 395.0
+text = "LEVEL: 0"
+
+[node name="target" type="Label" parent="CanvasLayer"]
+offset_left = 14.0
+offset_top = 419.0
+offset_right = 344.0
+offset_bottom = 494.0
+text = "TARGET_COUNT: 0"

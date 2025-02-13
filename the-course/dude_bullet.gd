@@ -10,7 +10,7 @@ extends CharacterBody2D
 
 
 func _ready() -> void:
-	$LaserShoot.pitch_scale = randf_range(0.9, 1.1)
+	$LaserShoot.pitch_scale = randf_range(0.1, 2)
 
 func _draw():
 	draw_line(Vector2(0, 10), Vector2(0, -10), color, line_size)
@@ -23,7 +23,8 @@ func _process(delta):
 		var coll = c.get_collider()
 		if coll.is_in_group("ufo"):
 			print("collided with a ufo")				
-			$"../dude".ufo_count = $"../dude".ufo_count + 1
+			var uc = $"../dude".ufo_count
+			$"../dude".ufo_count = uc + 1
 			$"../CanvasLayer/ufo_count".text = "UFO COUNT:" + str($"../dude".ufo_count)
 			c.get_collider().queue_free()
 			

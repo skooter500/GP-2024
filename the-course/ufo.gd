@@ -19,7 +19,7 @@ func _ready() -> void:
 	tween.tween_property(self, "scale", Vector2.ONE, 1)
 	$Synth.pitch_scale = randf_range(0.7, 1.3)
 	await get_tree().create_timer(2.0).timeout		
-	randomise_timer()
+	# randomise_timer()
 	
 func randomise_timer():
 	$Timer.wait_time = randf_range(0, 10)
