@@ -12,12 +12,6 @@ size = Vector2(55, 53)
 [node name="shooter_game" type="Node2D"]
 script = ExtResource("1_c5ar1")
 
-[node name="ufo3" parent="." instance=ExtResource("3_6xsbg")]
-position = Vector2(232, 59)
-
-[node name="Timer" parent="ufo3" index="1"]
-wait_time = 7.93954
-
 [node name="dude" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn") groups=["dude"]]
 collision_mask = 6
 motion_mode = 1
@@ -46,18 +40,6 @@ wait_time = 0.1
 position = Vector2(-1, 0)
 position_smoothing_enabled = true
 
-[node name="ufo" parent="." instance=ExtResource("3_6xsbg")]
-position = Vector2(-346, 128)
-
-[node name="Timer" parent="ufo" index="1"]
-wait_time = 3.82548
-
-[node name="ufo2" parent="." instance=ExtResource("3_6xsbg")]
-position = Vector2(402, 68)
-
-[node name="Timer" parent="ufo2" index="1"]
-wait_time = 8.44109
-
 [node name="ufo_spawner" type="Marker2D" parent="."]
 script = ExtResource("4_gm47b")
 ufo_scene = ExtResource("3_6xsbg")
@@ -81,7 +63,3 @@ offset_bottom = 185.0
 text = "LIVES: 10"
 
 [connection signal="timeout" from="dude/Timer" to="dude" method="_on_timer_timeout"]
-
-[editable path="ufo3"]
-[editable path="ufo"]
-[editable path="ufo2"]

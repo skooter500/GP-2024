@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://7ffshnxf3qah"]
+[gd_scene load_steps=5 format=3 uid="uid://7ffshnxf3qah"]
 
 [ext_resource type="Script" uid="uid://cq1w3jbf2rpos" path="res://ufo.gd" id="1_c0rv2"]
 [ext_resource type="PackedScene" uid="uid://dl7bn3bgrqbcg" path="res://dude_bullet.tscn" id="2_lwnds"]
+[ext_resource type="AudioStream" uid="uid://bdp3fj5og0i5j" path="res://sounds/synth.wav" id="3_7har2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0rv2"]
 size = Vector2(88, 51)
@@ -20,9 +21,13 @@ position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_c0rv2")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 4.11547
+wait_time = 6.65606
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1, 40)
+
+[node name="Synth" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7har2")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
