@@ -1,5 +1,6 @@
 extends Node2D
 
+# when the scene is loaded, assign these variables from the scene
 @onready var ufo_spawner = $ufo_spawner
 @onready var dude = $dude
 
@@ -17,10 +18,12 @@ func next_level():
 	ufo_spawner.position = dude.position
 	ufo_spawner.spawn()	
 	level = level + 1
+	# next target
 	target = target + ufo_spawner.count
 
 
 func _process(delta):
+	# if the dude reaches the target, advance to next level
 	if dude.ufo_count == target:
 		next_level()
 	$CanvasLayer/target.text="target_count: " + str(target)

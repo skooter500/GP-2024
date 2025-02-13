@@ -1,5 +1,6 @@
 extends Marker2D
 
+# The thing to spawn
 @export var ufo_scene:PackedScene
 
 @export var radius:float = 200
@@ -10,7 +11,7 @@ extends Marker2D
 func spawn():
 	print("begin spawning")
 	var theta_inc = TAU / float(count)
-	var color = Color.from_hsv(randf(), 1, 1, 0.5)		
+	var color = Color.from_hsv(randf(), 1, 1, 0.9)		
 	for i in count:
 		await get_tree().create_timer(1 / float(rate)).timeout
 		var theta = theta_inc * i
