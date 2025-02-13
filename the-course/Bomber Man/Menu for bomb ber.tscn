@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cleyudmu0av3k"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_2mxjt"]
+[ext_resource type="Script" uid="uid://b5bissyvyr7bi" path="res://menu.gd" id="1_2mxjt"]
 [ext_resource type="Texture2D" uid="uid://d0wptppajim7a" path="res://Bomber Man/1000_F_572788249_Lpiz0SMKEh1XU4y3Lj7NXjZW89yXw4ZC.jpg" id="2_13ew1"]
 
 [node name="MENU" type="Control"]

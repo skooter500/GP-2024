@@ -2,6 +2,8 @@ extends Sprite2D
 @export var time = 5
 @export var speed = 50
 @onready var player = $"../Player"
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var a:float = 10 / 17.0
@@ -23,4 +25,6 @@ func _on_area_entered(area:Area2D) -> void:
 	print ("collided")
 	print(area)
 	area.queue_free()
+
+
 pass

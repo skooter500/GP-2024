@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bqvm1txmqy61t"]
 
-[ext_resource type="Script" path="res://Bomber Man/rocket_man.gd" id="1_bs004"]
-[ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_dg82q"]
+[ext_resource type="Script" uid="uid://d0d1i0akpk8ry" path="res://Bomber Man/rocket_man.gd" id="1_bs004"]
+[ext_resource type="Script" uid="uid://cc6tm2x26g2gh" path="res://rigid_body_2d.gd" id="1_dg82q"]
 [ext_resource type="Texture2D" uid="uid://i8pp0u427i1v" path="res://Bomber Man/191312.png" id="2_03q06"]
 [ext_resource type="Texture2D" uid="uid://c67qrds413ar4" path="res://Bomber Man/il_1080xN.5941421093_t2y6.jpg" id="3_5ubvf"]
 [ext_resource type="Texture2D" uid="uid://4qhlohohle31" path="res://Bomber Man/360x360.jpg" id="5_5lxxe"]
-[ext_resource type="Script" path="res://Bomber Man/pngtree_pixel_art_rocket_png_image_13061388.gd" id="6_x4fuc"]
+[ext_resource type="Script" uid="uid://8c3ruiy8ttff" path="res://Bomber Man/pngtree_pixel_art_rocket_png_image_13061388.gd" id="6_x4fuc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_exyn6"]
 
@@ -13,13 +13,13 @@
 size = Vector2(77.5, 88.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vboc1"]
-size = Vector2(55.25, 1228.25)
+size = Vector2(53.625, 723.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qiui"]
-size = Vector2(2183.5, 40)
+size = Vector2(1271, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1un47"]
-size = Vector2(361.311, 362.252)
+size = Vector2(357.813, 365.104)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_bs004")
@@ -34,6 +34,10 @@ position = Vector2(540, 295)
 linear_damp = 1.0
 angular_damp = 2.0
 script = ExtResource("1_dg82q")
+engine_power = null
+double_power = null
+spin_power = null
+lives = null
 
 [node name="body" type="Sprite2D" parent="Player"]
 position = Vector2(1, 0)
@@ -52,35 +56,36 @@ shape = SubResource("RectangleShape2D_1737f")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-29, 608)
+position = Vector2(-29.8125, 355.438)
 shape = SubResource("RectangleShape2D_vboc1")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2"]
-position = Vector2(723, -18)
+position = Vector2(566.5, -13.5)
 shape = SubResource("RectangleShape2D_4qiui")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="StaticBody2D/StaticBody2D2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3"]
-position = Vector2(1182, 544)
+position = Vector2(1188, 349)
 shape = SubResource("RectangleShape2D_vboc1")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/StaticBody2D2/StaticBody2D3/StaticBody2D4"]
-position = Vector2(871, 667)
+position = Vector2(581.625, 667)
 shape = SubResource("RectangleShape2D_4qiui")
 
 [node name="shidstain" type="Sprite2D" parent="."]
-position = Vector2(283, 268)
-scale = Vector2(0.514792, 0.499653)
+position = Vector2(253.669, 297.469)
+scale = Vector2(0.35184, 0.335938)
 texture = ExtResource("5_5lxxe")
 script = ExtResource("6_x4fuc")
 
 [node name="Area2D" type="Area2D" parent="shidstain"]
 
 [node name="shidstain2" type="CollisionShape2D" parent="shidstain/Area2D"]
-position = Vector2(-6.10352e-05, 1.00085)
+position = Vector2(-1.7489, -0.424866)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1un47")
