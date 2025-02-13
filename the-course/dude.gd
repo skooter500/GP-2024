@@ -21,7 +21,7 @@ extends CharacterBody2D
 
 @export var lives:int = 100
 @export var ammo:int = 100
-@export var ufo_count:int = 100
+@export var ufo_count:int = 0
 
 
 var can_fire = true
@@ -41,14 +41,17 @@ func _process(delta: float) -> void:
 	if ! Engine.is_editor_hint():	
 		$"../CanvasLayer/lives".text = "LIVES: " + str(lives)
 		
-		if Input.is_action_pressed("fire") and can_fire:
+		
+		if Input.is_action_pressed("fire") and can_fire and ammo > 0:
 			var b = bullet_scene.instantiate()
 			b.global_position = bullet_spawn.global_position
 			b.global_rotation = bullet_spawn.global_rotation
-			get_tree().get_root().add_child(b) 
+			get_parent().add_child(b) 
 			b.color = color
 			b.line_size = line_size
 			can_fire = false
+			ammo = ammo - 1
+			$"../CanvasLayer/ammo".text = "AMMO: " + str(ammo)
 			$Timer.start()
 	pass
 	
@@ -73,7 +76,7 @@ func _physics_process(delta: float) -> void:
 func _ready() -> void:
 	scale = Vector2.ZERO
 	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(self, "scale", Vector2.ONE, 3)
+	tween.tween_property(self, "scale", Vector2.ONE, 2)
 	pass
 
 

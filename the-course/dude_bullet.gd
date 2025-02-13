@@ -12,7 +12,7 @@ extends CharacterBody2D
 
 func _draw():
 	draw_line(Vector2(0, 10), Vector2(0, -10), color, line_size)
-
+"."
 	
 func _process(delta):
 	velocity = -transform.y * speed
@@ -21,7 +21,10 @@ func _process(delta):
 		var coll = c.get_collider()
 		if coll.is_in_group("ufo"):
 			print("collided with a ufo")				
+			$"../dude".ufo_count = $"../dude".ufo_count + 1
+			$"../CanvasLayer/ufo_count".text = "UFO COUNT:" + str($"../dude".ufo_count)
 			c.get_collider().queue_free()
+			
 		elif coll.is_in_group("dude"):
 			coll.lives = coll.lives - 1
 			print("collided with a dude")

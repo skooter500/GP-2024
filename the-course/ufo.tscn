@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq1w3jbf2rpos" path="res://ufo.gd" id="1_c0rv2"]
 [ext_resource type="PackedScene" uid="uid://dl7bn3bgrqbcg" path="res://dude_bullet.tscn" id="2_lwnds"]
-[ext_resource type="AudioStream" uid="uid://bdp3fj5og0i5j" path="res://sounds/synth.wav" id="3_7har2"]
+[ext_resource type="AudioStream" uid="uid://cxvpo2egevp8l" path="res://sounds/jump.wav" id="3_7har2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0rv2"]
 size = Vector2(88, 51)
@@ -16,18 +16,18 @@ line_size = 5.0
 bullet_scene = ExtResource("2_lwnds")
 bullet_spawn = NodePath("Marker2D")
 
+[node name="Synth" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7har2")
+autoplay = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_c0rv2")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 6.65606
+wait_time = 6.37324
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1, 40)
-
-[node name="Synth" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_7har2")
-autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

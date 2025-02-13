@@ -16,8 +16,9 @@ var can_fire = false
 func _ready() -> void:
 	scale = Vector2.ZERO
 	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(self, "scale", Vector2.ONE, 3)
+	tween.tween_property(self, "scale", Vector2.ONE, 1)
 	$Synth.pitch_scale = randf_range(0.7, 1.3)
+	await get_tree().create_timer(2.0).timeout		
 	randomise_timer()
 	
 func randomise_timer():
@@ -46,7 +47,7 @@ func _on_timer_timeout() -> void:
 	var b = bullet_scene.instantiate()
 	b.global_position = bullet_spawn.global_position
 	b.global_rotation = PI
-	get_tree().get_root().add_child(b) 
+	get_parent().add_child(b) 
 	b.color = color
 	b.line_size = line_size
 	b.set_collision_mask_value(3, false)
