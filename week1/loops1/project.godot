@@ -12,5 +12,5 @@ config_version=5
 
 config/name="loops1"
 run/main_scene="uid://bdwaq2cyx8vu1"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
