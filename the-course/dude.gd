@@ -26,6 +26,13 @@ extends CharacterBody2D
 
 var can_fire = true
 
+func respawn():
+	scale = Vector2.ZERO
+	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "scale", Vector2.ONE, 1)
+	position = Vector2.ZERO
+	get_node("Synth2").play()
+
 func _draw() -> void:
 	draw_line(Vector2(-radius, radius), Vector2(0, -radius), color, line_size)
 	draw_line(Vector2(radius, radius), Vector2(0, -radius), color, line_size)
@@ -74,9 +81,7 @@ func _physics_process(delta: float) -> void:
 		
 	
 func _ready() -> void:
-	scale = Vector2.ZERO
-	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(self, "scale", Vector2.ONE, 2)
+	respawn()
 	pass
 
 

@@ -9,6 +9,8 @@ extends CharacterBody2D
 @export var line_size:float = 3
 
 
+func _ready() -> void:
+	$LaserShoot.pitch_scale = randf_range(0.9, 1.1)
 
 func _draw():
 	draw_line(Vector2(0, 10), Vector2(0, -10), color, line_size)
@@ -28,7 +30,7 @@ func _process(delta):
 		elif coll.is_in_group("dude"):
 			coll.lives = coll.lives - 1
 			print("collided with a dude")
-			coll.position = Vector2.ZERO
+			coll.respawn()
 			pass
 		var e = explosion.instantiate()
 		e.modulate = coll.color
