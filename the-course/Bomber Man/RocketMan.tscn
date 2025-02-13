@@ -34,10 +34,6 @@ position = Vector2(540, 295)
 linear_damp = 1.0
 angular_damp = 2.0
 script = ExtResource("1_dg82q")
-engine_power = null
-double_power = null
-spin_power = null
-lives = null
 
 [node name="body" type="Sprite2D" parent="Player"]
 position = Vector2(1, 0)
@@ -87,5 +83,4 @@ script = ExtResource("6_x4fuc")
 
 [node name="shidstain2" type="CollisionShape2D" parent="shidstain/Area2D"]
 position = Vector2(-1.7489, -0.424866)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1un47")

@@ -40,8 +40,8 @@ func get_input():
 	rotation_dir = Input.get_axis("rotate_left", "rotate_right")
 	if Input.is_action_pressed("esc"):
 		get_tree().change_scene_to_file("res://Bomber Man/Menu for bomb ber.tscn")		
-	if Input.is_action_pressed("e"):
-		thrust -= transform.y * double_power
+	#if Input.is_action_pressed("e"):
+		#thrust -= transform.y * double_power
 		rotation_dir = Input.get_axis("rotate_left", "rotate_right")
 	pass
 func _physics_process(_delta):
