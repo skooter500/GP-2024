@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c1cjkmj4t8ly6"]
 
 [ext_resource type="Script" path="res://patch.gd" id="1_64se4"]
-[ext_resource type="Theme" uid="uid://bsyatf2qyqicf" path="res://bryans_theme.tres" id="1_wya1o"]
+[ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="1_wya1o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpl3n"]
 size = Vector2(100, 100)

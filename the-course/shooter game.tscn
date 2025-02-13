@@ -1,0 +1,126 @@
+[gd_scene load_steps=13 format=3 uid="uid://cx6qdq0c477ye"]
+
+[ext_resource type="Script" path="res://Spaceman.gd" id="1_ohbyb"]
+[ext_resource type="Texture2D" uid="uid://dfqem0ebv08jw" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_001.png" id="2_ugyg5"]
+[ext_resource type="PackedScene" uid="uid://dcn4soippejj5" path="res://bullet.tscn" id="2_y2mg7"]
+[ext_resource type="Script" path="res://bullet_scene.gd" id="3_8socv"]
+[ext_resource type="Texture2D" uid="uid://c844yfbd26ea8" path="res://sprites/bug.png" id="3_glu3y"]
+[ext_resource type="Script" path="res://enemy.gd" id="5_l6g3b"]
+[ext_resource type="Script" path="res://new_enemy.gd" id="7_wp4ji"]
+[ext_resource type="Texture2D" uid="uid://b2a1y1atnx8in" path="res://assets/PNG/Sprites/Ships/spaceShips_007.png" id="8_d52hu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a56th"]
+radius = 20.8806
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4rqb6"]
+size = Vector2(31.5, 35)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_eqfl4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3d4rm"]
+radius = 47.0724
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Spaceman" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn_point")]
+position = Vector2(88, 67)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_ohbyb")
+bullet_scene = ExtResource("2_y2mg7")
+bullet_spawn_point = NodePath("spawn_point")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spaceman"]
+shape = SubResource("CircleShape2D_a56th")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spaceman"]
+texture = ExtResource("2_ugyg5")
+
+[node name="spawn_point" type="Node2D" parent="Spaceman"]
+position = Vector2(32, -1)
+rotation = 1.5708
+script = ExtResource("3_8socv")
+
+[node name="Timer" type="Timer" parent="Spaceman"]
+wait_time = 0.2
+one_shot = true
+
+[node name="Enemy" type="CharacterBody2D" parent="."]
+position = Vector2(775, 233)
+script = ExtResource("5_l6g3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("RectangleShape2D_4rqb6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+texture = ExtResource("3_glu3y")
+
+[node name="Timer" type="Timer" parent="Enemy"]
+
+[node name="Enemy2" type="CharacterBody2D" parent="."]
+position = Vector2(363, 380)
+script = ExtResource("5_l6g3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
+shape = SubResource("RectangleShape2D_4rqb6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy2"]
+texture = ExtResource("3_glu3y")
+
+[node name="Enemy3" type="CharacterBody2D" parent="."]
+position = Vector2(597, 368)
+script = ExtResource("5_l6g3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3"]
+shape = SubResource("RectangleShape2D_4rqb6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy3"]
+texture = ExtResource("3_glu3y")
+
+[node name="Enemy4" type="CharacterBody2D" parent="."]
+position = Vector2(299, 192)
+script = ExtResource("5_l6g3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy4"]
+shape = SubResource("RectangleShape2D_4rqb6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy4"]
+texture = ExtResource("3_glu3y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(500, 0)
+rotation = -3.14159
+shape = SubResource("WorldBoundaryShape2D_eqfl4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(500, 500)
+shape = SubResource("WorldBoundaryShape2D_eqfl4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 250)
+rotation = 1.5708
+shape = SubResource("WorldBoundaryShape2D_eqfl4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1000, 250)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_eqfl4")
+
+[node name="Enemy5" type="CharacterBody2D" parent="."]
+position = Vector2(515, 56)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("7_wp4ji")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Enemy5"]
+position = Vector2(-0.75, 1.5)
+shape = SubResource("CircleShape2D_3d4rm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy5"]
+position = Vector2(0.999989, -1)
+scale = Vector2(0.494186, 0.480132)
+texture = ExtResource("8_d52hu")
+
+[connection signal="timeout" from="Spaceman/Timer" to="Spaceman" method="_on_timer_timeout"]
