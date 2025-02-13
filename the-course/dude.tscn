@@ -8,7 +8,7 @@
 size = Vector2(55, 53)
 
 [node name="dude" type="CharacterBody2D" node_paths=PackedStringArray("bullet_spawn") groups=["dude"]]
-rotation = 2.54316
+rotation = 5.50398
 scale = Vector2(1e-05, 1e-05)
 collision_mask = 6
 motion_mode = 1
@@ -35,7 +35,7 @@ wait_time = 0.1
 
 [node name="Synth2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_62y41")
-pitch_scale = 1.05691
+pitch_scale = 1.33588
 autoplay = true
 stream_paused = true
 

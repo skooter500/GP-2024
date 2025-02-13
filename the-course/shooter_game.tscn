@@ -14,7 +14,8 @@ size = Vector2(27.0029, 26.0028)
 script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
-rotation = 2.3413
+rotation = 1.20507
+scale = Vector2(1, 1)
 collision_mask = 5
 color = Color(0, 1, 0.25, 0.847059)
 speed = 500.0
@@ -24,9 +25,6 @@ explosion = ExtResource("3_c5ar1")
 script = ExtResource("4_gm47b")
 ufo_scene = ExtResource("3_6xsbg")
 count = 5
-
-[node name="ufo" parent="." instance=ExtResource("3_6xsbg")]
-position = Vector2(440, 223)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -75,5 +73,4 @@ line_size = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="health"]
 position = Vector2(0.500053, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ejtda")
