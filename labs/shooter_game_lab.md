@@ -23,6 +23,7 @@ Analyse the shooter_game scene carfully and write down your explanation of how t
 - fire rate powerup
 - fire_power
 
+
 # Gameplay
 - add level progression so that the number of aliens increases as the levels increase
 - start at level 1 with 1 alien and increase the number of aliens that spawn
