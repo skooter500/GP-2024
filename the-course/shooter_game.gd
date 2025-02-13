@@ -11,8 +11,8 @@ func _ready() -> void:
 
 
 func next_level():
-	ufo_spawner.radius = randf_range(100, 200)
-	ufo_spawner.count = randi_range(1, 4)
+	ufo_spawner.radius = randf_range(200, 400)
+	ufo_spawner.count = randi_range(2, 10)
 	ufo_spawner.rate  = randf_range(1, 5)
 	ufo_spawner.position = dude.position
 	ufo_spawner.spawn()	

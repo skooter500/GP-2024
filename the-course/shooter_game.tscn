@@ -9,6 +9,7 @@
 script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
+scale = Vector2(1, 1)
 speed = 500.0
 
 [node name="ufo_spawner" type="Marker2D" parent="."]

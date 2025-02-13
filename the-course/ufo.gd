@@ -22,7 +22,7 @@ func _ready() -> void:
 	# randomise_timer()
 	
 func randomise_timer():
-	$Timer.wait_time = randf_range(0, 10)
+	$Timer.wait_time = randf_range(1, 5)
 	$Timer.start()
 
 

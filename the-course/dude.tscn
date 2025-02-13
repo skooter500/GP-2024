@@ -38,7 +38,7 @@ position_smoothing_enabled = true
 
 [node name="Synth2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_62y41")
-pitch_scale = 1.30534
+pitch_scale = 1.83402
 autoplay = true
 stream_paused = true
 

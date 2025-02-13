@@ -8,7 +8,6 @@
 size = Vector2(88, 51)
 
 [node name="ufo" type="CharacterBody2D" node_paths=PackedStringArray("bullet_spawn") groups=["ufo"]]
-scale = Vector2(-0.0974396, -0.0974396)
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_c0rv2")
@@ -19,7 +18,7 @@ bullet_spawn = NodePath("Marker2D")
 
 [node name="Synth" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_7har2")
-pitch_scale = 1.28995
+pitch_scale = 1.12307
 autoplay = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -27,7 +26,6 @@ position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_c0rv2")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 9.70477
 autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
