@@ -52,6 +52,11 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 
 # Semester 2
 
+## Week 3
+- Shooter Game
+
+## [Shooter Game Exercises](labs/shooter_game_lab.md)
+
 ## Week 2 
 - More procedural drawing
 - [Spirals] - Have a look at the spirals scene!

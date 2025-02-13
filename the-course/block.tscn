@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwi6lmhwtpkeh"]
 
-[ext_resource type="Script" path="res://block.gd" id="1_4urbb"]
+[ext_resource type="Script" uid="uid://djmpfqltoxdwd" path="res://block.gd" id="1_4urbb"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_04on2"]
 

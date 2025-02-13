@@ -2,7 +2,10 @@
 
 On your break, go and take pictures of flowers around the campus for inspiration
 
-Using the spiral generator as an example, create a flower generater with as much artistic expression as you can think of
+Using the spiral generator as an example, create a flower generater with as much artistic expression as you can think of.
+
+Upload pictures of your flowers to discord
+Analyse the flower and construct an algorithm to draw it
 
 Adjustable parameters:
 
