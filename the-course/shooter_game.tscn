@@ -10,7 +10,6 @@ script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
 speed = 500.0
-ufo_count = 1
 
 [node name="ufo_spawner" type="Marker2D" parent="."]
 script = ExtResource("4_gm47b")
