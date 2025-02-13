@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://5xmg4kyjea30"]
 
-[ext_resource type="Script" uid="uid://byl3sew3vbcr5" path="res://shooter_game.gd" id="1_c5ar1"]
+[ext_resource type="Script" path="res://shooter_game.gd" id="1_c5ar1"]
 [ext_resource type="PackedScene" uid="uid://dogoya3fntpbk" path="res://dude.tscn" id="2_gm47b"]
 [ext_resource type="PackedScene" uid="uid://7ffshnxf3qah" path="res://ufo.tscn" id="3_6xsbg"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="3_c5ar1"]
-[ext_resource type="Script" uid="uid://ck2i25kw3ks1m" path="res://ufo_spawner.gd" id="4_gm47b"]
-[ext_resource type="Script" uid="uid://cwu1wej2vf2ha" path="res://health.gd" id="6_ejtda"]
+[ext_resource type="Script" path="res://ufo_spawner.gd" id="4_gm47b"]
+[ext_resource type="Script" path="res://health.gd" id="6_ejtda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejtda"]
 size = Vector2(27.0029, 26.0028)
@@ -14,7 +14,7 @@ size = Vector2(27.0029, 26.0028)
 script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
-rotation = 2.3413
+rotation = 3.13652
 collision_mask = 5
 color = Color(0, 1, 0.25, 0.847059)
 speed = 500.0
@@ -26,7 +26,7 @@ ufo_scene = ExtResource("3_6xsbg")
 count = 5
 
 [node name="ufo" parent="." instance=ExtResource("3_6xsbg")]
-position = Vector2(440, 223)
+position = Vector2(730, 96)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -75,5 +75,4 @@ line_size = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="health"]
 position = Vector2(0.500053, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ejtda")

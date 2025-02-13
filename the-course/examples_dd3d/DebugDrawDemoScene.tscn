@@ -716,7 +716,6 @@ libraries = {
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="MusicVisualizer"]
 unique_name_in_owner = true
 autoplay = true
-bus = &"MusicAnalyzer"
 
 [node name="VBox" type="VBoxContainer" parent="MusicVisualizer"]
 layout_mode = 2
@@ -807,7 +806,6 @@ size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 13
 item_count = 1
 popup/item_0/text = "1.0.0"
-popup/item_0/id = 0
 
 [node name="Label" type="Label" parent="Settings/HBox/VBoxContainer"]
 layout_mode = 2

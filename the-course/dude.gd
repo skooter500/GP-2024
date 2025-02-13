@@ -88,6 +88,7 @@ func _process(delta: float) -> void:
 			ammo = ammo - 1
 			$"../CanvasLayer/ammo".text = "AMMO: " + str(ammo)
 			$Timer.start() # to set can_fire back to true
+			
 	pass
 	
 func _physics_process(delta: float) -> void:

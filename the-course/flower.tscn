@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvuxk5edat6qb"]
+
+[ext_resource type="Script" path="res://flower01.gd" id="1_fyh06"]
+
+[node name="Flower" type="Node2D"]
+position = Vector2(508, 162)
+script = ExtResource("1_fyh06")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-259, 55)

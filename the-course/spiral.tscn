@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnlh5xpotna2y"]
 
-[ext_resource type="Script" uid="uid://du825yqfaxvax" path="res://spiral.gd" id="1_3lw7s"]
-[ext_resource type="Script" uid="uid://cgys4nkaf8jfp" path="res://spiral_center.gd" id="2_evqlj"]
+[ext_resource type="Script" path="res://spiral.gd" id="1_3lw7s"]
+[ext_resource type="Script" path="res://spiral_center.gd" id="2_evqlj"]
 
 [node name="spiral_art" type="Node2D"]
 
