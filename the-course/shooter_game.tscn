@@ -16,9 +16,9 @@ script = ExtResource("1_c5ar1")
 position = Vector2(232, 59)
 
 [node name="Timer" parent="ufo3" index="1"]
-wait_time = 4.10649
+wait_time = 7.93954
 
-[node name="dude" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn")]
+[node name="dude" type="CharacterBody2D" parent="." node_paths=PackedStringArray("bullet_spawn") groups=["dude"]]
 collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_opyg7")
@@ -31,8 +31,6 @@ forward_input = "forward"
 back_input = "back"
 bullet_scene = ExtResource("2_mugk0")
 bullet_spawn = NodePath("Marker2D")
-lives = null
-ammo = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dude"]
 position = Vector2(0.5, -0.5)
@@ -52,13 +50,13 @@ position_smoothing_enabled = true
 position = Vector2(-346, 128)
 
 [node name="Timer" parent="ufo" index="1"]
-wait_time = 6.66072
+wait_time = 3.82548
 
 [node name="ufo2" parent="." instance=ExtResource("3_6xsbg")]
 position = Vector2(402, 68)
 
 [node name="Timer" parent="ufo2" index="1"]
-wait_time = 1.07011
+wait_time = 8.44109
 
 [node name="ufo_spawner" type="Marker2D" parent="."]
 script = ExtResource("4_gm47b")
@@ -76,9 +74,10 @@ offset_bottom = 30.0
 text = "UFO_COUNT:"
 
 [node name="lives" type="Label" parent="CanvasLayer"]
-offset_top = 53.0
-offset_right = 132.0
-offset_bottom = 83.0
+offset_left = 1.0
+offset_top = 110.0
+offset_right = 331.0
+offset_bottom = 185.0
 text = "LIVES: 10"
 
 [connection signal="timeout" from="dude/Timer" to="dude" method="_on_timer_timeout"]

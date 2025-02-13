@@ -22,6 +22,7 @@ bomb=""
 [gui]
 
 theme/custom="uid://dyroetfulq0o6"
+theme/custom_font="uid://dyroetfulq0o6"
 
 [input]
 

@@ -21,6 +21,8 @@ extends CharacterBody2D
 
 @export var lives:int = 100
 @export var ammo:int = 100
+@export var ufo_count:int = 100
+
 
 var can_fire = true
 
@@ -69,6 +71,9 @@ func _physics_process(delta: float) -> void:
 		
 	
 func _ready() -> void:
+	scale = Vector2.ZERO
+	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "scale", Vector2.ONE, 3)
 	pass
 
 
