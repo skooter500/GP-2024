@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bjjgdrew6l6ye"]
 
 [ext_resource type="Texture2D" uid="uid://cyb1li5opi7vq" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_012.png" id="1_o68ij"]
-[ext_resource type="Script" path="res://play.gd" id="1_qqrbu"]
+[ext_resource type="Script" uid="uid://wc4yxc2ha3y6" path="res://play.gd" id="1_qqrbu"]
 [ext_resource type="Texture2D" uid="uid://bdyamkhqs0oyj" path="res://assets/PNG/Sprites/Building/spaceBuilding_021.png" id="3_bnnyv"]
-[ext_resource type="Script" path="res://mob.gd" id="4_u6htg"]
+[ext_resource type="Script" uid="uid://cc0sjyw5decda" path="res://mob.gd" id="4_u6htg"]
 [ext_resource type="Texture2D" uid="uid://behty5e063yby" path="res://assets/PNG/Sprites/Astronauts/spaceAstronauts_005.png" id="4_xuixt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ewy2i"]

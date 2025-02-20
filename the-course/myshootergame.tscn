@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://dr50saercunm0"]
 
-[ext_resource type="Script" path="res://charactershootergame.gd" id="1_mvn0k"]
-[ext_resource type="Script" path="res://myshootergame.gd" id="1_vnums"]
+[ext_resource type="Script" uid="uid://dy7ulc62lglin" path="res://charactershootergame.gd" id="1_mvn0k"]
+[ext_resource type="Script" uid="uid://cs1a85686qavl" path="res://myshootergame.gd" id="1_vnums"]
 [ext_resource type="Texture2D" uid="uid://2v8yl7j6etc2" path="res://assets/PNG/Sprites/Rockets/spaceRockets_002.png" id="2_q3lj8"]
 [ext_resource type="Texture2D" uid="uid://ckmaspa7xadub" path="res://assets/PNG/Sprites/Missiles/spaceMissiles_001.png" id="3_6x1j7"]
-[ext_resource type="Script" path="res://spawner.gd" id="4_tf2fd"]
+[ext_resource type="Script" uid="uid://c80p2qbsu7oqg" path="res://spawner.gd" id="4_tf2fd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pl8h"]
 size = Vector2(37, 136)
