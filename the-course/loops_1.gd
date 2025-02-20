@@ -1,7 +1,6 @@
 extends Node2D
 
 var num_c_lines = 50
-var cx: float
 
 func _ready() -> void:
 	$Label/HSlider.value = num_c_lines

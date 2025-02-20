@@ -6,15 +6,15 @@ var tween: Tween
 func _ready() -> void:
 	tween = create_tween()
 	tween.set_loops(0)
-	tween.tween_property(self, "position", position + Vector2(200, 0), 1.0)  # Right
-	tween.tween_property(self, "position", position + Vector2(0, 200), 1.0)  # Down
-	tween.tween_property(self, "position", position + Vector2(-200, 0), 1.0)  # Left
-	tween.tween_property(self, "position", position + Vector2(0, -200), 1.0)  # Up
+	
+	tween.tween_property(self, "position", position + Vector2(100, 0), 1.0)  # Right
+	tween.tween_property(self, "position", position + Vector2(-100, 0), 1.0)  # Left
+	tween.tween_property(self, "position", position + Vector2(0, 50), 1.0)
+
 
 
 func _process(_delta: float) -> void:
 	pass
-
 
 func _draw() -> void:
 	# enemy body

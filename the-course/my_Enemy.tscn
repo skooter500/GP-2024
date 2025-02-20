@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu4hc7fgpaiiq"]
+[gd_scene load_steps=4 format=3 uid="uid://mnj5awkm61k4"]
 
-[ext_resource type="Script" path="res://t_EnemyScript.gd" id="1_lwmjl"]
-[ext_resource type="AudioStream" uid="uid://cxvpo2egevp8l" path="res://sounds/jump.wav" id="2_7varh"]
+[ext_resource type="Script" path="res://my_EnemyScript.gd" id="1_uqwrf"]
+[ext_resource type="AudioStream" uid="uid://cxvpo2egevp8l" path="res://sounds/jump.wav" id="2_uavvw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nndh7"]
 size = Vector2(88, 51)
 
 [node name="Enemy" type="Node2D"]
 position = Vector2(583, 340)
-script = ExtResource("1_lwmjl")
+script = ExtResource("1_uqwrf")
 
 [node name="Synth" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_7varh")
+stream = ExtResource("2_uavvw")
 volume_db = -19.676
 pitch_scale = 1.22851
 autoplay = true

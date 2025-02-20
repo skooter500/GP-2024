@@ -66,7 +66,7 @@ func _process(delta: float) -> void:
 	
 	# if not running in engine, update the lives ui
 	if ! Engine.is_editor_hint():	
-		$"../CanvasLayer/lives".text = "LIVES: " + str(lives)
+		#$"../CanvasLayer/lives".text = "LIVES: " + str(lives)
 		
 		# if i can fire
 		if Input.is_action_pressed("fire") and can_fire and ammo > 0:
@@ -86,9 +86,8 @@ func _process(delta: float) -> void:
 			
 			can_fire = false
 			ammo = ammo - 1
-			$"../CanvasLayer/ammo".text = "AMMO: " + str(ammo)
+			#$"../CanvasLayer/ammo".text = "AMMO: " + str(ammo)
 			$Timer.start() # to set can_fire back to true
-			
 	pass
 	
 func _physics_process(delta: float) -> void:
@@ -124,13 +123,21 @@ func _physics_process(delta: float) -> void:
 				respawn()
 			elif c.get_collider().is_in_group("health"):
 					lives += 1
-					c.get_collider().queue_free()
+					$"PowerupSound".play()
+					c.get_collider().set_collision_layer_value(1, false)						
+					c.get_collider().die()
+			elif c.get_collider().is_in_group("ammo"):
+					ammo += 10
+					$"PowerupSound".play()
+					c.get_collider().set_collision_layer_value(1, false)											
+					c.get_collider().die()
 		else:
 			velocity = velocity * 0.99
 		
 	
 func _ready() -> void:
-	respawn()
+	if ! Engine.is_editor_hint():	
+		respawn()
 	pass
 
 
