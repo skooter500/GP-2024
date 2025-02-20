@@ -124,13 +124,21 @@ func _physics_process(delta: float) -> void:
 				respawn()
 			elif c.get_collider().is_in_group("health"):
 					lives += 1
-					c.get_collider().queue_free()
+					$"PowerupSound".play()
+					c.get_collider().set_collision_layer_value(1, false)						
+					c.get_collider().die()
+			elif c.get_collider().is_in_group("ammo"):
+					ammo += 10
+					$"PowerupSound".play()
+					c.get_collider().set_collision_layer_value(1, false)											
+					c.get_collider().die()
 		else:
 			velocity = velocity * 0.99
 		
 	
 func _ready() -> void:
-	respawn()
+	if ! Engine.is_editor_hint():	
+		respawn()
 	pass
 
 
