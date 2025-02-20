@@ -52,7 +52,7 @@ func _process(delta):
 	if ! Engine.is_editor_hint():	
 		alive = alive + delta
 	queue_redraw()
-	pass	
+	pass
 
 func _physics_process(delta: float) -> void:
 	if ! Engine.is_editor_hint():	
