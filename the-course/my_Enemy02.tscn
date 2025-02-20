@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctb8jm1uyun2o"]
+
+[ext_resource type="Script" path="res://my_EnemyScript02.gd" id="1_xvqv2"]
+[ext_resource type="AudioStream" uid="uid://cxvpo2egevp8l" path="res://sounds/jump.wav" id="2_24b7i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nndh7"]
+size = Vector2(88, 51)
+
+[node name="Enemy02" type="Node2D"]
+position = Vector2(568, 334)
+script = ExtResource("1_xvqv2")
+
+[node name="Synth" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_24b7i")
+volume_db = -19.676
+pitch_scale = 1.22851
+autoplay = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_nndh7")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1, 40)

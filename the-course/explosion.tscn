@@ -35,11 +35,11 @@ modulate = Color(0, 1, 1, 1)
 position = Vector2(-78, -57)
 emitting = false
 amount = 50
+process_material = SubResource("ParticleProcessMaterial_8i2hp")
 lifetime = 5.0
 one_shot = true
 explosiveness = 1.0
 trail_lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_8i2hp")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_q7epf")

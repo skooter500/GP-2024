@@ -66,7 +66,7 @@ func _process(delta: float) -> void:
 	
 	# if not running in engine, update the lives ui
 	if ! Engine.is_editor_hint():	
-		$"../CanvasLayer/lives".text = "LIVES: " + str(lives)
+		#$"../CanvasLayer/lives".text = "LIVES: " + str(lives)
 		
 		# if i can fire
 		if Input.is_action_pressed("fire") and can_fire and ammo > 0:
@@ -86,7 +86,7 @@ func _process(delta: float) -> void:
 			
 			can_fire = false
 			ammo = ammo - 1
-			$"../CanvasLayer/ammo".text = "AMMO: " + str(ammo)
+			#$"../CanvasLayer/ammo".text = "AMMO: " + str(ammo)
 			$Timer.start() # to set can_fire back to true
 	pass
 	

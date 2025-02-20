@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c7m2s77s7pxfy"
-path="res://.godot/imported/Minecraft.ttf-e6722a4c8b9733825dcf3450454c3442.fontdata"
+uid="uid://erdgllynwqkw"
+path="res://.godot/imported/Roboto-Bold.ttf-3674de3d9ad3ee757cd4b4a89f1e126d.fontdata"
 
 [deps]
 
-source_file="res://fonts/Minecraft.ttf"
-dest_files=["res://.godot/imported/Minecraft.ttf-e6722a4c8b9733825dcf3450454c3442.fontdata"]
+source_file="res://examples_dd3d/Roboto-Bold.ttf"
+dest_files=["res://.godot/imported/Roboto-Bold.ttf-3674de3d9ad3ee757cd4b4a89f1e126d.fontdata"]
 
 [params]
 
@@ -28,7 +28,11 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[]
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration"
+}]
 language_support={}
 script_support={}
 opentype_features={}

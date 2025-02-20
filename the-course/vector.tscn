@@ -18,8 +18,5 @@ texture = ExtResource("2_8pm2h")
 [node name="spiral" type="Node2D" parent="."]
 position = Vector2(516, 486)
 script = ExtResource("4_y6gwc")
-thing_scene = ExtResource("5_ulvfa")
-count = 100
-radius = 200
 
 [node name="spiral_arm" parent="." instance=ExtResource("5_ulvfa")]
