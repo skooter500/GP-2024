@@ -15,24 +15,34 @@ extends CharacterBody2D
 @export var bullet_scene:PackedScene
 @export var bullet_spawn:Node2D
 
+@export var loot_array:Array[PackedScene]
+
 var can_fire = false
 
 func _ready() -> void:
 	# Tween my scale using elastic	
-	scale = Vector2.ZERO
-	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(self, "scale", Vector2.ONE, 1)
-	# vary the pitch
-	$Synth.pitch_scale = randf_range(0.7, 1.3)
-	# wait 2 seconds
-	await get_tree().create_timer(2.0).timeout		
-	randomise_timer()
-	
+	if ! Engine.is_editor_hint():
+		scale = Vector2.ZERO
+		var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(self, "scale", Vector2.ONE, 1)
+		# vary the pitch
+		$Synth.pitch_scale = randf_range(0.7, 1.3)
+		# wait 2 seconds
+		await get_tree().create_timer(2.0).timeout		
+		randomise_timer()
+		
 func randomise_timer():
 	# randomise the wait time
 	$Timer.wait_time = randf_range(1, 5)
 	$Timer.start()
-
+	
+func drop_loot():
+	
+	var i = randi_range(0, loot_array.size() - 1)
+	var loot = loot_array[i].instantiate()
+	loot.position = position
+	get_parent().add_child(loot)
+	pass
 
 func _draw() -> void:
 	
@@ -63,6 +73,7 @@ func _on_timer_timeout() -> void:
 	b.line_size = line_size
 	# make sure it doesnt collide the the other ufo's
 	b.set_collision_mask_value(3, false)
+	b.set_collision_mask_value(1, true)
 	# restart the timer for the next bullet
 	randomise_timer()
 	pass # Replace with function body.
