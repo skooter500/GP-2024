@@ -40,8 +40,8 @@ var can_fire = true
 func respawn():
 	# Tween my scale using elastic
 	scale = Vector2.ZERO
-	var tween = create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(self, "scale", Vector2.ONE, 3)
+	var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(self, "scale", Vector2.ONE, 1)
 	
 	position = Vector2.ZERO
 	rotation = randf_range(0, TAU)
