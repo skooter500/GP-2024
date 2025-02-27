@@ -8,6 +8,10 @@ extends Marker2D
 
 @export var rate:int = 10
 
+@export var auto_spawn = false
+
+
+
 func spawn():
 	print("begin spawning")
 	var theta_inc = TAU / float(count)
@@ -18,11 +22,10 @@ func spawn():
 		var x = sin(theta) * radius
 		var y = - cos(theta) * radius
 		var ufo = ufo_scene.instantiate()
-		ufo.color = color
+		# ufo.color = color
 		ufo.position = position + Vector2(x, y)		
 		get_parent().add_child(ufo)
 		
-		
-func _ready() -> void:
-	# spawn()
-	pass 
+func _ready():
+	if auto_spawn:
+		spawn()

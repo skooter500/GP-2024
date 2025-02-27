@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck14xoiwnmh1v"]
+[gd_scene load_steps=3 format=3 uid="uid://ck14xoiwnmh1v"]
 
-[ext_resource type="Script" uid="uid://dl3o23uia12v4" path="res://enemy.gd" id="1_4gyqm"]
 [ext_resource type="AudioStream" uid="uid://cxvpo2egevp8l" path="res://sounds/jump.wav" id="5_e1ltt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c0rv2"]
@@ -9,7 +8,6 @@ size = Vector2(88, 51)
 [node name="enemy" type="CharacterBody2D" groups=["ufo"]]
 collision_layer = 4
 collision_mask = 7
-script = ExtResource("1_4gyqm")
 
 [node name="Synth" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_e1ltt")
