@@ -51,3 +51,9 @@ func _physics_process(_delta):
 	pass
 		
 	
+
+
+func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if area.name == "shidstain":
+		get_tree().quit()
+	pass # Replace with function body.
