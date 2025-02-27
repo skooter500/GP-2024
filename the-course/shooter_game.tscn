@@ -1,13 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://5xmg4kyjea30"]
+[gd_scene load_steps=9 format=3 uid="uid://5xmg4kyjea30"]
 
 [ext_resource type="Script" uid="uid://byl3sew3vbcr5" path="res://shooter_game.gd" id="1_c5ar1"]
+[ext_resource type="AudioStream" uid="uid://boy36rslfnhmp" path="res://sounds/heroplanet.mp3" id="2_ejtda"]
 [ext_resource type="PackedScene" uid="uid://dogoya3fntpbk" path="res://dude.tscn" id="2_gm47b"]
 [ext_resource type="PackedScene" uid="uid://7ffshnxf3qah" path="res://ufo.tscn" id="3_6xsbg"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="3_c5ar1"]
 [ext_resource type="Script" uid="uid://ck2i25kw3ks1m" path="res://ufo_spawner.gd" id="4_gm47b"]
+[ext_resource type="PackedScene" uid="uid://ck14xoiwnmh1v" path="res://enemy.tscn" id="7_ndjor"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8wc7a"]
 
 [node name="shooter_game" type="Node2D"]
 script = ExtResource("1_c5ar1")
+
+[node name="Heroplanet" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ejtda")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
 rotation = 5.68262
@@ -56,3 +63,16 @@ offset_top = 419.0
 offset_right = 344.0
 offset_bottom = 494.0
 text = "ufo_COUNT: 0"
+
+[node name="ufo_spawner1" type="Marker2D" parent="."]
+position = Vector2(558, 269)
+script = ExtResource("4_gm47b")
+ufo_scene = ExtResource("3_6xsbg")
+count = 5
+
+[node name="enemy" parent="ufo_spawner1" instance=ExtResource("7_ndjor")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_8wc7a")

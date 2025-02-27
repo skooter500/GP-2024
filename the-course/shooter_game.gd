@@ -14,7 +14,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func _ready() -> void:
 	next_level()
 
-
 func next_level():
 	ufo_spawner.radius = randf_range(200, 250)
 	ufo_spawner.count = 6

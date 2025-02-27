@@ -52,6 +52,14 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 
 # Semester 2
 
+## Week 5 - Enemy AI
+- [Air Sea Battle](https://www.retrogames.cz/play_349-Atari2600.php)
+- [Lab](labs/enemy_ai.md)
+
+## Week 4 - Tweens & Juice
+- [Tweens](labs/tweens.md)
+- [Tweens lab](labs/tweens_lab.md)
+
 ## Week 3
 - Shooter Game
 

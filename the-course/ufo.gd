@@ -19,12 +19,25 @@ extends CharacterBody2D
 
 var can_fire = false
 
+func movement():
+	var tween = create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_EXPO)
+	tween.tween_property(self, "rotation", PI, 2)		
+	tween.tween_property(self, "position", position + Vector2.RIGHT * 200, 2)
+	tween.tween_property(self, "color", Color.from_hsv(randf_range(0, 1), 1,1), 3)		
+	tween.tween_property(self, "position", position + Vector2.LEFT * 200, 2)
+	tween.tween_property(self, "position", position + Vector2.UP * 200, 2)
+	tween.tween_property(self, "position", position + Vector2.DOWN * 200, 2)
+	tween.finished.connect(movement)
+		
+	pass
+
 func _ready() -> void:
 	# Tween my scale using elastic	
 	if ! Engine.is_editor_hint():
 		scale = Vector2.ZERO
 		var tween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_IN_OUT)
 		tween.tween_property(self, "scale", Vector2.ONE, 1)
+		tween.finished.connect(movement)
 		# vary the pitch
 		$Synth.pitch_scale = randf_range(0.7, 1.3)
 		# wait 2 seconds
