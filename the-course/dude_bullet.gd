@@ -41,6 +41,8 @@ func _process(delta):
 			pass
 		# create an explosion
 		
+		
+		
 		var e = explosion.instantiate()
 		e.modulate = coll.color
 		get_parent().add_child(e)

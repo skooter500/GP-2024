@@ -61,6 +61,7 @@ func _draw() -> void:
 var acceleration:Vector2
 
 func _process(delta: float) -> void:
+
 	radius = size / 2
 	queue_redraw() # make draw happen
 	
