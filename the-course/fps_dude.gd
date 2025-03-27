@@ -10,6 +10,7 @@ var relative:Vector2 = Vector2.ZERO
 @export var ammo = 0
 
 func _input(event):
+	print(event)
 	if event is InputEventMouseMotion and controlling:
 		relative = event.relative
 	if event.is_action_pressed("ui_cancel"):
@@ -40,7 +41,7 @@ func _process(delta):
 		if Input.is_key_pressed(KEY_SHIFT):
 			mult = 3
 		
-		var turn = Input.get_axis("left", "right") - v.x	
+		var turn = Input.get_axis("left", "right")
 		if abs(turn) > 0:   
 			position = position + global_transform.basis.x * speed * turn * mult * delta
 			# global_translate(global_transform.basis.x * speed * turn * mult * delta)

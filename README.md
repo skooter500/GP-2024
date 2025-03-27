@@ -52,6 +52,16 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 
 # Semester 2
 
+## Week 8 - 3D character animation
+- [Animation Blending Part 1](https://www.youtube.com/watch?v=iElHZhOxGYA)
+- [Animation Blending Part 2](https://www.youtube.com/watch?v=iElHZhOxGYA)
+- [Look at](https://www.youtube.com/watch?v=iElHZhOxGYA)
+- [Animation Trees](https://www.youtube.com/watch?v=iElHZhOxGYA)
+- [Vuntra City](https://www.youtube.com/watch?v=H-cL8zlNsGI)
+- [Godot 3D Characters](https://github.com/gdquest-demos/godot-4-3D-Characters)
+
+## Week 7 - GDC
+
 ## Week 6 - 3D FPS
 - [3D nodes](labs/3d.md)
 
