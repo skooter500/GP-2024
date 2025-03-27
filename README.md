@@ -60,6 +60,9 @@ Weekly engagement mark is assessessed automatically by evaluating the number of 
 - [Vuntra City](https://www.youtube.com/watch?v=H-cL8zlNsGI)
 - [Godot 3D Characters](https://github.com/gdquest-demos/godot-4-3D-Characters)
 
+## Lab
+- See Brightspace for the lab
+
 ## Week 7 - GDC
 
 ## Week 6 - 3D FPS
