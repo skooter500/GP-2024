@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://betoa56tlk8tg"]
 
-[ext_resource type="Script" path="res://bugzap.gd" id="1_s2q5l"]
-[ext_resource type="Script" path="res://bug_player.gd" id="1_vqb0a"]
+[ext_resource type="Script" uid="uid://mwod53ewxeo8" path="res://bugzap.gd" id="1_s2q5l"]
+[ext_resource type="Script" uid="uid://ddyav5gy3bbmy" path="res://bug_player.gd" id="1_vqb0a"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="2_rwge8"]
 [ext_resource type="PackedScene" uid="uid://b26mblvmunn4a" path="res://bug.tscn" id="4_k6dp0"]
 [ext_resource type="Theme" uid="uid://dyroetfulq0o6" path="res://bryans_theme.tres" id="8_12hsc"]
-[ext_resource type="Script" path="res://bug_spawner.gd" id="9_oaua2"]
+[ext_resource type="Script" uid="uid://8iyn4kdi277m" path="res://bug_spawner.gd" id="9_oaua2"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rvup1"]
 size = Vector2(50, 20)
