@@ -13,6 +13,6 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	print("entered" + str(body))
-	body.ammo += 1
-	queue_free()
+	# body.ammo += 1
+	# queue_free()
 	pass # Replace with function body.
